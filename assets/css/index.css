@@ -1,0 +1,208 @@
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    /* Hero Carousel Container */
+
+    .hero-slider{
+    position:relative;
+    width:100%;
+    height:100vh;
+    min-height:700px;
+    overflow:hidden;
+     padding: 0;
+}
+
+    .slides-wrapper { display: flex; width: 300%; height: 100%; animation: slideAnimation 15s infinite ease-in-out; }
+
+    /* Individual Slides */
+    .slide-content{
+    max-width:760px;
+    position:relative;
+    z-index:5;
+}
+    .slide{
+        width:100%;
+    height:100%;
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    padding:0 8%;
+}
+.slide::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(2,18,42,.82) 0%,
+            rgba(3,28,60,.72) 35%,
+            rgba(5,35,70,.40) 70%,
+            rgba(0,0,0,.15) 100%
+        );
+}
+    /* Backgrounds */
+    .slide-1 {
+      /* background-image: url('/assets/images/hero/about.png'); /* Change to your filename */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+    }
+
+    .slide-2 { background-image: url('/assets/images/card-baground.jpg'); }
+    .slide-3 { background-image: url('/assets/images/card-baground.jpg'); }
+
+    /* Typography */
+.hero-tag-i{
+    display:inline-block;
+    padding:8px 18px;
+    margin-bottom:25px;
+
+    font-size:15px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+    color:#fff;
+
+    border:1px solid rgba(255,255,255,.3);
+
+    border-radius:40px;
+
+    backdrop-filter:blur(10px);
+    animation:fadeUp .8s ease;
+
+}
+.hero-title-i{
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:70px;
+
+    font-weight:700;
+    animation:fadeUp 1s ease;
+
+    line-height:1.05;
+
+    letter-spacing:-2px;
+
+    margin-bottom:28px;
+
+}
+.hero-subtitle-i{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    color:rgba(255,255,255,.85);
+
+    max-width:620px;
+    animation:fadeUp 1.2s ease;
+
+    margin-bottom:40px;
+
+}
+    /* Animation */
+    @keyframes slideAnimation {
+      0%, 28% { transform: translateX(0%); }
+      33%, 61% { transform: translateX(-33.33%); }
+      66%, 95% { transform: translateX(-66.66%); }
+      100% { transform: translateX(0%); }
+    }
+
+
+.heading-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: #fff;
+}
+
+
+
+.slide{
+
+    animation:zoomHero 8s linear infinite alternate;
+
+}
+
+@keyframes zoomHero{
+
+from{
+
+transform:scale(1);
+
+}
+
+to{
+
+transform:scale(1.08);
+
+}
+
+}
+
+
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.slider-arrow{
+
+width:58px;
+
+height:58px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(10px);
+
+color:#293b97;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:18px;
+
+transition:.35s;
+
+}
+
+.slider-arrow:hover{
+
+background:#0056b3;
+
+}
