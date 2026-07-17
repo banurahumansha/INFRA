@@ -1095,7 +1095,14 @@ INDUSTRIES TIMELINE
 
 .industry-timeline-section {
     padding: 110px 0;
-    background: linear-gradient(135deg, #f3f3fe 30%,#e0f4f7 40%, #f0fafd 67%) !important;
+background: linear-gradient(
+    135deg,
+    #C9DBFF,
+    #AFCFFF,
+    #8CCBEF,
+    #7ECFC3,
+    #69B89D
+);
 }
 
 .industry-timeline{
@@ -1180,7 +1187,7 @@ INDUSTRIES TIMELINE
 
     margin-top:22px;
 
-    color:#1F2937;
+    color:#5F6B7A;
 
     font-weight:700;
 
@@ -1190,7 +1197,7 @@ INDUSTRIES TIMELINE
 
     margin-top:10px;
 
-    color:#6B7280;
+    color:#4F5F73;
 
     font-size: 1.2rem;
 
@@ -1385,8 +1392,14 @@ MOBILE
     padding:90px 0;
 
     overflow:hidden;
-    background: linear-gradient(135deg,#f0fafd 67% ,#e0f4f7 40%, #f3f3fe 30%) !important;
-
+background: linear-gradient(
+    135deg,
+    rgba(234,243,255,0.9),
+    rgba(228,247,255,0.9),
+    rgba(232,255,240,0.9),
+    rgba(255,248,230,0.9),
+    rgba(255,234,243,0.9)
+);
 }
 
 .client-logo-marquee{
@@ -1407,13 +1420,13 @@ MOBILE
 
     width:max-content;
 
-    animation:clientScroll 90s linear infinite;
+    animation:clientScroll 120s linear infinite;
 
 }
 
 .client-logo-marquee.reverse .client-logo-track{
 
-    animation:clientScrollReverse 90s linear infinite;
+    animation:clientScrollReverse 120s linear infinite;
 
 }
 .client-logo-track img{

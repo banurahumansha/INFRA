@@ -658,7 +658,7 @@ linear-gradient(
 
     color:#64748B;
 
-    font-size:15px;
+    font-size:19px;
 
     line-height:1.8;
 
@@ -1010,7 +1010,18 @@ linear-gradient(
     font-size:46px;
     margin:15px 0;
 }
+.capabilities h2 {
+    font-size: 46px;
+    margin-bottom: 15px;
+        color:#fff ! important;
 
+}
+.capabilities p{
+    max-width:700px;
+    margin:auto;
+    font-size: 1.3rem;
+    color:#fff ! important;
+}
 .section-title p{
     max-width:700px;
     margin:auto;

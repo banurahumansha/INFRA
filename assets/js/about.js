@@ -13,96 +13,152 @@ fetch("components/footer.html")
 
     });
 
+// Capablities
+
 const data = {
 
-cloud:{
-image:"assets/images/icon/cloud.png",
+    infrastructure: {
 
-title:"Cloud & Infrastructure",
-focus:[
-"Hybrid Cloud Orchestration",
-"Cloud Migration",
-"Cloud Native Engineering"
-],
-impact:[
-"Zero-disruption migrations",
-"Optimized resource allocation",
-"Elastic auto-scaling environments"
-]
-},
+        image: "assets/images/icon/infrastructure.png",
 
-digital:{
-image:"assets/images/icon/digital.jpg",
+        title: "Enterprise Infrastructure Services",
 
-title:"Digital Transformation",
-focus:[
-"Application Modernization",
-"Custom Software Development",
-"API Integrations"
-],
-impact:[
-"Modernized legacy systems",
-"Streamlined workflows",
-"Seamless interoperability"
-]
-},
+        description: "Engineering the resilient physical foundations that power enterprise velocity. From custom data center design and turnkey facility build-outs to next-generation network architectures, high-density structured cabling, and hybrid hyper-converged infrastructure (HCI), we build the baseline stability your applications run on.",
 
-security:{
-image:"assets/images/icon/security.jpg",
+        capabilities: [
+            "Custom Data Center Design",
+            "Turnkey Facility Build-outs",
+            "Network Architecture",
+            "High-Density Structured Cabling",
+            "Hybrid Hyper-Converged Infrastructure (HCI)"
+        ]
 
-title:"Enterprise Security",
-focus:[
-"Layered Cybersecurity",
-"Identity & Access Management",
-"Continuous Monitoring"
-],
-impact:[
-"Threat mitigation",
-"Identity access management",
-"Global industry compliance"
-]
-},
+    },
 
-managed:{
-image:"assets/images/icon/managed.jpg",
+    cloud: {
 
-title:"Managed IT Services",
-focus:[
-"24/7/365 Infrastructure Support",
-"Automated Monitoring",
-"Preventive Maintenance"
-],
-impact:[
-"Proactive fault detection",
-"Reduced Total Cost of Ownership",
-"Continuous optimization"
-]
-}
+        image: "assets/images/icon/cloud.png",
+
+        title: "Multi-Cloud Services",
+
+        description: "We don’t just resell cloud licenses. We own your cloud engineering outcomes. From initial migration strategies to end-to-end infrastructure lifecycle orchestration, we build and run your cloud environments. Backed by proactive 24×7 Site Reliability Engineering (SRE) teams, we ensure your deployments remain highly available, secure, and commercially optimized.",
+
+        capabilities: [
+            "Cloud Migration",
+            "Hybrid Cloud",
+            "AWS",
+            "Microsoft Azure",
+            "Google Cloud",
+            "24×7 Site Reliability Engineering",
+            "Infrastructure Lifecycle Management",
+            "Cloud Cost Optimization"
+        ]
+
+    },
+
+    elv: {
+
+        image: "assets/images/icon/elv.png",
+
+        title: "Integrated ELV",
+
+        description: "Advanced ELV engineering for smart buildings, corporate campuses, and industrial infrastructure. We bridge the gap between structural engineering and digital automation. Our teams deliver enterprise-grade, high-density unified ELV cabling deployments, continuous public address platforms, and intelligent automated fire alarm detection matrices designed to safeguard large-scale facilities.",
+
+        capabilities: [
+            "Structured ELV Cabling",
+            "Public Address Systems",
+            "Fire Alarm Systems",
+            "Smart Building Infrastructure",
+            "Industrial Automation",
+            "Corporate Campus Solutions"
+        ]
+
+    },
+
+    managed: {
+
+        image: "assets/images/icon/managed.jpg",
+
+        title: "Consulting & Managed Services",
+
+        description: "Shifting your operations from reactive ticketing to intelligent, predictive systems management. We keep your business permanently online. Our managed services engine covers full-stack infrastructure health through continuous monitoring, optimized infrastructure management, and resilient backup strategies.",
+
+        capabilities: [
+            "24×7 NOC Monitoring",
+            "Virtual Desktop Infrastructure (VDI)",
+            "Storage Administration",
+            "Backup & Disaster Recovery",
+            "Infrastructure Health Monitoring",
+            "Predictive Maintenance"
+        ]
+
+    },
+
+    security: {
+
+        image: "assets/images/icon/security.jpg",
+
+        title: "Cybersecurity & Threat Intelligence",
+
+        description: "Defensive security frameworks built to harden your perimeter and outpace evolving threats. We replace reactive dashboards with a process-first security architecture. Our cybersecurity division provides continuous managed protection, proactive assessments, and rapid incident response.",
+
+        capabilities: [
+            "24×7 Managed SOC",
+            "SIEM Integration",
+            "Vulnerability Assessment & Penetration Testing (VAPT)",
+            "Digital Forensics",
+            "Threat Intelligence",
+            "Incident Response"
+        ]
+
+    },
+
+    resource: {
+
+        image: "assets/images/icon/resource.png",
+
+        title: "Resource Augmentation",
+
+        description: "Strategic capacity scaling through specialized technology talent. We eliminate workforce friction by deploying pre-vetted contract professionals, permanent recruitment solutions, and dedicated engineering teams that accelerate enterprise delivery.",
+
+        capabilities: [
+            "Contract Staffing",
+            "Permanent Recruitment",
+            "Dedicated Engineering Teams",
+            "Technology Specialists",
+            "Project-Based Resources",
+            "Rapid Team Scaling"
+        ]
+
+    }
 
 };
+
 const details = document.getElementById("details-content");
 const cards = document.querySelectorAll(".capability");
 
 function loadContent(key){
 
     const item = data[key];
-details.style.opacity = 1;
-details.style.transform = "translateY(0)";
+
+    details.style.opacity = 0;
+    details.style.transform = "translateY(20px)";
+
     setTimeout(()=>{
 
         details.innerHTML = `
-    <img src="${item.image}" class="details-illustration">
+            <img src="${item.image}" class="details-illustration">
 
             <h3>${item.title}</h3>
 
-            <h4>Focus Areas</h4>
-            <ul>
-                ${item.focus.map(x=>`<li>${x}</li>`).join("")}
-            </ul>
+            <p class="details-description">
+                ${item.description}
+            </p>
 
-            <h4>Business Impact</h4>
+            <h4>Key Capabilities</h4>
+
             <ul>
-                ${item.impact.map(x=>`<li>${x}</li>`).join("")}
+                ${item.capabilities.map(x=>`<li>${x}</li>`).join("")}
             </ul>
         `;
 
@@ -112,9 +168,10 @@ details.style.transform = "translateY(0)";
     },150);
 
 }
+loadContent("infrastructure");
 
-loadContent("cloud");
 let hoverTimer;
+
 cards.forEach(card=>{
 
     function activate(){
@@ -128,19 +185,21 @@ cards.forEach(card=>{
     }
 
     // Desktop
-  card.addEventListener("mouseenter", () => {
+    card.addEventListener("mouseenter",()=>{
 
         clearTimeout(hoverTimer);
 
-        hoverTimer = setTimeout(activate, 150);
+        hoverTimer = setTimeout(activate,150);
 
     });
-      card.addEventListener("mouseleave", () => {
+
+    card.addEventListener("mouseleave",()=>{
 
         clearTimeout(hoverTimer);
 
     });
+
     // Mobile
-    card.addEventListener("click", activate);
+    card.addEventListener("click",activate);
 
 });
