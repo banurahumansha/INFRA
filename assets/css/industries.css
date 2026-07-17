@@ -1,0 +1,522 @@
+/*=========================================================
+INDUSTRY DESIGN SYSTEM
+=========================================================*/
+
+:root{
+
+    --industry-primary:#0B5ED7;
+
+    --industry-secondary:#EAF4FF;
+
+    --industry-accent:#FFC107;
+
+    --industry-heading:#1F2937;
+
+    --industry-text:#6B7280;
+
+    --industry-card:#ffffff;
+
+}
+.edu-theme{
+
+    --industry-primary:#0B5ED7;
+
+    --industry-secondary:#EAF4FF;
+
+    --industry-accent:#FFC107;
+
+}
+.manu-theme{
+
+    --industry-primary:#D97706;
+
+    --industry-secondary:#FFF7ED;
+
+    --industry-accent:#F59E0B;
+
+}
+.health-theme{
+
+    --industry-primary:#0284C7;
+
+    --industry-secondary:#ECFEFF;
+
+    --industry-accent:#06B6D4;
+
+}
+
+.retail-theme{
+
+    --industry-primary:#7C3AED;
+
+    --industry-secondary:#F5F3FF;
+
+    --industry-accent:#8B5CF6;
+
+}
+.bfsi-theme{
+
+    --industry-primary:#059669;
+
+    --industry-secondary:#ECFDF5;
+
+    --industry-accent:#10B981;
+
+}
+.it-theme{
+
+    --industry-primary:#2563EB;
+
+    --industry-secondary:#EFF6FF;
+
+    --industry-accent:#3B82F6;
+
+}
+
+.industry-section-tag{
+
+    display:inline-block;
+
+    padding:8px 22px;
+
+    background:var(--industry-accent);
+
+    color:#1F2937;
+
+    border-radius:50px;
+
+    font-size:.85rem;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+.industry-section-title{
+    padding: 10px;
+
+    font-size:2.8rem;
+
+    font-weight:300;
+
+    color:var(--industry-heading);
+
+    margin:25px 0;
+
+
+}
+
+.industry-section-subtitle{
+
+    max-width:750px;
+
+    margin:auto;
+
+    color:var(--industry-text);
+
+    line-height:1.9;
+        font-size:0.8rem;
+
+    font-weight:200;
+
+
+}
+
+.industry-overview{
+
+    padding:100px 0;
+
+    background:#fff;
+
+}
+
+
+.industry-challenges{
+
+    padding:100px 0;
+
+    background:var(--industry-secondary);
+
+}
+
+.industry-card{
+
+    background:var(--industry-card);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    height:100%;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.05);
+
+}
+
+.industry-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 45px rgba(0,0,0,.08);
+
+}
+
+.industry-card h4{
+
+    color:var(--industry-heading);
+
+}
+
+.industry-card p{
+
+    color:var(--industry-text);
+
+}
+
+/*==========================================
+INDUSTRY OVERVIEW
+==========================================*/
+
+.industry-overview{
+
+    padding:100px 0;
+
+    background:#fff;
+
+}
+
+.industry-overview-image{
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+      transform: scale(1.07);
+}
+
+.industry-overview-image img{
+
+    width:100%;
+
+    display:block;
+
+    transition:.4s;
+
+}
+
+
+
+.industry-overview-text{
+
+    color:var(--industry-text);
+
+    line-height:1.9;
+
+    margin-bottom:22px;
+
+    font-size:1.02rem;
+
+}
+
+.industry-overview-header{
+
+    max-width:700px;
+
+    margin-bottom:15px;
+
+}
+
+/*==========================================
+INDUSTRY HIGHLIGHT
+==========================================*/
+
+.industry-highlight{
+
+    padding:40px 0 100px;
+
+    background:#fff;
+
+}
+
+.industry-highlight-image{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:26px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.15);
+
+}
+
+.industry-highlight-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+}
+
+.industry-highlight-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:60px;
+
+    background:linear-gradient(
+        rgba(8,25,52,.55),
+        rgba(8,25,52,.55)
+    );
+
+    color:#fff;
+
+}
+
+.industry-highlight-overlay h2{
+
+    font-size:2.7rem;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+    max-width:800px;
+
+}
+
+.industry-highlight-overlay p{
+
+    font-size:1.1rem;
+
+    line-height:1.9;
+
+    max-width:700px;
+
+    margin:0;
+
+}
+/*==========================================
+INDUSTRY SOLUTIONS
+==========================================*/
+
+.industry-solutions{
+
+    padding:100px 0;
+
+    background:var(--industry-secondary);
+
+}
+
+.industry-solution-card{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:25px;
+
+    background:#fff;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    height:100%;
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.05);
+
+}
+
+.industry-solution-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 45px rgba(0,0,0,.08);
+
+}
+
+.industry-solution-icon {
+    width: 160px;
+    height: 100px;
+    flex-shrink: 0;
+    display: flex;          /* Centers the image container if needed */
+    align-items: center;    /* Prevents vertical stretching */
+    justify-content: center;/* Prevents horizontal shifting */
+}
+
+.industry-solution-icon img {
+    width: 100%;            /* Fills the parent width exactly */
+    height: 100%;           /* Fills the parent height exactly */
+    object-fit: contain;    /* Prevents distortion; change to 'cover' if you want no borders */
+    content-visibility: auto; /* Boosts performance by skipping off-screen rendering */
+}
+
+
+.industry-solution-card h4{
+
+    color:var(--industry-heading);
+
+    margin-bottom:15px;
+
+    font-weight:700;
+
+}
+
+.industry-solution-card p{
+
+    color:var(--industry-text);
+
+    line-height:1.8;
+
+    margin:0;
+
+}
+
+
+/*==========================================
+INDUSTRY BENEFITS
+==========================================*/
+
+.industry-benefits{
+
+    padding:100px 0;
+
+    background:#fff;
+
+}
+
+.industry-benefit-box{
+
+    background:#F8FAFC;
+
+    padding:40px;
+
+    border-radius:22px;
+
+    height:100%;
+
+    border:1px solid #E5E7EB;
+
+}
+
+.industry-benefit-box h3{
+
+    margin-bottom:30px;
+
+    color:var(--industry-primary);
+
+    font-weight:700;
+
+}
+
+.industry-benefit-list{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+.industry-benefit-list li{
+
+    position:relative;
+
+    padding-left:42px;
+
+    margin-bottom:22px;
+
+    color:#374151;
+
+    font-weight:500;
+
+    line-height:1.7;
+
+}
+
+.industry-benefit-list li::before{
+
+    content:"✓";
+
+    position:absolute;
+
+    left:0;
+
+    top:2px;
+
+    width:26px;
+
+    height:26px;
+
+    border-radius:50%;
+
+    background:var(--industry-primary);
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+.industry-benefit-quote{
+
+    margin-top:70px;
+
+    background:var(--industry-secondary);
+
+    border-left:6px solid var(--industry-primary);
+
+    border-radius:18px;
+
+    padding:35px 40px;
+
+}
+
+.industry-benefit-quote p{
+
+    margin:0;
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+
+    color:#374151;
+
+    font-style:italic;
+
+}
+

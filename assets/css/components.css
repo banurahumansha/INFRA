@@ -14,7 +14,7 @@ background: transparent;
     padding:15px 0;
 
     z-index:9999;
-    position:absolute;
+    position:absolute ! important;
 
 
 }
@@ -92,7 +92,8 @@ background: transparent;
 
     color:#FFFFFF !important;
 
-    font-weight:500;
+    font-weight:500 !important;
+   font-size : 1.5rem !important;
 
     padding:12px 18px !important;
 

@@ -1,0 +1,605 @@
+/*======================================================
+ELV SOLUTIONS
+======================================================*/
+
+:root{
+
+    --primary:#0B5ED7;
+    --secondary:#2563EB;
+    --light:#F8FAFC;
+    --text:#334155;
+    --muted:#64748B;
+    --border:#E5E7EB;
+    --radius:22px;
+
+}
+
+
+/*======================================================
+HERO
+======================================================*/
+.infra-hero{
+background:linear-gradient(90deg, #fda4af, #fdba74);
+    position:relative;
+
+    overflow:hidden;
+
+    padding:120px 0 80px;
+
+
+}
+.infra-tag{
+
+    font-size:70px;
+
+    font-weight:800;
+  background: linear-gradient(135deg, #4c0519, #200007);
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    background-clip:text;
+
+    color:transparent;
+     display:inline-block;
+
+    margin-bottom:40px;
+
+
+}
+
+
+/*======================================================
+COMMON SECTION
+======================================================*/
+
+.service-section{
+
+    padding:90px 0;
+
+}
+
+
+.bg-light{
+
+    background:#F8FAFC;
+
+}
+
+.section-tag{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    background:#EAF3FF;
+
+    color:var(--primary);
+
+    font-size:22px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.service-section h2{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:#1E293B;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.service-section p{
+
+    color:var(--muted);
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    margin-bottom:30px;
+
+}
+
+
+
+/*======================================================
+IMAGE
+======================================================*/
+
+.service-section img{
+
+    border-radius:24px;
+
+    transition:.45s;
+
+    box-shadow:
+
+    0 20px 50px rgba(15,23,42,.08);
+
+}
+
+
+
+.service-section img:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+/*======================================================
+LIST
+======================================================*/
+
+.service-list{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+
+
+.service-list li{
+
+    position:relative;
+
+    padding-left:34px;
+
+    margin-bottom:16px;
+
+    color:#475569;
+
+    font-size:17px;
+
+}
+
+
+
+.service-list li::before{
+
+    content:"✓";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:22px;
+
+    height:22px;
+
+    border-radius:50%;
+
+    background:#E8F3FF;
+
+    color:var(--primary);
+
+    font-size:13px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:700;
+
+}
+
+
+
+/*======================================================
+PREMIUM NUMBER
+======================================================*/
+
+.service-section{
+
+    position:relative;
+
+}
+
+
+
+.service-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:80px;
+
+    left:80px;
+
+    font-size:110px;
+
+    font-weight:800;
+
+    color:#F1F5F9;
+
+    z-index:0;
+
+}
+
+
+
+#data-networking::before{
+
+    content:"01";
+
+}
+
+
+
+#structured-cabling::before{
+
+    content:"02";
+
+}
+
+
+
+#wireless::before{
+
+    content:"03";
+
+}
+
+
+
+#fiber-backbone::before{
+
+    content:"04";
+
+}
+
+
+
+#ai-surveillance::before{
+
+    content:"05";
+
+}
+
+
+
+#access-control::before{
+
+    content:"06";
+
+}
+
+
+
+#smart-av::before{
+
+    content:"07";
+
+}
+
+
+
+#fire-alarm::before{
+
+    content:"08";
+
+}
+
+
+
+#public-address::before{
+
+    content:"09";
+
+}
+
+
+
+#talk-back::before{
+
+    content:"10";
+
+}
+
+
+
+.service-section .container{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+
+/*======================================================
+BUTTON
+======================================================*/
+
+.btn-primary{
+
+    padding:14px 34px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+
+
+.btn-primary:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+    0 15px 30px rgba(11,94,215,.25);
+
+}
+
+/*======================================================
+Why INFRA
+======================================================*/
+
+.why-elv{
+
+    padding:110px 0;
+
+    background:#F8FAFC;
+
+}
+
+.why-elv h2{
+
+    font-size:46px;
+
+    font-weight:700;
+
+    color:#1E293B;
+
+}
+
+
+
+.feature-box{
+
+background: linear-gradient(
+    135deg,
+    #F7F3FF 0%,
+    #C4B5FD 100%
+);
+    padding:40px 30px;
+
+    border-radius:24px;
+
+    transition:.35s;
+
+    height:100%;
+
+    border:1px solid #EEF2F7;
+
+    box-shadow:
+    0 15px 40px rgba(15,23,42,.05);
+
+}
+
+
+
+.feature-box:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 25px 60px rgba(15,23,42,.10);
+
+}
+
+
+
+.feature-box i{
+
+    width:75px;
+
+    height:75px;
+
+    border-radius:50%;
+
+    background:#EAF3FF;
+
+    color:#0B5ED7;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+
+    margin:auto;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.feature-box h5{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+    color:#1E293B;
+
+}
+
+
+
+.feature-box p{
+
+    color:#64748B;
+
+    line-height:1.8;
+
+    margin:0;
+
+}
+
+
+
+/*======================================================
+CTA
+======================================================*/
+
+.cta-section{
+
+    padding:110px 0;
+
+    background:#FFFFFF;
+
+}
+
+
+
+/*======================================================
+SMOOTH ANIMATION
+======================================================*/
+
+.service-section img,
+
+.feature-box,
+
+.btn,
+
+.cta-box{
+
+    transition:all .35s ease;
+
+}
+
+
+
+/*======================================================
+RESPONSIVE
+======================================================*/
+
+
+
+
+
+@media(max-width:768px){
+
+.solution-title{
+
+    font-size:36px;
+
+}
+
+.service-section::before{
+
+    display:none;
+
+}
+
+.why-elv h2{
+
+    font-size:34px;
+
+}
+
+.feature-box{
+
+    margin-bottom:25px;
+
+}
+
+.cta-box h2{
+
+    font-size:28px;
+
+}
+
+.cta-box{
+
+    border-radius:20px;
+
+}
+
+}
+
+.section-intro{
+
+    max-width:900px;
+
+    margin:0 auto 40px;
+
+    text-align:center;
+
+}
+
+.feature-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    height:100%;
+
+    border:1px solid #E5E7EB;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.05);
+
+}
+
+.feature-card h4{
+
+    color:#0B5ED7;
+
+    margin-bottom:20px;
+
+}
+
+.service-banner{
+
+    margin:45px 0 60px;
+
+}
+
+.service-banner img{
+
+    width:100%;
+
+    border-radius:24px;
+
+}

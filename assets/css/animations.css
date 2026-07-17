@@ -68,3 +68,49 @@ FLOATING ANIMATION
         transform:translateX(0);
     }
 }
+
+/*==============================
+Hero ANIMATION
+==============================*/
+
+.hero-tag{
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+.hero-content h1{
+
+    opacity:0;
+
+    animation:fadeUp .8s ease .2s forwards;
+
+}
+
+.hero-content p{
+
+    opacity:0;
+
+    animation:fadeUp .8s ease .4s forwards;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
