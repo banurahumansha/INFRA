@@ -141,65 +141,51 @@ function loadContent(key){
 
     const item = data[key];
 
-    details.style.opacity = 0;
-    details.style.transform = "translateY(20px)";
+    details.innerHTML = `
+        <img src="${item.image}" class="details-illustration" alt="${item.title}">
 
-    setTimeout(()=>{
+        <h3>${item.title}</h3>
 
-        details.innerHTML = `
-            <img src="${item.image}" class="details-illustration">
+        <p class="details-description">
+            ${item.description}
+        </p>
 
-            <h3>${item.title}</h3>
+        <h4>Key Capabilities</h4>
 
-            <p class="details-description">
-                ${item.description}
-            </p>
-
-            <h4>Key Capabilities</h4>
-
-            <ul>
-                ${item.capabilities.map(x=>`<li>${x}</li>`).join("")}
-            </ul>
-        `;
-
-        details.style.opacity = 1;
-        details.style.transform = "translateY(0)";
-
-    },150);
+        <ul>
+            ${item.capabilities.map(x => `<li>${x}</li>`).join("")}
+        </ul>
+    `;
 
 }
+// -------------------------
+// Default content
+// -------------------------
+
+let activeKey = null;
+
 loadContent("infrastructure");
+activeKey = "infrastructure";
 
-let hoverTimer;
+// -------------------------
+// Click Events
+// -------------------------
 
-cards.forEach(card=>{
+cards.forEach(card => {
 
-    function activate(){
+    card.addEventListener("click", () => {
 
-        cards.forEach(c=>c.classList.remove("active"));
+        const key = card.dataset.target;
 
+        if (key === activeKey) return;
+
+        activeKey = key;
+
+        cards.forEach(c => c.classList.remove("active"));
         card.classList.add("active");
 
-        loadContent(card.dataset.target);
-
-    }
-
-    // Desktop
-    card.addEventListener("mouseenter",()=>{
-
-        clearTimeout(hoverTimer);
-
-        hoverTimer = setTimeout(activate,150);
+        loadContent(key);
 
     });
-
-    card.addEventListener("mouseleave",()=>{
-
-        clearTimeout(hoverTimer);
-
-    });
-
-    // Mobile
-    card.addEventListener("click",activate);
 
 });
