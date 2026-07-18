@@ -19,7 +19,7 @@ const data = {
 
     infrastructure: {
 
-        image: "assets/images/icon/infrastructure.png",
+        image: "assets/images/icon/ent.png",
 
         title: "Enterprise Infrastructure Services",
 
@@ -187,5 +187,55 @@ cards.forEach(card => {
         loadContent(key);
 
     });
+
+});
+
+
+//our approach
+
+document.addEventListener("DOMContentLoaded", function(){
+
+    const items = document.querySelectorAll(".reveal-item");
+    const glow = document.querySelector(".approach-glow");
+
+
+    const observer = new IntersectionObserver((entries)=>{
+
+        if(entries[0].isIntersecting){
+
+            items.forEach((item,index)=>{
+
+            setTimeout(()=>{
+
+    item.classList.add("active");
+
+    if(glow){
+
+        glow.style.left =
+        (10 + index * 25) + "%";
+
+    }
+
+}, index * 1000);
+
+            });
+
+
+            observer.disconnect();
+
+        }
+
+    },{
+        threshold:0.2
+    });
+
+
+    const section = document.querySelector(".approach-section");
+
+    if(section){
+
+        observer.observe(section);
+
+    }
 
 });
