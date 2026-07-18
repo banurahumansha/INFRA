@@ -2008,11 +2008,18 @@ padding 10;
 .approach-quote span{
 
 
-    color:#399598;
+  background: linear-gradient(
+    90deg,
+    #FFD54F,
+    #FFE066,
+    #5EEAD4,
+    #399598,
+    #00838F
+);
 
     font-size:24px;
 
-    font-weight:700;
+    font-weight:900;
 
     letter-spacing:3px;
 
@@ -2074,7 +2081,6 @@ background: linear-gradient(
 /*==================================
  INTRO SECTION
 ==================================*/
-
 .intro-section{
 
     position: relative;
@@ -2085,30 +2091,11 @@ background: linear-gradient(
 
     background:
 
-    radial-gradient(
-        circle at 12% 18%,
-        rgba(57,149,152,.18),
-        transparent 28%
-    ),
+        url("../images/home/home.jpg");
 
-    radial-gradient(
-        circle at 88% 20%,
-        rgba(88,196,255,.12),
-        transparent 32%
-    ),
-
-    radial-gradient(
-        circle at 50% 90%,
-        rgba(41,59,151,.12),
-        transparent 30%
-    ),
-
-    linear-gradient(
-        135deg,
-        #07111F,
-        #0B1627 45%,
-        #111F36
-    );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
 }
 
@@ -2119,60 +2106,97 @@ background: linear-gradient(
     padding:0 40px;
 
 }
+.intro-content{
 
-.intro-grid{
+    max-width:800px;
 
-    display:grid;
-    grid-template-columns:55% 45%;
-    gap:70px;
-    align-items:center;
+    margin:0 auto;
+
+    padding:50px 60px;
+
+    text-align:center;
+
+    background:rgba(8,18,32,.58);
+
+    border:1px solid rgba(126,226,209,.18);
+
+    border-radius:24px;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.35);
+
+    -webkit-backdrop-filter:blur(14px);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.30);
 
 }
-
 .intro-content h2 span{
+    font-size:44px;
+    font-weight:900;
 
-    background:linear-gradient(
-        90deg,
-        #293B97,
-        #399598,
-        #58C4FF
-    );
+
+background: linear-gradient(
+    90deg,
+    #FFD54F,
+    #FFE066,
+    #5EEAD4,
+    #399598,
+    #00838F
+);
 
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
+    background-clip:text;
+
 
 }
 
 .intro-content h2{
 
-    color:#fff;
+     color:#FFFFFF;
 
+    font-size:54px;
+    font-weight:700;
+
+
+
+}
+.intro-content h2::after{
+    content:"";
+    display:block;
+    width:80px;
+    height:3px;
+    margin:20px auto 0;
+    background:linear-gradient(
+        90deg,
+        #F59E0B,
+        #FFD166
+    );
+    border-radius:10px;
 }
 
 .intro-content h4{
 
-    color:#7DE2D1;
+
+    color:#A7F3D0;
+
+    font-weight:500;
 
 }
 
 .intro-content p{
 
-    color:rgba(255,255,255,.78);
+ color:rgba(255,255,255,.86);
+
+    line-height:1.9;
+     font-weight:600;
+         font-size:20.5px;
+
+    line-height:1.8;
 
 }
 
-.intro-image{
-
-    text-align:center;
-
-}
-
-.intro-image img{
-
-    width:100%;
-    max-width:100%;
-
-}
 
 /* ===========================
  KPI
@@ -2190,50 +2214,48 @@ background: linear-gradient(
 
 .kpi-card{
 
-    background:rgba(255,255,255,.04);
+ background:rgba(10,20,35,.72);
 
-    border:1px solid rgba(255,255,255,.08);
-
-    border-radius:20px;
+    border:1px solid rgba(88,196,255,.18);
+        border-radius:20px;
 
     padding:35px;
 
     backdrop-filter:none;
+        align-items:center;
 
 }
 
 .kpi-card:hover{
 
+    border-color:#58C4FF;
+
     transform:translateY(-8px);
 
     box-shadow:
-        0 20px 45px rgba(0,0,0,.12);
+        0 18px 45px rgba(88,196,255,.18);
 
 }
-
 .kpi-card h3{
-
-    font-size:38px;
-    font-weight:700;
-
-    margin-bottom:12px;
 
     background:linear-gradient(
         90deg,
-        #293B97,
-        #399598,
-        #58C4FF
+        #58C4FF,
+        #7DE2D1,
+        #399598
     );
 
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
+    align-items:center ! important;
 
 }
 
 .kpi-card p{
 
-    color:#666;
-    font-size:16px;
+    color:rgba(255,255,255,.78);
+    font-size:19px;
     font-weight:500;
+    align-items:center ! important;
 
 }
