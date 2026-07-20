@@ -1,0 +1,269 @@
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    /* Hero Carousel Container */
+
+    .hero-slider{
+    position:relative;
+    width:100%;
+    height:100vh;
+    min-height:700px;
+    overflow:hidden;
+     padding: 0;
+}
+
+    .slides-wrapper { display: flex; width: 300%; height: 100%; animation: slideAnimation 15s infinite ease-in-out; }
+
+    /* Individual Slides */
+    .slide-content{
+ max-width: 1000px ! important;
+    position:relative;
+    z-index:5;
+}
+    .slide{
+        width:100%;
+            max-width:none;
+    height:100%;
+    background-size:cover;
+    background-repeat:no-repeat;
+        align-items:left;
+
+    position:relative;
+    display:flex;
+    justify-content:flex-start;
+    padding:0;
+}
+.slide::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+}
+    /* Backgrounds */
+    .slide-1 {
+
+   background-image: url('/assets/images/home/card-baground1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+    }
+
+    .slide-2 { background-image: url('/assets/images/home/card-baground2.webp'); }
+    .slide-3 { background-image: url('/assets/images/home/card-baground3.jpg'); }
+
+    /* Typography */
+.hero-tag-i{
+    padding:8px 18px;
+    margin-bottom:25px;
+    font-size:25px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    width: max-content;
+
+            position:absolute;
+    left: 660px;      /* Distance from left edge */
+    bottom: 400px;    /* Distance from bottom edge */
+    z-index:5;
+    border:1px solid rgba(255,255,255,.3);
+
+    border-radius:40px;
+
+    backdrop-filter:blur(10px);
+    animation:tagDrop 0.8s ease forwards;
+    animation-delay:1s;   /* After title animation */
+
+}
+
+
+.hero-title-i{
+    position:absolute;
+    left: 160px;      /* Distance from left edge */
+    bottom: 180px;    /* Distance from bottom edge */
+    z-index:5;
+    width: max-content;
+}
+.hero-title-i{
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:70px;
+
+    font-weight:700;
+    animation:fadeUp 1s ease;
+
+    line-height:1.05;
+
+    letter-spacing:-2px;
+
+    margin-bottom:28px;
+
+
+}
+
+.slide-1 .hero-title-i{
+    background: linear-gradient(
+        90deg,
+        #1E3A8A 0%,   /* Dark Blue */
+        #2563EB 40%,  /* Blue */
+        #A3E635 100%  /* Light Green */
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.slide-2 .hero-title-i{
+    color: #fff !important;
+}
+
+.slide-3 .hero-title-i{
+
+    background: linear-gradient(90deg, #FF00A8, #B026FF, #6A5CFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+ color: #fff !important;
+}
+
+.hero-subtitle-i{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    color:rgba(255,255,255,.85);
+
+    animation:fadeUp 1.2s ease;
+
+    margin-bottom:40px;
+
+}
+    /* Animation */
+    @keyframes slideAnimation {
+      0%, 28% { transform: translateX(0%); }
+      33%, 61% { transform: translateX(-33.33%); }
+      66%, 95% { transform: translateX(-66.66%); }
+      100% { transform: translateX(0%); }
+    }
+
+
+.heading-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+  background-color: #fff;
+}
+
+
+
+.slide{
+
+    animation:zoomHero 8s linear infinite alternate;
+
+}
+
+@keyframes zoomHero{
+
+from{
+
+transform:scale(1);
+
+}
+
+to{
+
+transform:scale(1.08);
+
+}
+
+}
+
+
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.slider-arrow{
+
+width:58px;
+
+height:58px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(10px);
+
+color:#293b97;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:18px;
+
+transition:.35s;
+
+}
+
+.slider-arrow:hover{
+
+background:#0056b3;
+
+}
+
+@keyframes tagDrop{
+
+    0%{
+        opacity:0;
+        transform:translateY(-80px);
+    }
+
+    70%{
+        opacity:1;
+        transform:translateY(8px);     /* Slight overshoot */
+    }
+
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.slide-1 .hero-tag-i{
+    animation: tagDrop 0.8s ease 1s forwards;
+    opacity: 0;
+}
+
+.slide-2 .hero-tag-i{
+    animation: tagDrop 0.8s ease 1s forwards;
+    opacity: 0;
+}
+
+.slide-3 .hero-tag-i{
+    animation: tagDrop 0.8s ease 1s forwards;
+    opacity: 0;
+}
