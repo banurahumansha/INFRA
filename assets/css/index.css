@@ -42,18 +42,15 @@
 }
     /* Backgrounds */
     .slide-1 {
-    background-image: url('../images/home/card-baground1.jpg');
+
+   background-image: url('assets/images/home/card-baground1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
     }
 
-.slide-2 {
-    background-image: url('../images/home/card-baground2.webp');
-}
+    .slide-2 { background-image: url('assets/images/home/card-baground2.webp'); }
+    .slide-3 { background-image: url('assets/images/home/card-baground3.jpg'); }
 
-.slide-3 {
-    background-image: url('../images/home/card-baground3.jpg');
-}
     /* Typography */
 .hero-tag-i{
     padding:8px 18px;
