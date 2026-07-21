@@ -3,20 +3,20 @@
 
     /* Hero Carousel Container */
 
-    .hero-slider{
-    position:relative;
-    width:100%;
-    height:100vh;
-    min-height:700px;
-    overflow:hidden;
-     padding: 0;
-}
-.slides-wrapper{
-    display:flex;
-    width:300%;
-    height:100%;
-    transition:transform 0.9s ease-in-out;
-}
+        .hero-slider{
+        position:relative;
+        width:100%;
+        height:100vh;
+        min-height:700px;
+        overflow:hidden;
+         padding: 0;
+    }
+    .slides-wrapper{
+        display:flex;
+        width:300%;
+        height:100%;
+        transition:transform 0.9s ease-in-out;
+    }
     /* Individual Slides
     .slide-content{
  max-width: 1000px ! important;

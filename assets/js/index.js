@@ -58,3 +58,30 @@ wrapper.style.transform = `translateX(-${index * (100/3)}%)`;
     }
 
 }
+
+window.addEventListener("load", () => {
+
+    console.log("=== INDEX DEBUG ===");
+    console.log("Viewport Width:", window.innerWidth);
+    console.log("Document Width:", document.documentElement.scrollWidth);
+
+    [...document.querySelectorAll("*")].forEach(el => {
+
+        const r = el.getBoundingClientRect();
+
+        if (r.right > window.innerWidth + 1 || r.left < -1) {
+
+            console.log("Overflow Element:", el);
+            console.log({
+                class: el.className,
+                id: el.id,
+                left: Math.round(r.left),
+                right: Math.round(r.right),
+                width: Math.round(r.width)
+            });
+
+        }
+
+    });
+
+});
