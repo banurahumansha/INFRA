@@ -190,103 +190,120 @@ cards.forEach(card => {
 });
 
 
-//our approach
+// =========================
+// OUR APPROACH ANIMATION
+// =========================
 
-//document.addEventListener("DOMContentLoaded", function(){
-//
-//    const items = document.querySelectorAll(".reveal-item");
-//    const glow = document.querySelector(".approach-glow");
-//
-//
-//    const observer = new IntersectionObserver((entries)=>{
-//
-//        if(entries[0].isIntersecting){
-//
-//            items.forEach((item,index)=>{
-//
-//            setTimeout(()=>{
-//
-//    item.classList.add("active");
-//
-//    if(glow){
-//
-//        glow.style.left =
-//        (10 + index * 25) + "%";
-//
-//    }
-//
-//}, index * 1000);
-//
-//            });
-//
-//
-//            observer.disconnect();
-//
-//        }
-//
-//    },{
-//        threshold:0
-//    });
-//
-//
-//    const section = document.querySelector(".approach-section");
-//
-//    if(section){
-//
-//        observer.observe(section);
-//
-//    }
-//
-//});
+let approachInitialized = false;
 
 
-document.addEventListener("DOMContentLoaded", function(){
+function initApproach(){
+
+    if(approachInitialized) return;
 
     const items = document.querySelectorAll(".reveal-item");
     const glow = document.querySelector(".approach-glow");
     const section = document.querySelector(".approach-section");
 
+
     console.log("=== ABOUT DEBUG ===");
     console.log("Viewport:", window.innerWidth, window.innerHeight);
 
-    if(section){
-        console.log("Section Rect:", section.getBoundingClientRect());
+
+    if(!section){
+
+        console.log("Approach section not found");
+        return;
+
     }
 
-    const observer = new IntersectionObserver((entries)=>{
+
+    approachInitialized = true;
+
+
+    console.log(
+        "Section Rect:",
+        section.getBoundingClientRect()
+    );
+
+
+    const observer = new IntersectionObserver(
+    (entries)=>{
+
 
         console.log("Observer Fired");
-        console.log("isIntersecting:", entries[0].isIntersecting);
-        console.log("Ratio:", entries[0].intersectionRatio);
-        console.log("Rect:", entries[0].boundingClientRect);
+
+        console.log(
+            "isIntersecting:",
+            entries[0].isIntersecting
+        );
+
 
         if(entries[0].isIntersecting){
 
+
             console.log("Animation Triggered");
+
 
             items.forEach((item,index)=>{
 
+
                 setTimeout(()=>{
+
 
                     item.classList.add("active");
 
+
                     if(glow){
-                        glow.style.left = (10 + index * 25) + "%";
+
+                        glow.style.left =
+                        (10 + index * 25) + "%";
+
                     }
+
 
                 }, index * 1000);
 
+
             });
 
+
             observer.disconnect();
+
+
         }
 
-    },{
-        threshold:0   // <-- temporarily change from 0.2 to 0
+
+    },
+    {
+        threshold:0
     });
 
-    if(section){
-        observer.observe(section);
-    }
 
-});
+    observer.observe(section);
+
+}
+
+
+
+// Normal load
+if(document.readyState === "loading"){
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        initApproach
+    );
+
+}
+else{
+
+    initApproach();
+
+}
+
+
+// Fold / browser restore
+window.addEventListener(
+    "pageshow",
+    initApproach
+);

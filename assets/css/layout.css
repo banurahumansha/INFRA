@@ -1558,7 +1558,7 @@ background: linear-gradient(
 .client-logo-marquee{
 
     overflow:hidden;
-
+    width:100%;
     margin:30px 0;
 
 }
