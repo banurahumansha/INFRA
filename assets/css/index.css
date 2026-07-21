@@ -17,12 +17,19 @@
     height:100%;
     transition:transform 0.9s ease-in-out;
 }
-    /* Individual Slides */
+    /* Individual Slides
     .slide-content{
  max-width: 1000px ! important;
     position:relative;
     z-index:5;
+}*/
+.slide-content{
+    position:relative;
+    width:100%;
+    height:100%;
+    z-index:5;
 }
+
 
 .slide{
     width:33.3333%;
@@ -43,12 +50,12 @@
     /* Backgrounds */
     .slide-1 {
 
-   background-image: url('/INFRA/assets/images/home/card-baground1.jpg');
+   background-image: url('../images/home/card-baground1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
     }
 
-    .slide-2 { background-image: url('/INFRA/assets/images/home/card-baground2.webp'); }
+    .slide-2 { background-image: url('../images/home/card-baground2.webp'); }
     .slide-3 { background-image: url('../images/home/card-baground3.jpg'); }
 
     /* Typography */
@@ -60,28 +67,32 @@
     letter-spacing:2px;
     text-transform:uppercase;
     width: max-content;
-        color: #fff !important;
-
             position:absolute;
-    left: 660px;      /* Distance from left edge */
+    left: 500px;      /* Distance from left edge */
     bottom: 400px;    /* Distance from bottom edge */
     z-index:5;
-    border:1px solid rgba(255,255,255,.3);
-
-    border-radius:40px;
-
-    backdrop-filter:blur(10px);
-
 }
 
+.hero-tag-i{
 
+    color:#58C4FF;
+
+    border:1px solid rgba(88,196,255,.45);
+
+    background:rgba(9,25,55,.28);
+
+    backdrop-filter:blur(12px);
+
+}
 .hero-title-i{
     position:absolute;
-    left: 160px;      /* Distance from left edge */
-    bottom: 180px;    /* Distance from bottom edge */
+    left: 20px;      /* Distance from left edge */
+    bottom: 260px;    /* Distance from bottom edge */
     z-index:5;
     width: max-content;
 }
+
+
 .hero-title-i{
 
     font-size:70px;
@@ -95,7 +106,8 @@
     margin-bottom:28px;
 
 }
-.hero-title-i,
+
+
 .hero-tag-i{
     opacity:0;
 }
@@ -112,9 +124,19 @@
     background-clip: text;
 }
 .slide-2 .hero-title-i{
-    color: #fff !important;
-}
 
+    background: linear-gradient(
+        90deg,
+        #399598 0%,   /* Brand Teal */
+        #7ED957 55%,  /* Bright Green */
+        #C8FF72 100%  /* Lime Green */
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+}
 .slide-3 .hero-title-i{
 
     background: linear-gradient(90deg, #FF00A8, #B026FF, #6A5CFF);
@@ -265,4 +287,105 @@ background:#0056b3;
 
 .slide.active .hero-tag-i{
     animation:tagDrop .7s ease .7s forwards;
+}
+
+
+/* =========================
+   TABLETS
+========================= */
+
+@media (max-width:991px){
+
+    .hero-slider{
+        min-height:650px;
+        height:90vh;
+    }
+
+    .hero-title-i{
+
+        left:40px;
+        bottom:120px;
+
+        font-size:48px;
+
+        line-height:1.1;
+
+        letter-spacing:-1px;
+
+        width:auto;
+        max-width:85%;
+
+    }
+
+    .hero-tag-i{
+
+        left:40px;
+        bottom:310px;
+
+        font-size:18px;
+
+        padding:8px 16px;
+
+        letter-spacing:1px;
+
+    }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width:768px){
+
+    .hero-slider{
+
+        height:100vh;
+
+        min-height:600px;
+
+    }
+
+    .slide{
+
+        background-position:center;
+
+    }
+
+    .hero-title-i{
+
+        left:20px;
+
+        bottom:90px;
+
+        font-size:34px;
+
+        line-height:1.15;
+
+        letter-spacing:-0.5px;
+
+        width:auto;
+
+        max-width:90%;
+
+    }
+
+    .hero-tag-i{
+
+        left:20px;
+
+        bottom:240px;
+
+        font-size:14px;
+
+        padding:8px 14px;
+
+        letter-spacing:1px;
+
+        max-width:220px;
+
+        white-space:normal;
+
+    }
+
 }

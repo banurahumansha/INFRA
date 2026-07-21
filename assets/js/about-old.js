@@ -123,7 +123,7 @@ const data = {
 const details = document.getElementById("details-content");
 const cards = document.querySelectorAll(".capability");
 
-function loadContent(key, card){
+function loadContent(key){
 
     const item = data[key];
 
@@ -132,7 +132,9 @@ function loadContent(key, card){
 
         <h3>${item.title}</h3>
 
-        <p class="details-description">${item.description}</p>
+        <p class="details-description">
+            ${item.description}
+        </p>
 
         <h4>Key Capabilities</h4>
 
@@ -147,7 +149,9 @@ function loadContent(key, card){
             box.innerHTML="";
         });
 
-        card.querySelector(".mobile-details").innerHTML = html;
+        document
+            .querySelector(".capability.active .mobile-details")
+            .innerHTML = html;
 
     }else{
 
@@ -156,7 +160,6 @@ function loadContent(key, card){
     }
 
 }
-
 // -------------------------
 // Default content
 // -------------------------
@@ -166,29 +169,27 @@ let activeKey = null;
 loadContent("infrastructure");
 activeKey = "infrastructure";
 cards[0].classList.add("active");
-loadContent("infrastructure", cards[0]);
 // -------------------------
 // Click Events
 // -------------------------
 
-cards.forEach(card => {
+cards.forEach(card=>{
 
-    card.addEventListener("click", () => {
+    card.addEventListener("click",()=>{
 
         const key = card.dataset.target;
 
-        if (key === activeKey) return;
+        cards.forEach(c=>c.classList.remove("active"));
+
+        card.classList.add("active");
 
         activeKey = key;
 
-        cards.forEach(c => c.classList.remove("active"));
-        card.classList.add("active");
+        loadContent(key);
 
-        loadContent(key, card);
     });
 
 });
-
 
 //our approach
 

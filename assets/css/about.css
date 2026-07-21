@@ -16,8 +16,7 @@ ABOUT Heo
     overflow:hidden;
 
     background-image:
-        url("/INFRA/assets/images/bg/green-g.jpg");
-
+        url("../images/bg/green-g.jpg");
     background-size:cover;
 
     background-position:center;
@@ -968,6 +967,36 @@ linear-gradient(
     overflow:hidden;
 
 }
+.capabilities-section{
+
+    background:
+
+    radial-gradient(
+        circle at 15% 20%,
+        rgba(0,123,255,.18),
+        transparent 28%
+    ),
+
+    radial-gradient(
+        circle at 85% 25%,
+        rgba(0,200,255,.10),
+        transparent 30%
+    ),
+
+    radial-gradient(
+        circle at 40% 90%,
+        rgba(0,100,255,.10),
+        transparent 28%
+    ),
+
+    linear-gradient(
+        135deg,
+        #09111D,
+        #0B1120 45%,
+        #111B2F
+    ) !important;
+
+}
 
 
 
@@ -976,42 +1005,6 @@ linear-gradient(
     margin:15px 0;
  margin-bottom: 15px;
   margin-top: 15px;
-}
-.capabilities{
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 40px;
-    box-sizing: border-box;
-}
-.capabilities h2 {
-    font-size: 46px;
-    margin-bottom: 15px;
-        color:#fff ! important;
-
-}
-.capabilities p{
-    max-width:700px;
-    margin:auto;
-    font-size: 1.3rem;
-    color:#fff ! important;
-}
-.section-title p{
-    max-width:700px;
-    margin:auto;
-    color:#ffff;
-    font-size:20.5px;
-}
-
-.capability{
-    margin-bottom:35px;
-}
-
-.capability-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    cursor:pointer;
-    padding:18px 0;
 }
 
 .number{
@@ -1142,10 +1135,10 @@ linear-gradient(
 
 .section-title p{
 
-    max-width:700px;
-
+   max-width:700px;
     margin:auto;
-
+    color:#ffff;
+    font-size:20.5px;
 }
 
 .capabilities-wrapper{
@@ -1162,20 +1155,15 @@ linear-gradient(
 
 .capability{
 
-    margin-bottom:30px;
-
+ margin-bottom:35px;
     cursor:pointer;
-
 }
-
 .capability-header{
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
+    cursor:pointer;
+    padding:18px 0;
 }
 
 .title{
@@ -1210,14 +1198,15 @@ linear-gradient(
 .capability-title h3{
 
     margin-bottom:5px;
-
+     color:#fff ! important;
 }
 
 .capability-title p{
 
-    color:#777;
-
-    font-size:17px;
+      max-width:700px;
+    margin:auto;
+    color:#ffff;
+    font-size:20.5px;
 
 }
 
@@ -1519,36 +1508,7 @@ background: linear-gradient(
     box-shadow:0 20px 40px rgba(57,149,152,.35);
 
 }
-.capabilities-section{
 
-    background:
-
-    radial-gradient(
-        circle at 15% 20%,
-        rgba(0,123,255,.18),
-        transparent 28%
-    ),
-
-    radial-gradient(
-        circle at 85% 25%,
-        rgba(0,200,255,.10),
-        transparent 30%
-    ),
-
-    radial-gradient(
-        circle at 40% 90%,
-        rgba(0,100,255,.10),
-        transparent 28%
-    ),
-
-    linear-gradient(
-        135deg,
-        #09111D,
-        #0B1120 45%,
-        #111B2F
-    ) !important;
-
-}
 /* =====================================
         APPROACH SECTION
 ===================================== */
@@ -2230,7 +2190,42 @@ background: linear-gradient(
     align-items:center ! important;
 
 }
+/* =========================
+   MOBILE KPI
+========================= */
 
+@media (max-width:768px){
+
+    .intro-kpis{
+
+        grid-template-columns:repeat(2,1fr);
+        gap:15px;
+        margin-top:40px;
+
+    }
+
+   .kpi-card{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    }
+    .kpi-card h3{
+
+        font-size:28px;
+        margin-bottom:8px;
+
+    }
+
+    .kpi-card p{
+
+        font-size:15px;
+        line-height:1.4;
+
+    }
+
+}
 /* ==========================
    iNAS ADVANTAGE
 ========================== */
@@ -2420,4 +2415,85 @@ background: linear-gradient(
 
 .advantage-card:nth-child(3){
     transition-delay:.3s;
+}
+
+/* Media for capablities */
+
+.capabilities{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+.capabilities h2 {
+    font-size: 46px;
+    margin-bottom: 15px;
+        color:#fff ! important;
+
+}
+.capabilities p{
+    max-width:700px;
+    margin:auto;
+    font-size: 1.3rem;
+    color:#fff ! important;
+}
+.section-title p{
+    max-width:700px;
+    margin:auto;
+    color:#ffff;
+    font-size:20.5px;
+}
+
+@media (max-width:768px){
+
+      .capabilities-wrapper{
+            display:block;
+        }
+
+    .capability-details{
+
+        display:none;
+
+    }
+
+    .mobile-details{
+
+        display:none;
+
+        margin-top:20px;
+
+        animation:fadeDown .35s ease;
+
+    }
+
+    .capability.active .mobile-details{
+
+        display:block;
+
+    }
+    .capability-details li{
+
+         color: #fff !important ;
+        }
+        .capability-details ul{
+ color: #fff !important ;
+
+}
+}
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+        transform:translateY(-10px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
 }
