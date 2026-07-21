@@ -1,6 +1,7 @@
 /*==================================================
         CORPORATE FRAMEWORK V1
         LAYOUT.CSS
+        Version-1
 ==================================================*/
 
 .stat-box{
@@ -172,14 +173,14 @@ section{
     .section-title {
         font-size: 1.6rem !important;
         line-height: 1.3 !important;
-        color: #293b97 !important;
+        color: #ffff !important;
     }
 
     .section-description {
         display: block !important;
         font-size: 1.1rem !important;
         line-height: 1.5 !important;
-        color: #293b97 !important;
+        color: #ffff !important;
             font-weight: 400;
 
 
@@ -907,7 +908,7 @@ background: linear-gradient(135deg, #fce7f3 0%, #e0f2fe 60%, #ccfbf1 100%);
 @media (max-width:768px){
 
     .solutions-grid{
-        grid-template-columns:1fr;
+        grid-template-columns:1fr ! important;
         gap:20px;
     }
 
@@ -997,7 +998,7 @@ background: linear-gradient(135deg, #fce7f3 0%, #e0f2fe 60%, #ccfbf1 100%);
 
 }
 .solution-card:hover .desc,
-.solution-card:hover .learn-more{
+.solution-card:hover .card-btn{
 
     opacity:1;
     transform:translateY(0);
