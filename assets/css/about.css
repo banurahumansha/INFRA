@@ -16,12 +16,13 @@ ABOUT Heo
     overflow:hidden;
 
     background-image:
-        url("../images/bg/green-g.jpg");
+        url("../images/hero/about.jpg");
     background-size:cover;
 
     background-position:center;
 
     background-repeat:no-repeat;
+background-position: center 20%;
 
 }
 
@@ -67,7 +68,7 @@ ABOUT Heo
 
     display:inline-block;
 
-    font-size:64px;
+    font-size:68px;
 
     font-weight:1000;
 
@@ -1852,8 +1853,13 @@ padding 10;
     overflow:hidden;
 
     padding:140px 0;
+ background:
 
-    background:
+        url("../images/home/ai.jpg");
+            background-size: cover;
+    background-repeat: no-repeat;
+background-position: center 20%;
+   /* background:
 
     radial-gradient(
         circle at 50% 50%,
@@ -1865,7 +1871,7 @@ padding 10;
         135deg,
         #07152F,
         #0B1F3A
-    );
+    ); */
 
 }
 
@@ -1881,62 +1887,40 @@ padding 10;
 
     height:700px;
 
-    background:
-
-    radial-gradient(
-        circle,
-        rgba(57,149,152,.30),
-        transparent 65%
-    );
-
-
-    top:-200px;
-
-    right:-200px;
-
-    filter:blur(40px);
-
 }
-
-
-
-
-
 
 .approach-quote{
 
-    text-align:center;
+     max-width:1100px;
 
-    max-width:1100px;
+    margin:0 auto;
 
-    margin:auto;
+    padding-top:20px;   /* adjust as needed */
+
+    text-align:right;
 
 }
 
-
-
-
-
+/*
 .approach-quote h2{
 
     font-size:58px;
     font-weight:800;
-    line-height:1.25;
+    line-height:1.5;
+ top:-40px;
 
-    background:
-    linear-gradient(
-        90deg,
-        #FFFFFF 0%,
-        #DDEEFF 25%,
-        #399598 60%,
-        #D4C15A 100%
-    );
+} adjust value */
 
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    background-clip:text;
-
+.approach-quote h2 {
+ font-size:58px;
+  color: #ffffff; /* Pure white */
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  /* Strong dark drop-shadow to separate text from background details */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8),
+               -1px -1px 0px rgba(0, 0, 0, 0.5);
 }
+
 
 .approach-quote span{
 
@@ -1955,7 +1939,6 @@ padding 10;
     font-weight:900;
 
     letter-spacing:3px;
-
 }
 
 .glass-card h3{
@@ -1975,8 +1958,7 @@ padding 10;
     background-clip:text;
 
 }
-.approach-content h3
-{
+.approach-content h3{
 
 background:
 linear-gradient(
@@ -2010,7 +1992,6 @@ background: linear-gradient(
 /* ===========================
    INTRO SECTION
 =========================== */
-
 /*==================================
  INTRO SECTION
 ==================================*/
@@ -2022,7 +2003,7 @@ background: linear-gradient(
 
     padding: 120px 0;
 
-    background:
+ background:
 
         url("../images/home/home.jpg");
 
@@ -2089,8 +2070,6 @@ background: linear-gradient(
 
     font-size:54px;
     font-weight:700;
-
-
 
 }
 .intro-content h2::after{

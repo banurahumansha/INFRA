@@ -61,10 +61,6 @@ wrapper.style.transform = `translateX(-${index * (100/3)}%)`;
 
 window.addEventListener("load", () => {
 
-    console.log("=== INDEX DEBUG ===");
-    console.log("Viewport Width:", window.innerWidth);
-    console.log("Document Width:", document.documentElement.scrollWidth);
-
     [...document.querySelectorAll("*")].forEach(el => {
 
         const r = el.getBoundingClientRect();

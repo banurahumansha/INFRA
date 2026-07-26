@@ -1,331 +1,19 @@
-/*======================================================
-ELV SOLUTIONS
-======================================================*/
-
-:root{
-
-    --primary:#0B5ED7;
-    --secondary:#2563EB;
-    --light:#F8FAFC;
-    --text:#334155;
-    --muted:#64748B;
-    --border:#E5E7EB;
-    --radius:22px;
-
+/*==================================================
+            Infrastructure Hero
+==================================================*/
+.infra-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 92vh;
+    overflow: hidden;
+    background-position: center bottom; /* Keeps the glowing wave at the bottom */
+    background-repeat: no-repeat;
+    background-size: cover; /* Forces the image to stretch and fill the space */
+    background-color: #050b14; /* Matches the dark background color of the image */
 }
 
-
-/*======================================================
-HERO
-======================================================*/
-.infra-hero{
-background:linear-gradient(90deg, #fda4af, #fdba74);
-    position:relative;
-
-    overflow:hidden;
-
-    padding:120px 0 80px;
-
-
-}
-.infra-tag{
-
-    font-size:70px;
-
-    font-weight:800;
-  background: linear-gradient(135deg, #4c0519, #200007);
-
-    -webkit-background-clip:text;
-
-    -webkit-text-fill-color:transparent;
-
-    background-clip:text;
-
-    color:transparent;
-     display:inline-block;
-
-    margin-bottom:40px;
-
-
-}
-
-
-/*======================================================
-COMMON SECTION
-======================================================*/
-
-.service-section{
-
-    padding:90px 0;
-
-}
-
-
-.bg-light{
-
-    background:#F8FAFC;
-
-}
-
-.section-tag{
-
-    display:inline-block;
-
-    padding:8px 18px;
-
-    border-radius:50px;
-
-    background:#EAF3FF;
-
-    color:var(--primary);
-
-    font-size:22px;
-
-    font-weight:700;
-
-    letter-spacing:1px;
-
-    margin-bottom:18px;
-
-}
-
-
-
-.service-section h2{
-
-    font-size:42px;
-
-    font-weight:700;
-
-    color:#1E293B;
-
-    margin-bottom:25px;
-
-}
-
-
-
-.service-section p{
-
-    color:var(--muted);
-
-    font-size:17px;
-
-    line-height:1.9;
-
-    margin-bottom:30px;
-
-}
-
-
-
-/*======================================================
-IMAGE
-======================================================*/
-
-.service-section img{
-
-    border-radius:24px;
-
-    transition:.45s;
-
-    box-shadow:
-
-    0 20px 50px rgba(15,23,42,.08);
-
-}
-
-
-
-.service-section img:hover{
-
-    transform:translateY(-8px);
-
-}
-
-
-
-/*======================================================
-LIST
-======================================================*/
-
-.service-list{
-
-    list-style:none;
-
-    padding:0;
-
-    margin:0;
-
-}
-
-
-
-.service-list li{
-
-    position:relative;
-
-    padding-left:34px;
-
-    margin-bottom:16px;
-
-    color:#475569;
-
-    font-size:17px;
-
-}
-
-
-
-.service-list li::before{
-
-    content:"✓";
-
-    position:absolute;
-
-    left:0;
-
-    top:0;
-
-    width:22px;
-
-    height:22px;
-
-    border-radius:50%;
-
-    background:#E8F3FF;
-
-    color:var(--primary);
-
-    font-size:13px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    font-weight:700;
-
-}
-
-
-
-/*======================================================
-PREMIUM NUMBER
-======================================================*/
-
-.service-section{
-
-    position:relative;
-
-}
-
-
-
-.service-section::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:80px;
-
-    left:80px;
-
-    font-size:110px;
-
-    font-weight:800;
-
-    color:#F1F5F9;
-
-    z-index:0;
-
-}
-
-
-
-#data-networking::before{
-
-    content:"01";
-
-}
-
-
-
-#structured-cabling::before{
-
-    content:"02";
-
-}
-
-
-
-#wireless::before{
-
-    content:"03";
-
-}
-
-
-
-#fiber-backbone::before{
-
-    content:"04";
-
-}
-
-
-
-#ai-surveillance::before{
-
-    content:"05";
-
-}
-
-
-
-#access-control::before{
-
-    content:"06";
-
-}
-
-
-
-#smart-av::before{
-
-    content:"07";
-
-}
-
-
-
-#fire-alarm::before{
-
-    content:"08";
-
-}
-
-
-
-#public-address::before{
-
-    content:"09";
-
-}
-
-
-
-#talk-back::before{
-
-    content:"10";
-
-}
-
-
-
-.service-section .container{
+.infra-hero .container{
 
     position:relative;
 
@@ -333,273 +21,1109 @@ PREMIUM NUMBER
 
 }
 
+.infra-hero-content{
 
+    max-width:720px;
+}
+.infra-hero-wrapper{
 
-/*======================================================
-BUTTON
-======================================================*/
+    display:grid;
 
-.btn-primary{
+    grid-template-columns:55% 45%;
 
-    padding:14px 34px;
+      gap:60px;
+  align-items:center;
+}
+.infra-overview-header{
 
-    border-radius:50px;
+    max-width:780px;
 
-    font-weight:600;
+    margin:0 auto 70px;
 
-    transition:.35s;
+    text-align:center;
+
+}
+.infra-overview-header h2{
+  font-size: clamp(54px, 5vw, 62px);
+
+    font-weight: 700;
+
+}
+.infra-hero h1{
+  font-size: clamp(90px, 8vw, 100px);
+
+    font-weight:900;
+
+    line-height:1.1;
+
+    color:#fff;
+
+    margin-bottom:28px;
+        text-align:center;
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    animation:heroFadeUp .8s ease forwards;
+
+}
+.infra-hero p{
+
+  font-size: clamp(35px, 8vw, 32px);
+
+    line-height:1.9;
+
+    color:rgba(255,255,255,.85);
+
+    max-width:650px;
+
+opacity:0;
+
+    transform:translateY(50px);
+
+    animation:heroFadeUp .8s ease forwards;
+
+    animation-delay:.2s;
+
+}
+.infra-hero-highlight{
+
+    display:inline-flex;
+    align-items:center;
+
+    margin-top:35px;
+
+    padding-left:18px;
+
+border-left:4px solid #FF9900;
+    font-size:30px;
+    font-weight:500;
+    line-height:1.6;
+
+    color:#fff;
+  opacity:0;
+
+    transform:translateY(40px);
+
+    animation:heroFadeUp .8s ease forwards;
+
+    animation-delay:.4s;
+}
+@keyframes heroFadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
 
 }
 
+.overview-feature-grid{
 
+    display:grid;
 
-.btn-primary:hover{
+    grid-template-columns:repeat(auto-fit,minmax(210px,220px));
 
-    transform:translateY(-3px);
+    justify-content:center;
 
-    box-shadow:
-
-    0 15px 30px rgba(11,94,215,.25);
-
-}
-
-/*======================================================
-Why INFRA
-======================================================*/
-
-.why-elv{
-
-    padding:110px 0;
-
-    background:#F8FAFC;
+    gap:16px;
 
 }
+.overview-feature-card{
 
-.why-elv h2{
-
-    font-size:46px;
-
-    font-weight:700;
-
-    color:#1E293B;
-
-}
-
-
-
-.feature-box{
-
-background: linear-gradient(
-    135deg,
-    #F7F3FF 0%,
-    #C4B5FD 100%
-);
-    padding:40px 30px;
-
-    border-radius:24px;
-
-    transition:.35s;
-
-    height:100%;
-
-    border:1px solid #EEF2F7;
-
-    box-shadow:
-    0 15px 40px rgba(15,23,42,.05);
-
-}
-
-
-
-.feature-box:hover{
-
-    transform:translateY(-10px);
-
-    box-shadow:
-    0 25px 60px rgba(15,23,42,.10);
-
-}
-
-
-
-.feature-box i{
-
-    width:75px;
-
-    height:75px;
-
-    border-radius:50%;
-
-    background:#EAF3FF;
-
-    color:#0B5ED7;
-
+       margin-top:45px;
     display:flex;
+
+    flex-direction:column;
 
     justify-content:center;
 
     align-items:center;
 
+    text-align:center;
+
+    padding:28px 24px;
+
+    aspect-ratio:1/1;
+
+     background:#fff;
+
+    border:1px solid #ececec;
+
+    border-radius:24px;
+
+    transition:.35s;
+
+}
+
+.overview-feature-card i{
+
     font-size:30px;
 
-    margin:auto;
+    color:#FF9900;
 
-    margin-bottom:25px;
-
-}
-
-
-
-.feature-box h5{
-
-    font-size:22px;
-
-    font-weight:700;
-
-    margin-bottom:15px;
-
-    color:#1E293B;
+    margin-bottom:18px;
 
 }
 
-
-
-.feature-box p{
-
-    color:#64748B;
-
-    line-height:1.8;
+.overview-feature-card h4{
 
     margin:0;
 
-}
+    font-size:21px;
 
+    line-height:1.5;
 
+    font-weight:700;
 
-/*======================================================
-CTA
-======================================================*/
-
-.cta-section{
-
-    padding:110px 0;
-
-    background:#FFFFFF;
+    color:#222;
 
 }
 
+.overview-feature-card:hover{
 
+    transform:translateY(-8px);
 
-/*======================================================
-SMOOTH ANIMATION
-======================================================*/
+    border-color:#FF9900;
 
-.service-section img,
+    box-shadow:0 18px 45px rgba(0,0,0,.08);
 
-.feature-box,
+}
+/*==================================================
+            Hero Tablet
+==================================================*/
 
-.btn,
+@media (max-width:991px){
 
-.cta-box{
+.infra-hero{
 
-    transition:all .35s ease;
+    min-height:75vh;
 
 }
 
+.infra-hero h1{
 
-
-/*======================================================
-RESPONSIVE
-======================================================*/
-
-
-
-
-
-@media(max-width:768px){
-
-.solution-title{
-
-    font-size:36px;
+    font-size:48px;
 
 }
 
-.service-section::before{
+.infra-hero p{
 
-    display:none;
-
-}
-
-.why-elv h2{
-
-    font-size:34px;
-
-}
-
-.feature-box{
-
-    margin-bottom:25px;
-
-}
-
-.cta-box h2{
-
-    font-size:28px;
-
-}
-
-.cta-box{
-
-    border-radius:20px;
+    font-size:17px;
 
 }
 
 }
+/*==================================================
+            Hero Mobile
+==================================================*/
 
-.section-intro{
+@media (max-width:767px){
 
-    max-width:900px;
+.infra-hero{
 
-    margin:0 auto 40px;
+    min-height:auto;
 
-    text-align:center;
-
-}
-
-.feature-card{
-
-    background:#fff;
-
-    border-radius:20px;
-
-    padding:30px;
-
-    height:100%;
-
-    border:1px solid #E5E7EB;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.05);
+    padding:150px 0 90px;
 
 }
 
-.feature-card h4{
+.infra-hero h1{
 
-    color:#0B5ED7;
+    font-size:38px;
 
     margin-bottom:20px;
 
 }
 
-.service-banner{
+.infra-hero p{
 
-    margin:45px 0 60px;
+    font-size:16px;
+
+    line-height:1.8;
 
 }
 
-.service-banner img{
+}
+/*==================================================
+            AWS Overview
+==================================================*/
+
+.infra-overview{
+
+    padding:70px 0;
+
+
+}
+
+.infra-overview-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.infra-overview-content p{
+
+    font-size:22px;
+
+    line-height:1.9;
+
+    color:#666;
+
+    margin-bottom:22px;
+
+        line-height: 1.9;
+    font-weight: 600;
+
+}
+
+.infra-overview-image{
+
+    text-align:right;
+
+}
+
+.infra-overview-image img{
 
     width:100%;
 
+    max-width:620px;
+
     border-radius:24px;
+
+    display:block;
+
+    margin-left:auto;
+
+}
+
+@media (max-width:991px){
+
+.infra-overview{
+
+    padding:90px 0;
+
+}
+
+.infra-overview-wrapper{
+
+    grid-template-columns:1fr;
+
+    gap:50px;
+
+}
+
+.infra-overview-content{
+
+    order:2;
+
+}
+
+.infra-overview-image{
+
+    order:1;
+
+    text-align:center;
+
+}
+
+.infra-overview-image img{
+
+    margin:auto;
+
+    max-width:520px;
+
+}
+
+.infra-overview-content h2{
+
+    font-size:38px;
+
+}
+
+}
+
+@media (max-width:767px){
+
+.infra-overview{
+
+    padding:70px 0;
+
+}
+
+.infra-overview-content h2{
+
+    font-size:30px;
+
+}
+
+.infra-overview-content p{
+
+    font-size:16px;
+
+}
+
+.overview-point{
+
+    align-items:flex-start;
+
+}
+
+.overview-point span{
+
+    font-size:15px;
+
+}
+
+}
+
+/*==================================================
+            AWS Services
+==================================================*/
+
+.aws-services{
+
+    padding:120px 0;
+
+    background:linear-gradient(180deg,#FFF9F1 0%,#FFF3E5 100%);
+
+}
+
+.aws-services-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+    margin-top:70px;
+
+}
+
+.aws-service-card{
+
+    position:relative;
+
+    background:#fff;
+
+    padding:40px;
+
+    border-radius:22px;
+
+    border-top:5px solid #FF9900;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+}
+
+.service-number{
+
+    position:absolute;
+
+    top:20px;
+
+    right:30px;
+
+    font-size:70px;
+
+    font-weight:700;
+
+    color:rgba(255,153,0,.08);
+
+    line-height:1;
+
+}
+
+.aws-service-card h3{
+
+    font-size:28px;
+
+    font-weight:650;
+
+    margin-bottom:20px;
+
+    color:#111;
+
+    max-width:75%;
+
+}
+
+.aws-service-card p{
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    color:#666;
+
+}
+
+.aws-service-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 25px 55px rgba(0,0,0,.10);
+
+}
+
+@media(max-width:991px){
+
+.aws-services{
+
+    padding:90px 0;
+
+}
+
+.aws-services-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.aws-service-card h3{
+
+    max-width:100%;
+
+}
+
+}
+
+@media(max-width:767px){
+
+.aws-services{
+
+    padding:70px 0;
+
+}
+
+.aws-service-card{
+
+    padding:30px;
+
+}
+
+.service-number{
+
+    font-size:50px;
+
+}
+
+.aws-service-card h3{
+
+    font-size:22px;
+
+}
+
+.aws-service-card p{
+
+    font-size:16px;
+
+}
+
+}
+
+
+/*=========================================
+        AWS Process Carousel
+=========================================*/
+
+.infra-process{
+
+    padding:120px 0;
+
+    background:#071A2D;
+
+}
+
+
+/* Main Carousel */
+
+.process-carousel{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:30px;
+
+    padding:40px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.06);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+/* Track */
+
+
+/* Slide */
+
+.process-slide{
+
+    display:grid;
+
+    grid-template-columns:45% 55%;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+/* Image */
+
+.process-image{
+
+    background:#fff;
+
+    border-radius:28px;
+
+    padding:18px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+
+}
+
+.process-image img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:18px;
+
+}
+
+/* Content */
+
+.process-content{
+
+    padding-right:20px;
+
+}
+
+.process-count{
+
+    display:inline-block;
+
+    margin-bottom:18px;
+
+    color:#FF9900;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+}
+
+.process-content h3{
+
+    font-size:46px;
+
+    margin-bottom:22px;
+
+    color:#1B2B45;
+
+}
+
+.process-content p{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:#5E6470;
+
+    margin-bottom:35px;
+
+}
+
+/* Bullet List */
+
+.process-list{
+
+    display:grid;
+
+    gap:18px;
+
+}
+
+.process-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    font-size:17px;
+
+    color:#2F3747;
+
+}
+
+.process-item i{
+
+    color:#FF9900;
+
+}
+
+/* Navigation Arrows */
+
+.process-arrow{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:60px;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.12);
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    z-index:20;
+
+}
+
+.process-prev{
+
+    left:-30px;
+
+}
+
+.process-next{
+
+    right:-30px;
+
+}
+
+.process-arrow:hover{
+
+    background:#FF9900;
+
+    color:#fff;
+
+    transform:translateY(-50%) scale(1.08);
+
+}
+
+/* Pagination */
+
+.process-pagination{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:14px;
+
+    margin-top:45px;
+
+}
+
+.process-pagination span{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#CFCFCF;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.process-pagination span.active{
+
+    background:#FF9900;
+
+    transform:scale(1.35);
+
+}
+
+
+
+/*==================================================
+            AWS PROCESS CAROUSEL
+==================================================*/
+
+.infra-process{
+
+    padding:120px 0;
+
+    background:linear-gradient(
+        180deg,
+        #FFF4E8 0%,
+        #F7FAFF 45%,
+        #EDF5FF 100%
+    );
+
+    overflow:hidden;
+
+}
+
+.infra-process-header{
+
+    max-width:760px;
+
+    margin:0 auto 70px;
+
+    text-align:center;
+
+}
+
+.infra-process-header h2{
+
+    margin:18px 0 18px;
+
+}
+
+.infra-process-header p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    color:#000;
+
+    line-height:1.8;
+
+}
+
+
+/*==========================
+        Carousel
+===========================*/
+
+.process-carousel{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:35px;
+
+}
+
+
+/*==========================
+        Window
+===========================*/
+
+.process-window{
+
+    width:100%;
+
+    overflow:hidden;
+
+}
+
+
+/*==========================
+        Track
+===========================*/
+
+.process-track{
+
+    display:flex;
+
+    transition:transform .75s ease;
+
+}
+
+
+/*==========================
+        Slide
+===========================*/
+
+.process-slide{
+
+    min-width:100%;
+
+    display:grid;
+
+    grid-template-columns:46% 54%;
+
+    align-items:center;
+
+    gap:70px;
+
+}
+
+
+/*==========================
+        Image
+===========================*/
+
+.process-image{
+
+    background:#fff;
+
+    border-radius:28px;
+
+    padding:18px;
+
+    box-shadow:
+        0 25px 60px rgba(18,38,63,.08);
+
+}
+
+.process-image img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:18px;
+
+}
+
+
+/*==========================
+        Content
+===========================*/
+
+.process-content{
+
+    padding-right:25px;
+
+}
+
+.process-count{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:#FFF2DF;
+
+    color:#F59E0B;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    margin-bottom:22px;
+
+}
+
+.process-content h3{
+
+    font-size:42px;
+
+    color:#13294B;
+
+    margin-bottom:22px;
+
+}
+
+.process-content p{
+
+    color:#64748B;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+
+}
+
+
+/*==========================
+        Bullet List
+===========================*/
+
+.process-list{
+
+    display:grid;
+
+    gap:18px;
+
+}
+
+.process-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    font-size:17px;
+
+    color:#25364D;
+
+}
+
+.process-item i{
+
+    color:#FF9900;
+
+    font-size:18px;
+
+}
+
+
+/*==========================
+        Arrows
+===========================*/
+
+.process-arrow{
+
+    width:58px;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    color:#1565C0;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.12);
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    flex-shrink:0;
+
+}
+
+.process-arrow:hover{
+
+    background:#FF9900;
+
+    color:#fff;
+
+    transform:translateY(-4px);
+
+}
+
+
+/*==========================
+        Pagination
+===========================*/
+
+.process-pagination{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:14px;
+
+    margin-top:55px;
+
+}
+
+.process-pagination span{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#C8D2DE;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.process-pagination span.active{
+
+    background:#FF9900;
+
+    transform:scale(1.35);
+
+}
+
+
+/*==========================
+        Responsive
+===========================*/
+
+@media(max-width:991px){
+
+.process-slide{
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+}
+
+.process-content{
+
+    padding-right:0;
+
+}
+
+.process-carousel{
+
+    gap:15px;
+
+}
+
+.process-content h3{
+
+    font-size:34px;
+
+}
 
 }

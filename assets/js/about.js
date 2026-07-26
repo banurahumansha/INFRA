@@ -205,27 +205,7 @@ function initApproach(){
     const glow = document.querySelector(".approach-glow");
     const section = document.querySelector(".approach-section");
 
-
-    console.log("=== ABOUT DEBUG ===");
-    console.log("Viewport:", window.innerWidth, window.innerHeight);
-
-
-    if(!section){
-
-        console.log("Approach section not found");
-        return;
-
-    }
-
-
     approachInitialized = true;
-
-
-    console.log(
-        "Section Rect:",
-        section.getBoundingClientRect()
-    );
-
 
     const observer = new IntersectionObserver(
     (entries)=>{
@@ -241,8 +221,6 @@ function initApproach(){
 
         if(entries[0].isIntersecting){
 
-
-            console.log("Animation Triggered");
 
 
             items.forEach((item,index)=>{
@@ -262,7 +240,7 @@ function initApproach(){
                     }
 
 
-                }, index * 1000);
+                }, index * 2000);
 
 
             });

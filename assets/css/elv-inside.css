@@ -1,0 +1,107 @@
+/*==================================================
+                AWS
+==================================================*/
+
+.aws-hero{
+
+        /*background-image: url("../images/hero/aws1.png") ! important;
+background: linear-gradient(180deg, #1565C0 0%, #5C99B5 100%);*/
+
+background: linear-gradient(
+    180deg,
+    #1565C0 0%,
+    #5C99B5 75%,
+    #F6D2A2 100%
+);
+}
+.aws-hero p{
+        color :#fff;
+   backdrop-filter:blur(12px);
+
+}
+
+.aws-hero h1 {
+  color: #000;
+
+  /* THE ELEVATION: Creates a soft white backlight halo */
+  text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8),
+               0px 0px 3px rgba(255, 255, 255, 0.5);
+}
+
+
+
+.aws-right-image{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:center;
+
+}
+
+.aws-right-image img{
+
+    display:block;
+
+    width:100%;
+
+    max-width:550px;
+
+    height:auto;
+
+}
+.aws-overview{
+background: linear-gradient(
+    180deg,
+    #F6D2A2 0%,
+    #FBE5C8 25%,
+    #FFF2DE 60%,
+    #FFF9F2 100%
+);
+
+}
+
+
+.aws-overview-header h2{
+
+    background:linear-gradient(
+        90deg,
+        #1565C0 0%,
+        #42A5F5 45%,
+        #FF9900 100%
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+
+}
+
+.aws-overview-feature-card{
+
+    background:#fff;
+
+    border:1px solid #ececec;
+
+    border-top:4px solid transparent;
+
+    border-radius:16px;
+
+}
+.aws-overview-feature-card.card-1{
+    border-top:4px solid #1565C0;
+}
+
+.aws-overview-feature-card.card-2{
+    border-top:4px solid #FF9900;
+}
+
+.aws-overview-feature-card.card-3{
+    border-top:4px solid #43A047;
+}
+
+.aws-overview-feature-card.card-4{
+    border-top:4px solid #00ACC1;
+}
+
