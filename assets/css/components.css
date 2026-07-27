@@ -367,7 +367,7 @@ background: transparent;
 
         display:grid;
 
-        grid-template-columns:100px 200px 1fr;
+        grid-template-columns:180px 240px 1fr;
 
         gap:15px;
 
@@ -587,27 +587,6 @@ background: transparent;
 
 }
 
-/*==========================
-    MEGA MENU
-===========================*/
-
-.mega-menu{
-
-    width:650px;
-
-    border-radius:20px;
-    min-height:450px;
-
-    border:none;
-
-    box-shadow:0 20px 60px rgba(0,0,0,.12);
-
-    background:#fff;
-
-    padding:10px;
-
-}
-
 
 .cta-box{
 
@@ -788,6 +767,9 @@ background: transparent;
 li.nav-item.dropdown.position-static {
     position: relative !important; /* Forces a local tracking anchor for its child items */
 }
+/*==========================
+    MEGA MENU
+===========================*/
 
 /* 2. Reposition the wide Solutions panel directly under its navbar anchor link */
 li.nav-item.dropdown.position-static .dropdown-menu.mega-menu {
@@ -798,6 +780,6 @@ li.nav-item.dropdown.position-static .dropdown-menu.mega-menu {
     right: auto !important;
 
     /* Optional: Controls total width to ensure layout structural sanity */
-    width: 650px !important;               /* Limits how far right the grid stretches */
+    width: 800px !important;               /* Limits how far right the grid stretches */
     min-height: 0 !important;
 }

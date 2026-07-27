@@ -377,10 +377,11 @@ if(mcloudOverview){
 
 // Cloud -ecosystem
 
-const cloudSection = document.querySelector(".cloud-ecosystem");
+
+const featureGrid = document.querySelector(".cloud-feature-grid");
 
 
-const cloudObserver = new IntersectionObserver(
+const featureObserver = new IntersectionObserver(
 (entries)=>{
 
     entries.forEach(entry=>{
@@ -389,15 +390,10 @@ const cloudObserver = new IntersectionObserver(
         if(entry.isIntersecting){
 
 
-            const featureGrid =
-            entry.target.querySelector(".cloud-feature-grid");
+            entry.target.classList.add("animate");
 
 
-            if(featureGrid){
-
-                featureGrid.classList.add("animate");
-
-            }
+            featureObserver.unobserve(entry.target);
 
 
         }
@@ -407,13 +403,12 @@ const cloudObserver = new IntersectionObserver(
 
 },
 {
-
-    threshold:0.46
+    threshold:0.3
 });
 
 
-if(cloudSection){
+if(featureGrid){
 
-    cloudObserver.observe(cloudSection);
+    featureObserver.observe(featureGrid);
 
 }
