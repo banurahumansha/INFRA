@@ -412,3 +412,52 @@ if(featureGrid){
     featureObserver.observe(featureGrid);
 
 }
+
+
+//  Immigration Framework cards
+const frameworkSection = document.querySelector(".migration-framework");
+
+if(frameworkSection){
+
+    const cards =
+    frameworkSection.querySelectorAll(".framework-card");
+
+    const frameworkObserver = new IntersectionObserver(
+
+        (entries)=>{
+
+            entries.forEach(entry=>{
+
+                if(entry.isIntersecting){
+
+                    /* First Row */
+
+                    cards[0].classList.add("show");
+                    cards[1].classList.add("show");
+
+                    /* Second Row */
+
+                    setTimeout(()=>{
+
+                        cards[2].classList.add("show");
+                        cards[3].classList.add("show");
+
+                    },400);
+
+                    frameworkObserver.unobserve(entry.target);
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold:0.25
+        }
+
+    );
+
+    frameworkObserver.observe(frameworkSection);
+
+}

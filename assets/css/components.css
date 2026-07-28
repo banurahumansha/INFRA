@@ -434,7 +434,7 @@ background: transparent;
     height: 0;
     border-top: 6px solid transparent;
     border-bottom: 6px solid transparent;
-    border-left: 6px solid #FF0000; /* White arrow matches the active text */
+    /*border-left: 6px solid #FF0000;  White arrow matches the active text */
 
     transition: all 0.3s ease;
 }
