@@ -237,4 +237,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+
 });
+
+const infraSection = document.querySelector(".infra-overview");
+
+if (infraSection) {
+
+    const infraObserver = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                infraSection.classList.add("show");
+
+                infraObserver.unobserve(infraSection);
+
+            }
+
+        });
+
+    }, {
+
+        threshold:0.2
+
+    });
+
+    infraObserver.observe(infraSection);
+
+}
