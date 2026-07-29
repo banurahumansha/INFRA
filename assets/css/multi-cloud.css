@@ -5102,3 +5102,7 @@ Security Framework
 
 }
 
+*{
+    animation:none !important;
+    transition:none !important;
+}
