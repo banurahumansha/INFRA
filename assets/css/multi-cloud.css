@@ -9,6 +9,32 @@
     padding:0 40px;
 
 }
+
+/**++++++++++++++++++++ CTA ++++++++++**********/
+
+body.page-multi-cloud{
+
+    --cta-primary:#7c3aed;
+
+    --cta-secondary:#14b8a6;
+
+    --cta-text:#ffffff;
+
+}
+body.page-multi-cloud .cta-box{
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #7c3aed,
+        #14b8a6
+    );
+
+    color:#ffffff;
+
+}
+
 /*==================================================
             Cloud Section Tag
 ==================================================*/
@@ -1032,7 +1058,7 @@ background:
     color:#34445e;
 
     font-weight:600;
-
+    font-size : 18px;
 
     box-shadow:
     0 10px 25px rgba(70,90,150,.08);
@@ -1426,7 +1452,7 @@ background:
 
 .cloud-pillar p{
  margin:10px;
-    font-size:20px;
+    font-size:24px;
 
     line-height:1.6;
 
@@ -4436,8 +4462,7 @@ opacity:0;
 
 .gov-body p{
 
-        color:#475569;
-
+color:#0f172a;
     line-height:1.8;
     font-size:24px;
 
@@ -4462,8 +4487,9 @@ opacity:0;
 
     position:relative;
 
-    color:#475569;
-
+    color:#334155;
+        font-size:20px;
+font-weight: 600px;
 }
 
 .gov-body li::before{

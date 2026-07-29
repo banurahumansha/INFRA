@@ -587,17 +587,21 @@ background: transparent;
 
 }
 
+/** CTA ***/
+
+/** CTA **/
 
 .cta-box{
 
     background:
 
     linear-gradient(
-    135deg,
-    #0B5ED7,
-    #2563EB);
+        135deg,
+        var(--cta-primary),
+        var(--cta-secondary)
+    );
 
-    color:#E6F3FF;
+    color:var(--cta-text);
 
     border-radius:30px;
 
@@ -610,7 +614,6 @@ background: transparent;
     overflow:hidden;
 
 }
-
 
 
 .cta-box::before{

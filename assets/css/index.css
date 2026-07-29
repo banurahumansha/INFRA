@@ -1,6 +1,15 @@
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
+body.page-home{
+
+    --cta-primary:#0B5ED7;
+
+    --cta-secondary:#2563EB;
+
+    --cta-text:#ffffff;
+
+}
     /* Hero Carousel Container */
 
         .hero-slider{
@@ -391,3 +400,4 @@ background:#0056b3;
     }
 
 }
+

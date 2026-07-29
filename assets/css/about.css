@@ -1,8 +1,55 @@
 /*==========================
 ABOUT Heo
 ==========================*/
+body.page-about{
+
+    --cta-primary:#07111f;
+
+    --cta-secondary:#111B2F;
+
+    --cta-text:#ffffff;
+
+}
+body.page-about .global-cta{
+
+    background:
+
+    radial-gradient(
+        circle at 20% 20%,
+        rgba(0,123,255,.18),
+        transparent 35%
+    ),
+
+    radial-gradient(
+        circle at 80% 80%,
+        rgba(0,200,255,.12),
+        transparent 35%
+    ),
+
+    linear-gradient(
+        135deg,
+        #07111f,
+        #09111D,
+        #111B2F
+    );
+
+    padding:100px 0;
+
+}
+.page-about .cta-box::before{
+
+    background:
+    rgba(0,123,255,.18);
+
+}
 
 
+.page-about .cta-box::after{
+
+    background:
+    rgba(0,200,255,.12);
+
+}
 .inner-hero{
 
     position:relative;
