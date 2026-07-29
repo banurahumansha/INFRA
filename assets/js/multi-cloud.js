@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", () => {
+
 const cloudData = {
 
    aws: {
@@ -341,8 +343,7 @@ if(modernization){
 
 // Overview
 
-const mcloudOverview =
-document.querySelector(".mcloud-overview-content");
+const mcloudOverview = document.querySelector(".mcloud-overview-content");
 
 
 const overviewObserver = new IntersectionObserver(
@@ -618,4 +619,5 @@ if(stakeholderSection){
 
     stakeholderObserver.observe(stakeholderSection);
 
+}
 }
