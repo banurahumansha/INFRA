@@ -620,4 +620,4 @@ if(stakeholderSection){
     stakeholderObserver.observe(stakeholderSection);
 
 }
-}
+})
