@@ -461,3 +461,161 @@ if(frameworkSection){
     frameworkObserver.observe(frameworkSection);
 
 }
+
+// Pillars
+
+const govItems = document.querySelectorAll(".gov-item");
+
+govItems.forEach(item=>{
+
+    const header = item.querySelector(".gov-header");
+
+    header.addEventListener("click",()=>{
+
+        govItems.forEach(i=>{
+
+            if(i!==item){
+
+                i.classList.remove("active");
+
+            }
+
+        });
+
+        item.classList.toggle("active");
+
+    });
+
+});
+
+
+// Stakeholder Tabs
+
+const stakeTabs = document.querySelectorAll(".stake-tab");
+const stakePanels = document.querySelectorAll(".stake-panel");
+
+stakeTabs.forEach(tab => {
+
+    tab.addEventListener("click", () => {
+
+        const target = tab.dataset.tab;
+
+        // Remove active class
+        stakeTabs.forEach(t => t.classList.remove("active"));
+        stakePanels.forEach(panel => panel.classList.remove("active"));
+
+        // Activate selected tab
+        tab.classList.add("active");
+
+        // Activate matching panel
+        document.getElementById(target).classList.add("active");
+
+    });
+
+});
+
+
+// finops show
+
+// FinOps Intro
+
+const finopsIntro = document.querySelector(".finops-intro");
+
+if(finopsIntro){
+
+    const finopsObserver = new IntersectionObserver(
+
+        (entries)=>{
+
+            entries.forEach(entry=>{
+
+                if(entry.isIntersecting){
+
+                    finopsIntro.classList.add("show");
+
+                    finopsObserver.unobserve(finopsIntro);
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold:0.25
+        }
+
+    );
+
+    finopsObserver.observe(finopsIntro);
+
+}
+
+// Governance Section
+
+const governanceSection = document.querySelector(".governance-pillars");
+
+if(governanceSection){
+
+    const governanceObserver = new IntersectionObserver(
+
+        (entries)=>{
+
+            entries.forEach(entry=>{
+
+                if(entry.isIntersecting){
+
+                    governanceSection.classList.add("show");
+
+                    governanceObserver.unobserve(governanceSection);
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold:0.2
+        }
+
+    );
+
+    governanceObserver.observe(governanceSection);
+
+}
+
+// Governance Section
+// Stakeholder Section
+
+const stakeholderSection = document.querySelector(".stakeholder-engine");
+
+if(stakeholderSection){
+
+    const stakeholderObserver = new IntersectionObserver(
+
+        (entries)=>{
+
+            entries.forEach(entry=>{
+
+                if(entry.isIntersecting){
+
+                    stakeholderSection.classList.add("show");
+
+                    stakeholderObserver.unobserve(stakeholderSection);
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold:0.3
+        }
+
+    );
+
+    stakeholderObserver.observe(stakeholderSection);
+
+}
