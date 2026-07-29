@@ -1,0 +1,151 @@
+.ms-inner{
+
+    width:100%;
+
+    max-width:1800px;
+
+    margin:0 auto;
+
+    padding:0 40px;
+
+}
+/**++++++++++++++++++++ CTA ++++++++++**********/
+
+body.page-ms{
+
+    --cta-primary:#7c3aed;
+
+    --cta-secondary:#14b8a6;
+
+    --cta-text:#ffffff;
+
+}
+body.page-ms.cta-box{
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #7c3aed,
+        #14b8a6
+    );
+
+    color:#ffffff;
+
+}
+
+/*==================================================
+            Infrastructure Hero
+==================================================*/
+.ms-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 92vh;
+    overflow: hidden;
+     background-image:
+        url("../images/hero/ms.webp");
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+background-position: center 20%;
+
+}
+
+.ms-hero .container{
+   width:min(97%, 1600px);
+
+    max-width:1600px;
+
+    margin:0 auto;
+
+    padding:0;
+    position:relative;
+
+    z-index:2;
+    align-items: center;
+
+}
+.ms-hero-content{
+   width: 100%;
+       text-align: right;
+
+}
+.ms-hero h1 {
+    font-size: clamp(110px, 8vw, 120px);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 28px;
+    text-align: center;
+
+    background: linear-gradient(86.95deg, #FFBA60 27.39%, #FFEC6F 70.68%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    opacity: 0;
+    transform: translateY(50px);
+    animation: heroFadeUp .8s ease forwards;
+}
+.ms-highlight span.accent {
+    color: #FF9900;
+}
+.logo {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    /* 1. Define the gradient flow direction and colors */
+background: linear-gradient(135deg, #00d4ff 0%, #FF9900 100%);
+    /* 2. Clip the background color strictly to the text letters */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* 3. Make the default text color transparent so the gradient shines through */
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+@keyframes heroFadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+.ms-highlight {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 35px;
+    padding: 10px 10px 10px 8px; /* Added right and vertical padding */
+    border-left: 5px solid #FF9900;
+
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #fff;
+ margin-left: 320px;
+    /* Frosted glass/Glossy background properties */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+    /* Animation styling stays the same */
+    opacity: 0;
+    transform: translateY(40px);
+    animation: heroFadeUp .8s ease forwards;
+    animation-delay: .4s;
+
+}

@@ -560,6 +560,9 @@ background: linear-gradient(135deg, #00d4ff 0%, #FF9900 100%);
     display:block;
 
     margin-left:auto;
+    background-size:cover;
+
+    background-position:center;
 
 }
 
@@ -1239,9 +1242,11 @@ infra-overview.section-header p{
 
     height:100%;
 
-    object-fit:contain;
 
     display:block;
+    background-size:cover;
+
+    background-position:center;
 
     transition:transform .8s ease;
     object-position:center 20%;
