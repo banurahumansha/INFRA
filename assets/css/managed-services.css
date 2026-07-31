@@ -941,7 +941,27 @@ color: #c7f36a;
 
 .ms-advantage {
     position: relative;
+
     padding: 110px 0 120px;
+
+    background: url("../images/managed-services/ms-lifecycle.jpg");
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+
+    isolation: isolate;
+}
+
+
+/* Dark overlay */
+.ms-advantage::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(5, 8, 12, 0.72);
+
+    z-index: -1;
 }
 
 
