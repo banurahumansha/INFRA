@@ -19,6 +19,26 @@ body.page-ms{
 
     --cta-text:#ffffff;
 
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(37, 99, 235, .10),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(236, 72, 153, .08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(6, 182, 212, .07),
+            transparent 30%
+        ),
+        #07101f;
+
+    color: #ffffff;
+
 }
 body.page-ms.cta-box{
 
@@ -33,7 +53,27 @@ body.page-ms.cta-box{
     color:#ffffff;
 
 }
+/* =========================================
+   COMMON SECTION REVEAL
+========================================= */
 
+.ms-reveal {
+    opacity: 0;
+    transform: translateY(60px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s cubic-bezier(.22, 1, .36, 1);
+
+}
+
+
+/* Visible state */
+
+.ms-reveal.ms-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 /*==================================================
             Infrastructure Hero
 ==================================================*/
@@ -53,10 +93,9 @@ body.page-ms.cta-box{
 background-position: center 20%;
 
 }
-
 .ms-hero .container{
    width:min(97%, 1600px);
-
+    flex :1;
     max-width:1600px;
 
     margin:0 auto;
@@ -79,7 +118,7 @@ background-position: center 20%;
     line-height: 1.1;
     margin-bottom: 28px;
     text-align: center;
-
+    margin-top :120px;
     background: linear-gradient(86.95deg, #FFBA60 27.39%, #FFEC6F 70.68%);
     -webkit-background-clip: text;
     background-clip: text;
@@ -90,6 +129,56 @@ background-position: center 20%;
     transform: translateY(50px);
     animation: heroFadeUp .8s ease forwards;
 }
+.infra-hero h1{
+  font-size: clamp(95px, 8vw, 100px);
+
+    font-weight:900;
+
+    line-height:1.1;
+
+    color:#fff;
+
+    margin-bottom:28px;
+        text-align:center;
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    animation:heroFadeUp .8s ease forwards;
+
+}
+.ms-hero-tagline {
+    width: 100%;
+    padding-top: 240px;
+    text-align: center;
+}
+.ms-hero-tagline p {
+
+    display: inline-block;
+
+    max-width: 1100px;
+
+    font-size: clamp(24px, 1.7vw, 28px);
+
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    letter-spacing: .5px;
+
+    color: rgba(255,255,255,.9);
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    animation: heroFadeUp .8s ease forwards;
+
+    animation-delay: .4s;
+     margin-left: 520px;
+
+}
 .ms-highlight span.accent {
     color: #FF9900;
 }
@@ -98,15 +187,7 @@ background-position: center 20%;
     padding: 10px 20px;
     border-radius: 8px;
     font-weight: bold;
-    /* 1. Define the gradient flow direction and colors */
-background: linear-gradient(135deg, #00d4ff 0%, #FF9900 100%);
-    /* 2. Clip the background color strictly to the text letters */
-    -webkit-background-clip: text;
-    background-clip: text;
-
-    /* 3. Make the default text color transparent so the gradient shines through */
-    -webkit-text-fill-color: transparent;
-    color: transparent;
+   color: #60a5fa;
 }
 
 @keyframes heroFadeUp{
@@ -133,6 +214,7 @@ background: linear-gradient(135deg, #00d4ff 0%, #FF9900 100%);
     margin-top: 35px;
     padding: 10px 10px 10px 8px; /* Added right and vertical padding */
     border-left: 5px solid #FF9900;
+    width: 900px;              /* change this */
 
     font-size: 38px;
     font-weight: 600;
@@ -147,5 +229,926 @@ background: linear-gradient(135deg, #00d4ff 0%, #FF9900 100%);
     transform: translateY(40px);
     animation: heroFadeUp .8s ease forwards;
     animation-delay: .4s;
+
+}
+/*==================================================
+                Large Tablet
+==================================================*/
+
+@media (max-width:1200px){
+
+    .multi-hero{
+
+        min-height:85vh;
+
+        background-position:center;
+
+    }
+
+    .multi-hero .container{
+
+        width:95%;
+
+    }
+
+    .multi-hero h1{
+
+        font-size:clamp(72px,8vw,90px);
+
+        margin-bottom:20px;
+
+    }
+
+    .multi-hero p{
+
+        font-size:24px;
+
+        line-height:1.7;
+
+        max-width:700px;
+
+        margin-left:auto;
+
+    }
+
+}
+
+
+/*==================================================
+                Tablet
+==================================================*/
+
+@media (max-width:991px){
+
+    .ms-hero{
+
+        min-height:80vh;
+
+        background-position:center;
+
+        padding:120px 0 80px;
+
+    }
+
+    .ms-hero .container{
+
+        width:92%;
+
+    }
+
+    .ms-hero-content{
+
+        text-align:center;
+
+    }
+
+    .ms-hero h1{
+
+        font-size:clamp(54px,9vw,72px);
+
+        line-height:1.15;
+
+        margin-bottom:18px;
+
+    }
+
+    .ms-hero p{
+
+        font-size:20px;
+
+        line-height:1.6;
+
+        max-width:650px;
+
+        margin:0 auto;
+
+    }
+
+}
+
+/* ==================================================
+   MANAGED SERVICES
+   INTRODUCTION
+================================================== */
+
+.ms-intro {
+
+    position: relative;
+
+    padding: 70px 0;
+}
+
+
+/* ------------------------------------------
+   SECTION HEADING
+------------------------------------------ */
+
+.ms-section-heading {
+
+    margin-bottom: 65px;
+
+}
+
+.ms-section-heading h2 {
+
+color: #c7f36a;
+    font-size: clamp(
+        40px,
+        5vw,
+        72px
+    );
+
+    font-weight: 800;
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+    white-space: nowrap;
+
+}
+
+
+/* ------------------------------------------
+   SECTION TAG
+------------------------------------------ */
+.ms-section-tag {
+
+    display: inline-block;
+
+    font-size: clamp(40px, 3vw, 45px);
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    background: linear-gradient(
+        90deg,
+        #FF4FA3 0%,
+        #5B7CFF 50%,
+        #FFEC6F 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+
+
+/* ------------------------------------------
+   MAIN GRID
+------------------------------------------ */
+
+.ms-intro-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.05fr)
+        minmax(0, .95fr);
+
+    gap: 35px;
+
+    align-items: stretch;
+
+}
+
+
+/* ------------------------------------------
+   IMAGE
+------------------------------------------ */
+
+.ms-intro-image {
+
+    position: relative;
+
+    min-height: 620px;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background: #0b1124;
+
+    border: 1px solid
+        rgba(
+            255,
+            255,
+            255,
+            .08
+        );
+
+    box-shadow:
+        0 30px 70px
+        rgba(
+            0,
+            0,
+            0,
+            .35
+        );
+
+}
+
+
+.ms-intro-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform .8s ease;
+
+}
+
+
+.ms-intro-image:hover img {
+
+    transform: scale(1.04);
+
+}
+
+.ms-image-label {
+
+    position: absolute;
+
+    left: 28px;
+
+    bottom: 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+}
+
+
+.ms-image-label span {
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #22d3ee;
+
+    box-shadow:
+        0 0 15px
+        rgba(
+            34,
+            211,
+            238,
+            .9
+        );
+
+}
+
+/********
+*animation intro ***********/
+
+/* =========================================
+   Managed Services Intro Animation
+========================================= */
+
+.ms-intro-image,
+.ms-intro-content {
+    opacity: 0;
+    transition:
+        opacity 0.9s ease,
+        transform 1s cubic-bezier(.22, 1, .36, 1);
+}
+/* Content enters from RIGHT */
+.ms-intro-content {
+    transform: translateX(100px);
+}
+
+/* Image enters from LEFT */
+.ms-intro-image {
+    transform: translateX(-100px);
+}
+/* Activated state */
+.ms-intro-image.ms-show,
+.ms-intro-content.ms-show {
+    opacity: 1;
+    transform: translateX(0);
+}
+/* ------------------------------------------
+   CONTENT CARD
+------------------------------------------ */
+
+.ms-intro-card {
+
+    position: relative;
+
+    padding: 58px 52px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(
+                15,
+                23,
+                42,
+                .98
+            ),
+            rgba(
+                10,
+                18,
+                38,
+                .96
+            )
+        );
+
+    border: 1px solid
+        rgba(
+            96,
+            165,
+            250,
+            .16
+        );
+
+    box-shadow:
+        0 30px 70px
+        rgba(
+            0,
+            0,
+            0,
+            .30
+        );
+
+}
+
+/* ------------------------------------------
+   CARD HEADING
+------------------------------------------ */
+
+.ms-intro-content h3 {
+
+    position: relative;
+
+    margin-bottom: 28px;
+
+    color: #ffffff;
+
+    font-size: clamp(
+        30px,
+        3vw,
+        46px
+    );
+
+    font-weight: 800;
+
+    line-height: 1.08;
+
+    letter-spacing: -1px;
+
+}
+
+
+/* ------------------------------------------
+   TEXT
+------------------------------------------ */
+
+.ms-intro-content p {
+
+    position: relative;
+
+    margin-bottom: 18px;
+
+    color: #aab5c8;
+
+    font-size: 23px;
+
+    line-height: 1.8;
+
+}
+
+
+/* ------------------------------------------
+   MINI FEATURES
+------------------------------------------ */
+
+.ms-intro-features {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-top: 28px;
+
+}
+
+
+/* ------------------------------------------
+   TABLET
+------------------------------------------ */
+
+@media (max-width: 991px) {
+
+    .ms-intro {
+
+        padding: 100px 0;
+
+    }
+
+    .ms-intro-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .ms-intro-image {
+
+        min-height: 480px;
+
+    }
+
+    .ms-intro-card {
+
+        padding: 45px 38px;
+
+    }
+
+}
+
+
+/* ------------------------------------------
+   MOBILE
+------------------------------------------ */
+
+@media (max-width: 600px) {
+
+    .ms-intro {
+
+        padding: 75px 0;
+
+    }
+
+    .ms-section-tag {
+
+        padding:
+            13px
+            30px
+            13px
+            25px;
+
+        font-size: 12px;
+
+        letter-spacing: 2.5px;
+
+    }
+
+    .ms-section-heading {
+
+        margin-bottom: 45px;
+
+    }
+
+    .ms-section-heading h2 {
+
+        margin-top: 22px;
+
+        font-size: 39px;
+
+        letter-spacing: -1px;
+
+    }
+
+    .ms-intro-image {
+
+        min-height: 360px;
+
+        border-radius: 18px;
+
+    }
+
+    .ms-intro-card {
+
+        padding: 35px 25px;
+
+        border-radius: 18px;
+
+    }
+
+    .ms-intro-card h3 {
+
+        font-size: 31px;
+
+    }
+
+    .ms-intro-card p {
+
+        font-size: 15px;
+
+        line-height: 1.7;
+
+    }
+
+    .ms-intro-features {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+/* =========================================
+   iNAS NEXT-GEN MANAGEMENT ADVANTAGE
+========================================= */
+
+.ms-advantage {
+    position: relative;
+    padding: 110px 0 120px;
+}
+
+
+/* -----------------------------------------
+   SECTION HEADING
+----------------------------------------- */
+
+.ms-advantage-heading {
+    margin-bottom: 60px;
+}
+
+.ms-advantage-heading h2 {
+    margin: 0;
+}
+
+.ms-advantage-heading h2 span {
+    color: #c7f36a;
+}
+
+
+/* -----------------------------------------
+   CARD GRID
+----------------------------------------- */
+
+.ms-advantage-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 24px;
+
+}
+
+
+/* -----------------------------------------
+   CARD
+----------------------------------------- */
+
+.ms-advantage-card {
+
+    position: relative;
+
+    min-height: 120px;
+
+    padding: 28px 36px 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    border: 1px solid
+        rgba(199, 243, 106, 0.65);
+
+    border-radius: 24px;
+
+    color: #d9dee7;
+
+    overflow: hidden;
+
+    transition:
+        background 0.45s ease,
+        border-color 0.45s ease,
+        transform 0.45s ease,
+        box-shadow 0.45s ease,
+        color 0.45s ease;
+
+}
+
+
+/* subtle glow */
+
+.ms-advantage-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    top: -90px;
+    right: -70px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(199, 243, 106, 0.10),
+            transparent 70%
+        );
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease;
+
+}
+
+
+/* -----------------------------------------
+   HEADING
+----------------------------------------- */
+
+.ms-advantage-card h3 {
+
+    position: relative;
+
+    margin: 0 0 22px;
+
+    max-width: 520px;
+
+    color: #ffffff;
+
+    font-size: clamp(
+        25px,
+        2.2vw,
+        34px
+    );
+
+    font-weight: 700;
+
+    line-height: 1.12;
+
+    letter-spacing: -0.8px;
+
+    transition:
+        color 0.45s ease;
+
+}
+
+
+/* -----------------------------------------
+   DESCRIPTION
+----------------------------------------- */
+
+.ms-advantage-card p {
+
+    position: relative;
+
+    max-width: 540px;
+
+    margin: 0;
+
+    color: #aab3c3;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    transition:
+        color 0.45s ease;
+
+}
+
+
+/* -----------------------------------------
+   BOTTOM LINE
+----------------------------------------- */
+
+.ms-card-line {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 30px;
+
+}
+
+
+.ms-card-line span {
+
+    width: 55px;
+    height: 1px;
+
+    background:
+        #c7f36a;
+
+    transition:
+        width 0.45s ease,
+        background 0.45s ease;
+
+}
+
+
+.ms-card-line i {
+
+    color: #c7f36a;
+
+    font-size: 14px;
+
+    transition:
+        color 0.45s ease,
+        transform 0.45s ease;
+
+}
+
+
+/* -----------------------------------------
+   HOVER
+----------------------------------------- */
+
+.ms-advantage-card:hover {
+
+    background: #ffffff;
+
+    border-color: #2563eb;
+
+    color: #172033;
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 24px 55px
+        rgba(0, 0, 0, 0.28);
+
+}
+
+
+.ms-advantage-card:hover::before {
+
+    opacity: 0;
+
+    transform: scale(1.3);
+
+}
+
+
+.ms-advantage-card:hover h3 {
+
+    color: #2563eb;
+
+}
+
+
+.ms-advantage-card:hover p {
+
+    color: #263246;
+
+}
+
+
+.ms-advantage-card:hover .ms-card-line span {
+
+    width: 90px;
+
+    background: #2563eb;
+
+}
+
+
+.ms-advantage-card:hover .ms-card-line i {
+
+    color: #2563eb;
+
+    transform: translateX(5px);
+
+}
+
+
+/* -----------------------------------------
+   FIFTH CARD
+----------------------------------------- */
+
+.ms-advantage-card-wide {
+
+    grid-column: 1 / -1;
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+    .ms-advantage {
+
+        padding: 90px 0 100px;
+
+    }
+
+    .ms-advantage-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .ms-advantage-card-wide {
+
+        grid-column: auto;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .ms-advantage {
+
+        padding: 70px 0 80px;
+
+    }
+
+    .ms-advantage-heading {
+
+        margin-bottom: 40px;
+
+    }
+
+    .ms-advantage-grid {
+
+        gap: 18px;
+
+    }
+
+    .ms-advantage-card {
+
+        min-height: 270px;
+
+        padding: 30px 26px 26px;
+
+        border-radius: 20px;
+
+    }
+
+    .ms-advantage-card h3 {
+
+        font-size: 25px;
+
+    }
+
+    .ms-advantage-card p {
+
+        font-size: 15px;
+
+        line-height: 1.65;
+
+    }
 
 }

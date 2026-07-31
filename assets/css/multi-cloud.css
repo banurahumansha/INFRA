@@ -2,13 +2,12 @@
 
     width:100%;
 
-    max-width:1800px;
-
     margin:0 auto;
 
     padding:0 40px;
 
 }
+
 
 /**++++++++++++++++++++ CTA ++++++++++**********/
 
@@ -440,10 +439,12 @@ font-size: clamp(20px, 2.5vw, 32px);
     overflow:hidden;
 
     padding:10px 0;
+   /*background-color: #6d96dc !important; */
 
-
+    background-color: #5c6bc0 !important; /* Soft Indigo */
+   /* background-color: #004246 !important; */
 }
-.mcloud-overview{
+/*.mcloud-overview{
 
     background:
 
@@ -480,7 +481,7 @@ font-size: clamp(20px, 2.5vw, 32px);
         #6cdfae 100%
     );
 
-}
+}*/
 
 .mcloud-overview.container{
 
@@ -493,58 +494,45 @@ font-size: clamp(20px, 2.5vw, 32px);
     padding:0;
 
 }
-.mcloud-overview-wrapper{
-
-    position:relative;
-
-    z-index:2;
-
-    display:grid;
-
-    grid-template-columns:53% 47%;
-
-    gap:20px;
-
-    align-items:center;
-
+/* Container box framing the video asset */
+.mcloud-overview-image {
+    width: 100%;
+    display: block;
+}
+..mcloud-overview-image video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0;
+}
+.ms-overview-text {
+    width: 100%;
+    max-width: none;
+    margin-top: 40px;
 }
 
-.mcloud-overview-image{
+@media (max-width: 767px) {
+    .mcloud-overview-image {
+        max-width: 100%; /* Allows container to span fully across mobile screens */
+        padding: 6px; /* Shrinks the inner box padding to save precious screen space */
+        margin: 15px 0; /* Brings down the outer vertical margin for tighter spacing */
+        border-radius: 8px; /* Slightly sharper corner radius looks better on smaller screens */
+    }
 
-    position:relative;
-
-    width:100%;
-        height:700px;
-
-
+    .mcloud-overview-image video {
+        border-radius: 4px; /* Matches the tighter container corners */
+    }
 }
 
-.mcloud-overview-image img{
-
- width:100%;
-
-    height:100%;
-
-    display:block;
-
-    border-radius:28px;
-
-    box-shadow:
-        0 35px 80px rgba(0,0,0,.40);
-
-    border:1px solid rgba(255,255,255,.08);
-
-    transition:.5s;
-      object-fit:cover;
-
+/* =========================================================
+   💻 DESKTOP ONLY RESTRICTIONS (Screens 768px wide and above)
+   ========================================================= */
+@media (min-width: 768px) {
+    .mcloud-overview-image {
+        max-width: 800px; /* Prevents the video from becoming monstrously huge on large monitors */
+        padding: 12px;
+    }
 }
-
-.mcloud-overview-image:hover img{
-
-    transform:scale(1.03);
-
-}
-
 /****** header *******/
 
 .multi-cloud-header p{
@@ -567,22 +555,15 @@ font-size: clamp(20px, 2.5vw, 32px);
     line-height:1.2;
 
     margin:20px 0 30px;
+    border-radius: 6px; /* Smooths the sharp corners */
+    padding: 10px 16px; /* Adds space so the text doesn't hit the border */
+    color: #ffffff !important; /* Center of the text is pure white */
+    -webkit-text-stroke: 1.5px #0f52ba !important; /* Crisp 1px sapphire border around the text */
+    font-size: 2.5rem;
+    font-weight: 800; /* Bold fonts look best with text stroke */
 
 }
-.multi-cloud-header h2{
 
-    background:linear-gradient(
-        180deg,
-        #08162d 0%,
-        #243f7c 55%,
-        #4b3ea8 100%
-    );
-
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    background-clip:text;
-
-}
 .multi-cloud-header{
 
     padding:30px;
@@ -641,32 +622,27 @@ font-size: clamp(20px, 2.5vw, 32px);
 
 }
 
-.highlight-item{
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px;
+    border-radius: 16px;
+    transition: .35s;
+ border: 2px solid rgba(255, 183, 77, 0.3) !important;
+}
 
-    display:flex;
-
-    align-items:center;
-
-    gap:15px;
-
-    padding:18px;
-
-    border-radius:16px;
-
-    background:rgba(255,255,255,.04);
-
-    border:1px solid rgba(255,255,255,.06);
-
-    transition:.35s;
-
+.highlight-item:hover {
+    border-color: rgba(255, 183, 77, 0.8) !important; /* Border sharpens beautifully */
+    background-color: rgba(255, 183, 77, 0.06) !important; /* Injects a microscopic warm orange tint */
+    transform: translateY(-2px); /* Gives a premium layout lift */
 }
 
 .highlight-item i{
 
-    color:#39c270;
 
     font-size:28px;
-
+color:#0a192f ;
 }
 
 .highlight-item span{
@@ -702,10 +678,13 @@ font-size: clamp(20px, 2.5vw, 32px);
     position:relative;
 
     overflow:hidden;
+       /* background-color: #004246 !important; green */
+
+   background-color: #6d96dc !important;
 
 }
 
-.cloud-ecosystem {
+./*cloud-ecosystem {
 background:
 
     radial-gradient(circle at 15% 20%,
@@ -729,7 +708,7 @@ background:
         #3fbf8b 100%
     );
 
-}
+} */
 
 
 
@@ -1203,45 +1182,7 @@ background:
 .cloud-strategy{
 
     padding:70px 0;
-
-}
-.cloud-strategy{
-
-    background:
-
-    /* Purple glow */
-    radial-gradient(
-        circle at 85% 15%,
-        rgba(175,140,255,.45),
-        transparent 42%
-    ),
-
-
-    /* Blue transition */
-    radial-gradient(
-        circle at 50% 25%,
-        rgba(110,140,255,.38),
-        transparent 45%
-    ),
-
-
-    /* Green bottom glow */
-    radial-gradient(
-        circle at 20% 90%,
-        rgba(70,245,175,.40),
-        transparent 45%
-    ),
-
-
-
-    linear-gradient(
-        135deg,
-        #dfe6ff 0%,
-        #c5ccff 25%,
-        #b1a5ff 50%,
-        #9285f2 72%,
-        #69d99d 100%
-    );
+   background-color: #6d96dc !important;
 
 }
 
@@ -1379,10 +1320,8 @@ background:
 
     border-radius:50%;
 
-    background:
 
-    rgba(79,214,255,.25);
-
+background: rgba(255, 193, 7, 0.45);
     animation:pulseDot 2s infinite;
 
 }
@@ -1443,9 +1382,9 @@ background:
 
 .cloud-pillar h4{
 
-    font-size:20px;
+    font-size:25px;
 
-    color:#101828;
+    color:#1b4d3e ;
 
     margin-bottom:10px;
 
@@ -1454,11 +1393,11 @@ background:
 
 .cloud-pillar p{
  margin:10px;
-    font-size:24px;
+    font-size:20px;
 
     line-height:1.6;
 
-    color:#667085;
+    color:#faf6ee  ;
     font-weight:500;
 
 }
@@ -2369,22 +2308,13 @@ MOBILE
 
     .mcloud-overview-image{
 
-        width:75%;
+        width:100%;
 
         margin:auto;
         height:auto;
 
     }
 
-    .mcloud-overview-image img{
-
-        width:100%;
-
-        height:auto;
-
-        display:block;
-
-    }
 
     .mcloud-overview-content{
 
