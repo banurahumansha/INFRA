@@ -10,14 +10,11 @@
 
 }
 /**++++++++++++++++++++ CTA ++++++++++**********/
+body.page-ms {
 
-body.page-ms{
-
-    --cta-primary:#7c3aed;
-
-    --cta-secondary:#14b8a6;
-
-    --cta-text:#ffffff;
+    --cta-primary: #111827;
+    --cta-secondary: #0f2f3a;
+    --cta-text: #ffffff;
 
     background:
         radial-gradient(
@@ -38,7 +35,6 @@ body.page-ms{
         #07101f;
 
     color: #ffffff;
-
 }
 body.page-ms.cta-box{
 
@@ -74,8 +70,9 @@ body.page-ms.cta-box{
     opacity: 1;
     transform: translateY(0);
 }
+
 /*==================================================
-            Infrastructure Hero
+            MS Hero
 ==================================================*/
 .ms-hero {  
     position: relative;
@@ -1105,7 +1102,7 @@ color: #c7f36a;
 }
 
 .ms-advantage.visible .ms-advantage-card:nth-child(5) {
-    transition-delay: 1.9s;
+    transition-delay: 1.8s;
 }
 /* -----------------------------------------
    HEADING
