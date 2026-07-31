@@ -21,7 +21,7 @@
 .common-carousel-container {
     width: 100%;
     max-width: none;
-    margin: 0 auto;
+    margin: 0 ;
 }
 
 
@@ -34,34 +34,22 @@
     max-width: 900px;
 
     margin: 0 auto 40px;
-
+    padding: 0;
     text-align: center;
 }
 
-.common-carousel-tag {
-    display: inline-block;
 
-    margin-bottom: 12px;
-
-    font-size: 13px;
-    font-weight: 600;
-
-    letter-spacing: 2px;
-    text-transform: uppercase;
-
-    color: rgba(255, 255, 255, 0.6);
-}
 
 .common-carousel-header h2 {
     margin: 0 0 16px;
 
-    font-size: clamp(32px, 3vw, 46px);
+    font-size: clamp(26px, 3vw, 30px);
 
     font-weight: 600;
 
     line-height: 1.15;
 
-    color: #ffffff;
+    color: #3a41c7;
 }
 
 .common-carousel-header p {
@@ -69,7 +57,7 @@
 
     margin: 0 auto;
 
-    font-size: 16px;
+    font-size: 20px;
 
     line-height: 1.7;
 
@@ -262,7 +250,7 @@
     margin: 0 0 18px;
 
     font-size: clamp(
-        32px,
+        38px,
         3vw,
         48px
     );
@@ -271,7 +259,7 @@
 
     line-height: 1.1;
 
-    color: #ffffff;
+    color: #3c1a9a;
 }
 
 
@@ -282,11 +270,11 @@
 
     margin: 0 0 35px;
 
-    font-size: 16px;
+    font-size: 23px;
 
     line-height: 1.7;
 
-    color: rgba(255, 255, 255, 0.65);
+    color: #ffffff;
 }
 
 
@@ -342,9 +330,9 @@
             0.10
         );
 
-    color: #ffffff;
+    color: #1619ca;
 
-    font-size: 16px;
+    font-size: 22px;
 
     transition:
         transform 0.35s ease,
@@ -366,7 +354,7 @@
 .common-carousel-feature h4 {
     margin: 2px 0 6px;
 
-    font-size: 16px;
+    font-size: 22px;
 
     font-weight: 600;
 
@@ -379,7 +367,7 @@
 .common-carousel-feature p {
     margin: 0;
 
-    font-size: 13px;
+    font-size: 19px;
 
     line-height: 1.6;
 
@@ -661,7 +649,7 @@
 
     .common-carousel-description {
 
-        font-size: 15px;
+        font-size: 2px;
     }
 
 }

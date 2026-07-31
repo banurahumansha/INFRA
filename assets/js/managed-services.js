@@ -64,5 +64,33 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     introObserver.observe(introImage);
+// card reaveal 
+
+    const advantageSection =
+        document.querySelector(".ms-advantage");
+
+    if (!advantageSection) return;
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    advantageSection.classList.add("visible");
+
+                    observer.unobserve(advantageSection);
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.15
+        }
+    );
+
+    observer.observe(advantageSection);
 
 });
