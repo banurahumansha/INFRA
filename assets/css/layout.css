@@ -626,6 +626,7 @@ section:nth-child(even).partners{
     flex-shrink:0;
 
     padding:10px 20px;
+    overflow: hidden;
 
 }
 .partner img{

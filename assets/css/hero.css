@@ -1137,3 +1137,14 @@ text-align:center;
 }
 
 }
+
+.footer-contact li{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+}
+
+.footer-contact li span{
+    max-width:220px;
+    overflow-wrap:break-word;
+}
