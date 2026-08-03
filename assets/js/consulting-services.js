@@ -22,32 +22,19 @@ console.log("CS JS LOADED");
     });
     // For mobile
 
+if (window.innerWidth > 768) {
+
     document.querySelectorAll(".mobile-title").forEach(title => {
 
-    title.addEventListener("click", function(){
+        title.addEventListener("click", function () {
 
-        console.log("CLICKED");
+            const card = this.closest(".mobile-card");
 
-        const card = this.closest(".mobile-card");
+            card.classList.toggle("active");
 
-        console.log("CARD FOUND:", card);
-
-        card.classList.add("active");
-
-        console.log("CLASS:", card.className);
+        });
 
     });
 
-});
-document.querySelectorAll(".mobile-title").forEach(btn => {
-
-    btn.addEventListener("click", function(){
-
-        console.log("MOBILE BUTTON CLICKED");
-
-        this.parentElement.classList.toggle("active");
-
-    });
-
-});
+}
 });

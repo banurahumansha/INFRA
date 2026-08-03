@@ -534,7 +534,135 @@ background-position: center 20%;
     color:#c7d2e4;
 
 }
+/* ===============================
+   TABLET
+================================= */
+/* ===============================
+   TABLET
+================================= */
 
+@media (max-width: 991px) {
+
+    .cs-section-header h2 {
+
+        font-size: 2.5rem;
+
+        line-height: 1.2;
+
+        margin-bottom: 20px;
+    }
+
+}
+
+
+/* ===============================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+    .cs-section-header h2 {
+
+        font-size: 2rem;
+
+        line-height: 1.25;
+
+        margin-bottom: 18px;
+
+        text-align: center;
+    }
+
+}
+
+
+/* ===============================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 480px) {
+
+    .cs-section-header h2 {
+
+        font-size: 1.7rem;
+
+        line-height: 1.3;
+
+        margin-bottom: 16px;
+    }
+
+}
+@media (max-width: 991px) {
+
+    .cs-section-tag {
+
+        padding: 8px 16px;
+
+        margin-bottom: 20px;
+
+        gap: 8px;
+
+        font-size: 24px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .cs-section-tag::before {
+
+        font-size: 9px;
+
+    }
+
+}
+
+
+/* ===============================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+    .cs-section-tag {
+
+        padding: 8px 14px;
+
+        margin-bottom: 18px;
+
+        gap: 8px;
+
+        font-size: 18px;
+
+        letter-spacing: 1px;
+
+        text-align: center;
+
+        white-space: normal;
+    }
+
+    .cs-section-tag::before {
+
+        font-size: 8px;
+
+    }
+
+}
+
+
+/* ===============================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 480px) {
+
+    .cs-section-tag {
+
+        font-size: 16px;
+
+        padding: 7px 12px;
+
+        letter-spacing: .8px;
+    }
+
+}
 /*=========================================
   INTRODUCTION
 =========================================*/
