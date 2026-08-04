@@ -931,11 +931,14 @@ Security Philosophy
 }
 
 .common-carousel-slide:nth-child(3) .common-carousel-image img{
-    object-position: 20% center;
+          object-fit: cover;
+  object-position:  93% 26%;
+
 }
 
 .common-carousel-slide:nth-child(4) .common-carousel-image img{
   object-position:  40% 26%;
+
 }
 .common-carousel-image::after{
 
