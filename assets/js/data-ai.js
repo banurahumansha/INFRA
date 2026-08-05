@@ -1,36 +1,27 @@
-/*=========================================
-    DATA & AI SOLUTION MATRIX
-=========================================*/
-
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
     const tabs = document.querySelectorAll(".sm-tab");
     const panels = document.querySelectorAll(".sm-panel");
 
     tabs.forEach(tab => {
 
-        tab.addEventListener("click", () => {
+        tab.addEventListener("click", function () {
 
-            const target = tab.dataset.target;
+            const target = this.getAttribute("data-target");
 
-            /* Remove Active */
+            // Remove active classes
+            tabs.forEach(t => t.classList.remove("active"));
+            panels.forEach(p => p.classList.remove("active"));
 
-            tabs.forEach(item =>
-                item.classList.remove("active")
-            );
+            // Activate selected tab
+            this.classList.add("active");
 
-            panels.forEach(panel => {
-                panel.classList.remove("active");
-            });
+            // Activate corresponding panel
+            const activePanel = document.getElementById(target);
 
-            /* Activate Selected */
-
-            tab.classList.add("active");
-
-            const activePanel =
-                document.getElementById(target);
-
-            activePanel.classList.add("active");
+            if (activePanel) {
+                activePanel.classList.add("active");
+            }
 
         });
 

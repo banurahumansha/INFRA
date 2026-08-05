@@ -648,7 +648,12 @@ margin-left: 20px;
     left:-200px;
 
 }
+.solution-matrix::before,
+.solution-matrix::after{
 
+    pointer-events:none;
+
+}
 
 
 /*======================================
@@ -719,7 +724,7 @@ LEFT
     gap:22px;
 
     position:sticky;
-    top:120px;
+    top:70px;
 
 }
 
@@ -751,7 +756,7 @@ TAB
     border:1px solid rgba(255,255,255,.08);
 
     overflow:hidden;
-
+      z-index:2;
 }
 
 .sm-tab::before{
@@ -1256,6 +1261,7 @@ TABLET
     position:relative;
 
     top:0;
+    z-index:5;
 
 }
 
@@ -1544,7 +1550,7 @@ IMAGE
 
     position:sticky;
     top:120px;
-
+    margin-bottom: 20px;
 }
 
 .ef-image img{
@@ -2044,3 +2050,4 @@ SMALL MOBILE
     }
 
 }
+
