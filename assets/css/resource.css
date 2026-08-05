@@ -1,12 +1,11 @@
 .rs-inner{
 
-    width:100%;
-
-    max-width:1800px;
+     width:100%;
 
     margin:0 auto;
 
     padding:0 40px;
+
 
 }
 .rs-hero .container{
@@ -31,29 +30,27 @@ body.page-rs{
     --cta-text:#ffffff;
 
   }
-
-  body.page-rs{
+body.page-rs{
 
     background:
-        radial-gradient(circle at 10% 15%, rgba(139,92,246,.18), transparent 35%),
-        radial-gradient(circle at 90% 20%, rgba(109,40,217,.16), transparent 35%),
-        radial-gradient(circle at 50% 100%, rgba(76,29,149,.18), transparent 45%),
+        radial-gradient(circle at 75% 35%, rgba(14, 116, 144, 0.15), transparent 45%),
+        radial-gradient(circle at 25% 65%, rgba(30, 58, 138, 0.2), transparent 50%),
         linear-gradient(
             180deg,
-            #120A26 0%,
-            #1A1038 45%,
-            #140B2D 100%
+            #07111E 0%,
+            #0D203D 45%,
+            #040914 100%
         );
 
-    color:#fff;
-
+    color: #fff;
 }
+
 body.page-rs .cta-box{
 
     background:linear-gradient(
         135deg,
-        #312E81,
-        #6D28D9
+        #102A43,
+        #1F3A60
     );
 
     color:#fff;
@@ -70,7 +67,7 @@ body.page-rs .cta-box{
     min-height: 92vh;
     overflow: hidden;
      background-image:
-        url("../images/resource/home.webp");
+        url("../images/resource/card-baground1.jpg");
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
@@ -91,7 +88,7 @@ body.page-rs .cta-box{
 
 }
 .rs-hero-content{
-   width: 100%;
+   width: 400px;
        text-align: center;
 }
 .rs-introduction{
@@ -105,10 +102,12 @@ body.page-rs .cta-box{
     text-align: left;
     margin-top :120px;
     color: transparent;
-margin-left: 40px;
-    opacity: 0;
+    margin-left: 40px;
+        opacity: 0;
     transform: translateY(50px);
     animation: heroFadeUp .8s ease forwards;
+        max-width: 900px;   /* Adjust as needed */
+
 }
 .rs-hero h1{
 

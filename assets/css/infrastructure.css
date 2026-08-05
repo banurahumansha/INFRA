@@ -2,15 +2,14 @@
             Infrastructure Hero
 ==================================================*/
 
-.container{
+.infra-inner{
 
-    width:min(97%, 1600px);
-
-    max-width:1600px;
+    
+    width:100%;
 
     margin:0 auto;
 
-    padding:0;
+    padding:0 40px;
 
 }
 .infra-hero {
