@@ -140,51 +140,63 @@ function loadContent(key, card){
             ${item.capabilities.map(x => `<li>${x}</li>`).join("")}
         </ul>
     `;
-
+    
     if(window.innerWidth <= 768){
 
-        document.querySelectorAll(".mobile-details").forEach(box=>{
-            box.innerHTML="";
-        });
+    card.querySelector(".mobile-details").innerHTML = html;
 
-        card.querySelector(".mobile-details").innerHTML = html;
+}else{
 
-    }else{
+    details.innerHTML = html;
 
-        details.innerHTML = html;
-
-    }
-
+}
 }
 
 // -------------------------
 // Default content
 // -------------------------
 
-let activeKey = null;
+let activeKey = "infrastructure";
 
-loadContent("infrastructure");
-activeKey = "infrastructure";
 cards[0].classList.add("active");
-loadContent("infrastructure", cards[0]);
+
+if (window.innerWidth > 768) {
+
+    loadContent("infrastructure", cards[0]);
+
+} else {
+
+    cards.forEach(card => {
+
+        loadContent(card.dataset.target, card);
+
+    });
+
+}
+
+
 // -------------------------
 // Click Events
 // -------------------------
-
 cards.forEach(card => {
 
+    const key = card.dataset.target;
+
+   
+    // Desktop click
     card.addEventListener("click", () => {
 
-        const key = card.dataset.target;
+        if(window.innerWidth <= 768) return;
 
-        if (key === activeKey) return;
 
         activeKey = key;
 
         cards.forEach(c => c.classList.remove("active"));
+
         card.classList.add("active");
 
         loadContent(key, card);
+
     });
 
 });
@@ -210,13 +222,6 @@ function initApproach(){
     const observer = new IntersectionObserver(
     (entries)=>{
 
-
-        console.log("Observer Fired");
-
-        console.log(
-            "isIntersecting:",
-            entries[0].isIntersecting
-        );
 
 
         if(entries[0].isIntersecting){
