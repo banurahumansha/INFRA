@@ -1424,6 +1424,16 @@ background: rgba(255, 193, 7, 0.45);
     padding:70px 0;
 }
 
+
+.modernization-content{
+
+    margin-top:70px;
+
+    display:flex;
+
+
+}
+
 .modernization-card{
 
     position:relative;
@@ -1443,6 +1453,7 @@ background: rgba(255, 193, 7, 0.45);
     backdrop-filter:blur(12px);
 
     z-index:1;
+    margin:80px auto;
 
 }
 
@@ -1569,36 +1580,7 @@ background: rgba(255, 193, 7, 0.45);
 
     padding:70px 0;
 
-    background:#f8fbff;
-
-}
-.migration-framework{
-
-    padding:70px 0;
-
-    background:
-
-    radial-gradient(
-        circle at 20% 90%,
-        rgba(70,245,175,.25),
-        transparent 35%
-    ),
-
-    radial-gradient(
-        circle at 85% 20%,
-        rgba(126,140,255,.25),
-        transparent 40%
-    ),
-
-    linear-gradient(
-        180deg,
-        #d8f4e6 0%,
-        #e6f0ff 25%,
-        #d7dfff 65%,
-        #eef3ff 100%
-    );
-
-}
+   }
 
 
 .migration-framework-header{
@@ -1681,7 +1663,7 @@ CARD
 
     position:relative;
 
-    background:#fff;
+    background:rgba(255,255,255,.65);
 
     border-radius:28px;
 
@@ -1707,7 +1689,7 @@ CARD
 
     border-radius:28px;
 
-    padding:2px;
+    padding:4px;
 
     background:
     linear-gradient(
@@ -1774,7 +1756,7 @@ CARD
     transform:translateY(-8px);
 
     box-shadow:
-    0 30px 70px rgba(40,70,150,.18);
+    0 30px 70px rgba(45, 177, 9, 0.18);
 
 }
 .framework-card{
@@ -3828,7 +3810,7 @@ MOBILE
 
     font-weight:500;
 
-    color:#27364d;
+    color:#d5d6d9;
 
     margin:0;
 
@@ -4038,7 +4020,7 @@ box-shadow:
 
     line-height:1.9;
 
-    color:#5B6475;
+    color:#d9dadd;
 
     margin-bottom:28px;
 
@@ -4052,17 +4034,10 @@ box-shadow:
 
     margin-bottom:0;
 
-    color:#334155;
+    color:#e3e5e8;
 
 }
 
-.finops-intro strong{
-
-    color:#1E293B;
-
-    font-weight:700;
-
-}
 
 /*=============== Heading finops ========*/
 
@@ -4089,7 +4064,7 @@ box-shadow:
 }
 .finops-intro strong{
 
-    color:#1E293B;
+    color:#9445f5;
 
     font-weight:700;
 
@@ -4236,7 +4211,7 @@ opacity:0;
 
 .gov-item{
 
-    background:#fff;
+    background:rgba(255,255,255,.65);
 
     border:1.5px solid rgba(124,58,237,.18);
 
@@ -4448,29 +4423,7 @@ font-weight: 600px;
 
     padding:70px 0;
 
-    background:
-
-    radial-gradient(
-        circle at 20% 90%,
-        rgba(70,245,175,.25),
-        transparent 35%
-    ),
-
-    radial-gradient(
-        circle at 85% 20%,
-        rgba(126,140,255,.25),
-        transparent 40%
-    ),
-
-    linear-gradient(
-        180deg,
-        #d8f4e6 0%,
-        #e6f0ff 25%,
-        #d7dfff 65%,
-        #eef3ff 100%
-    );
-
-}
+    }
 
 /*============= Engine================= ============*/
 
@@ -4489,28 +4442,7 @@ font-weight: 600px;
         opacity .8s ease,
         transform .8s ease;
 
-    background:
-
-    radial-gradient(
-        circle at 20% 90%,
-        rgba(70,245,175,.25),
-        transparent 35%
-    ),
-
-    radial-gradient(
-        circle at 85% 20%,
-        rgba(126,140,255,.25),
-        transparent 40%
-    ),
-
-    linear-gradient(
-        180deg,
-        #d8f4e6 0%,
-        #e6f0ff 25%,
-        #d7dfff 65%,
-        #eef3ff 100%
-    );
-
+    
 }
 .stakeholder-engine.show{
 
@@ -4657,20 +4589,29 @@ Content Panel
 
     display:none;
 
-    background:rgba(255,255,255,.72);
+    background:linear-gradient(
+        135deg,
+        rgba(33, 38, 67, 0.92),
+        rgba(11,17,31,.95)
+    );
 
-    backdrop-filter:blur(25px);
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
 
     border-radius:30px;
 
     padding:60px;
 
-    border:1px solid rgba(124,58,237,.18);
+    border:1px solid rgba(124,77,255,.22);
 
     box-shadow:
-    0 25px 60px rgba(30,41,59,.08);
+        0 25px 60px rgba(0,0,0,.35),
+        0 0 30px rgba(124,77,255,.10);
 
     animation:fadeStake .45s ease;
+
+    color:#E8ECF8;
 
 }
 
@@ -4770,7 +4711,7 @@ Content Panel
 
     line-height:1.9;
 
-    color:#2F6F82;
+    color:#dfe5e7;
 font-weight: 800px !important;
 }
 
@@ -4787,7 +4728,7 @@ font-weight: 800px !important;
 }
 .stake-panel p strong{
 
-    color:#14b8a6;
+    color:#5c70e0;
 
     font-weight:700;
 
@@ -4800,7 +4741,7 @@ font-weight: 800px !important;
 
     border-bottom:1px solid rgba(0,0,0,.06);
 
-    color:#3F5F78;
+    color:#8bc3ed;
 
     font-size:22px;
 font-weight: 700px;
@@ -4836,29 +4777,7 @@ Security Framework
 
     padding:90px 0;
 
-    background:
-
-    radial-gradient(
-        circle at 20% 90%,
-        rgba(70,245,175,.25),
-        transparent 35%
-    ),
-
-    radial-gradient(
-        circle at 85% 20%,
-        rgba(126,140,255,.25),
-        transparent 40%
-    ),
-
-    linear-gradient(
-        180deg,
-        #d8f4e6 0%,
-        #e6f0ff 25%,
-        #d7dfff 65%,
-        #eef3ff 100%
-    );
-
-}
+   }
 
 .security-intro{
 
@@ -4998,7 +4917,7 @@ Security Framework
 
     line-height:1.9;
 
-    color:#5B6475;
+    color:#ccccce;
 
 }
 
