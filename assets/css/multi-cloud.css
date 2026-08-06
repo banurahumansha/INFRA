@@ -8,19 +8,18 @@
 
 }
 
-
 /**++++++++++++++++++++ CTA ++++++++++**********/
+body.page-multi-cloud {
 
-body.page-multi-cloud{
+    background:
+        radial-gradient(circle at 10% 15%, rgba(124,77,255,.16), transparent 35%),
+        radial-gradient(circle at 90% 25%, rgba(0,229,255,.08), transparent 30%),
+        radial-gradient(circle at 50% 100%, rgba(139,92,246,.10), transparent 40%),
+        linear-gradient(180deg,#0a081d 0%, #11152d 50%, #08111f 100%);
 
-    --cta-primary:#7c3aed;
-
-    --cta-secondary:#14b8a6;
-
-    --cta-text:#ffffff;
-
+    color:#fff;
 }
-body.page-multi-cloud .cta-box{
+body.page-multi-cloud.cta-box{
 
     background:
 
@@ -33,105 +32,107 @@ body.page-multi-cloud .cta-box{
     color:#ffffff;
 
 }
+/**++++++++++++++++++++ CTA ++++++++++**********/
 
 /*==================================================
             Cloud Section Tag
 ==================================================*/
 
+/* ===================================
+   MULTI CLOUD TAG
+=================================== */
+
 .multi-cloud-overview-tag{
 
-    display:inline-block;
+    position:relative;
 
-    padding:20px 60px;
+    display:inline-flex;
 
-    color:#fff;
+    align-items:center;
 
-    font-size:34px;
+    gap:16px;
+
+    padding:18px 38px;
+
+    font-size:26px;
 
     font-weight:700;
 
-    letter-spacing:3px;
+    letter-spacing:2px;
 
     text-transform:uppercase;
 
-    background:linear-gradient(
-        90deg,
-        #d8e2ff,
-        #7b8cff,
-        #39c270
-    );
+    color:#F8FAFC;
 
-    clip-path:polygon(
-        0 0,
-        92% 0,
-        100% 50%,
-        92% 100%,
-        0 100%,
-        8% 50%
-    );
+    background:rgba(17,24,39,.75);
 
- }
+    border:1px solid rgba(94,234,212,.28);
+
+    border-radius:14px;
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+    overflow:hidden;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.35),
+        inset 0 1px 0 rgba(255,255,255,.08);
+
+}
+
+/* Left accent */
 
 .multi-cloud-overview-tag::before{
 
     content:"";
 
-    position:relative;
+    position:absolute;
 
-    left:-10px;
+    left:0;
 
-    top:50%;
+    top:0;
 
-    transform:translateY(-50%);
+    width:6px;
 
-    width:4px;
-
-    height:70%;
+    height:100%;
 
     background:linear-gradient(
-        #7b8cff,
-        #39c270
+        180deg,
+        #5EEAD4,
+        #6417c8,
+        #60A5FA
     );
-    overflow:hidden;
 
 }
-/* Animated icon */.multi-cloud-overview-tag{
 
-border:1px solid rgba(8,18,40,.45);
-
-box-shadow:0 12px 35px rgba(8,18,40,.25);
-
-text-shadow:0 1px 2px rgba(0,0,0,.25);
-}
-
-
-/* Moving shimmer */
+/* Moving shine */
 
 .multi-cloud-overview-tag::after{
 
     content:"";
 
-    position:relative;
+    position:absolute;
 
     top:0;
 
-    left:-140%;
+    left:-120%;
 
-    width:60%;
+    width:45%;
 
     height:100%;
-    overflow:hidden;
 
     background:linear-gradient(
         90deg,
         transparent,
-        rgba(255,255,255,.35),
+        rgba(123, 19, 187, 0.28),
         transparent
     );
 
     transform:skewX(-25deg);
 
-    animation:tagShine 5s linear infinite;
+    animation:tagShine 4.5s linear infinite;
 
 }
 
@@ -139,22 +140,35 @@ text-shadow:0 1px 2px rgba(0,0,0,.25);
 
 .multi-cloud-overview-tag:hover{
 
-    transform:translateY(-2px);
+    transform:translateY(-3px);
 
-    border-color:rgba(123,137,255,.35);
+    border-color:#6417c8;
 
     box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.2),
-        0 15px 40px rgba(83,109,216,.18);
+        0 18px 45px rgba(204, 85, 184, 0.18),
+        inset 0 1px 0 rgba(202, 70, 70, 0.1);
 
 }
+
+/* Icon */
+
 .multi-cloud-overview-tag i{
 
-    font-size:30px;
+    font-size:28px;
 
-    color:#fff;
+    color:#6417c8;
 
     animation:floatCloud 3s ease-in-out infinite;
+
+}
+
+/* Shine Animation */
+
+@keyframes tagShine{
+
+    100%{
+        left:130%;
+    }
 
 }
 
@@ -206,17 +220,15 @@ text-shadow:0 1px 2px rgba(0,0,0,.25);
 .multi-hero {
     position: relative;
     display: flex;
-    align-items: center;
     min-height: 92vh;
     overflow: hidden;
      background-image:
-        url("../images/hero/multi.jpg");
+        url("../images/hero/multi-cloud.jpg");
     background-size:cover;
+    align-items:flex-end;      /* Push content to bottom */
 
-    background-position:center;
-
+background-position: 20% 30%;
     background-repeat:no-repeat;
-background-position: center 20%;
 
 }
 
@@ -231,20 +243,20 @@ background-position: center 20%;
     position:relative;
 
     z-index:2;
-    align-items: center;
 
 }
 
 .multi-hero-content{
    width: 100%;
-       text-align: right;
+       text-align: bottom   ;
 
 }
 .multi-hero h1 {
-  background: linear-gradient(90deg, #1E1B4B 0%, #311042 50%, #111827 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /* background: linear-gradient(90deg, #1E1B4B 0%, #311042 50%, #111827 100%); */
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
   font-weight: 800;
+  color: white;
 }
 
 .multi-hero h1{
@@ -269,7 +281,6 @@ background-position: center 20%;
 
 font-size: clamp(20px, 2.5vw, 32px);
     line-height:1.9;
-
     color:rgba(255,255,255,.85);
 
     max-width:650px;
@@ -307,15 +318,13 @@ font-size: clamp(20px, 2.5vw, 32px);
 
 .multi-hero-highlight {
     display: inline-flex;
-    align-items: center;
-    margin-top: 35px;
     padding: 10px 10px 10px 8px; /* Added right and vertical padding */
     border-left: 4px solid #FF9900;
 
     font-size: 38px;
     font-weight: 600;
     line-height: 1.4;
-    color: #0A192F;
+    color: #ebeff6;
 
     /* Frosted glass/Glossy background properties */
     background: rgba(255, 255, 255, 0.03);
@@ -323,7 +332,7 @@ font-size: clamp(20px, 2.5vw, 32px);
     -webkit-backdrop-filter: blur(12px); */
     border-radius: 0 8px 8px 0; /* Smooths the right edge corners */
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-
+    margin-left: 180px;
     /* Animation styling stays the same */
     opacity: 0;
     transform: translateY(40px);
@@ -441,47 +450,9 @@ font-size: clamp(20px, 2.5vw, 32px);
     padding:10px 0;
    /*background-color: #6d96dc !important; */
 
-    background-color: #5c6bc0 !important; /* Soft Indigo */
    /* background-color: #004246 !important; */
 }
-/*.mcloud-overview{
 
-    background:
-
-    /* soft green hint at bottom for transition */
-    radial-gradient(
-        circle at 20% 85%,
-        rgba(70,245,175,.28),
-        transparent 40%
-    ),
-
-
-    /* purple bridge */
-    radial-gradient(
-        circle at 75% 35%,
-        rgba(170,145,255,.30),
-        transparent 40%
-    ),
-
-
-    /* blue upper area */
-    radial-gradient(
-        circle at 50% 10%,
-        rgba(126,140,255,.35),
-        transparent 42%
-    ),
-
-
-    linear-gradient(
-        135deg,
-        #e4ebff 0%,
-        #cbd0ff 25%,
-        #a49cf8 50%,
-        #7f86ee 70%,
-        #6cdfae 100%
-    );
-
-}*/
 
 .mcloud-overview.container{
 
@@ -541,7 +512,7 @@ font-size: clamp(20px, 2.5vw, 32px);
 
     line-height:1.7;
 
-    color:#475467;
+    color:#eeeff1;
 
     font-weight:500;
 
@@ -558,7 +529,6 @@ font-size: clamp(20px, 2.5vw, 32px);
     border-radius: 6px; /* Smooths the sharp corners */
     padding: 10px 16px; /* Adds space so the text doesn't hit the border */
     color: #ffffff !important; /* Center of the text is pure white */
-    -webkit-text-stroke: 1.5px #0f52ba !important; /* Crisp 1px sapphire border around the text */
     font-size: 2.5rem;
     font-weight: 800; /* Bold fonts look best with text stroke */
 
@@ -629,20 +599,16 @@ font-size: clamp(20px, 2.5vw, 32px);
     padding: 18px;
     border-radius: 16px;
     transition: .35s;
- border: 2px solid rgba(255, 183, 77, 0.3) !important;
+ border: 2px solid rgba(114, 199, 218, 0.3) !important;
 }
 
-.highlight-item:hover {
-    border-color: rgba(255, 183, 77, 0.8) !important; /* Border sharpens beautifully */
-    background-color: rgba(255, 183, 77, 0.06) !important; /* Injects a microscopic warm orange tint */
-    transform: translateY(-2px); /* Gives a premium layout lift */
-}
+
 
 .highlight-item i{
 
 
     font-size:28px;
-color:#0a192f ;
+color:#13c525 ;
 }
 
 .highlight-item span{
@@ -654,16 +620,11 @@ color:#0a192f ;
 
 }
 
-.highlight-item:hover{
 
+.highlight-item:hover {
+    border-color: rgba(103, 185, 26, 0.8) !important; /* Border sharpens beautifully */
     transform:translateY(-6px);
-
-    border-color:rgba(79,214,255,.20);
-
-    background:rgba(255,255,255,.08);
-
 }
-
 
 
 /*==================================================
@@ -678,42 +639,10 @@ color:#0a192f ;
     position:relative;
 
     overflow:hidden;
-       /* background-color: #004246 !important; green */
-
-   background-color: #6d96dc !important;
 
 }
 
-./*cloud-ecosystem {
-background:
-
-    radial-gradient(circle at 15% 20%,
-        rgba(90,255,190,.35),
-        transparent 35%),
-
-    radial-gradient(circle at 50% 10%,
-        rgba(126,140,255,.45),
-        transparent 40%),
-
-    radial-gradient(circle at 85% 20%,
-        rgba(170,145,255,.35),
-        transparent 35%),
-
-    linear-gradient(
-        135deg,
-        #d8e2ff 0%,
-        #b5b9ff 20%,
-        #8a82f6 40%,
-        #5e6ee8 60%,
-        #3fbf8b 100%
-    );
-
-} */
-
-
-
 /* Illustration */
-
 
 .cloud-illustration{
 
@@ -746,41 +675,15 @@ background:
 
     margin:0;
 
-    color:#263858;
+    color:#c9db89;
 
     font-size:16px;
 
 }
 
-.cloud-platform-card.active{
 
-    transform:translateY(-8px);
-
-    border-color:#4fd6ff;
-
-    box-shadow:
-
-        0 25px 55px rgba(80,100,180,.25),
-
-        0 0 30px rgba(79,214,255,.75),
-
-        0 0 80px rgba(79,214,255,.35);
-
-}
 /* Details */
-.cloud-platform-card:hover{
 
-    transform:translateY(-8px);
-
-    border-color:#4fd6ff;
-
-    box-shadow:
-
-        0 25px 55px rgba(80,100,180,.20),
-
-        0 0 25px rgba(79,214,255,.55);
-
-}
 .cloud-details{
 
     position:relative;
@@ -1112,6 +1015,8 @@ background:
 
 .cloud-platform-card{
 
+    position:relative;
+
     height:100px;
 
     width:90%;
@@ -1122,13 +1027,73 @@ background:
 
     justify-content:center;
 
-        border:1px solid rgba(255,255,255,.55);
+    padding:25px;
+
+    background:#fff;
+
+    border:2px solid transparent;
 
     border-radius:24px;
 
-    padding:25px;
+    transition:.35s ease;
+
+    cursor:pointer;
 
 }
+
+/* Rainbow Hover & Active */
+.cloud-platform-card.active{
+
+    background:linear-gradient(
+        135deg,
+        #FFE5E5 0%,   /* Soft Pink */
+        #FFF1D6 18%,  /* Peach */
+        #FFF9C4 36%,  /* Soft Yellow */
+        #E8FFD8 54%,  /* Light Green */
+        #DDF7FF 72%,  /* Light Cyan */
+        #E8E7FF 88%,  /* Lavender */
+        #F7E8FF 100%  /* Light Purple */
+    );
+
+    border:2px solid #A78BFA;
+
+    box-shadow:
+        0 18px 40px rgba(124,77,255,.18);
+
+}
+.cloud-platform-card:hover{
+
+    border-color:transparent;
+
+    background:
+        linear-gradient(#fff,#fff) padding-box,
+        linear-gradient(
+            90deg,
+            #ff4d4d,
+            #ff9f1c,
+            #ffe600,
+            #39c270,
+            #00c2ff,
+            #6c63ff,
+            #d946ef,
+            #ff4d4d
+        ) border-box;
+
+    box-shadow:
+        0 0 12px rgba(255,77,77,.25),
+        0 0 18px rgba(0,194,255,.25),
+        0 0 28px rgba(108,99,255,.25);
+
+    transform:translateY(-4px);
+
+}
+
+.cloud-platform-card img{
+
+    transition:.35s ease;
+
+}
+
 .cloud-content-media{
 
     width:100%;
@@ -1182,7 +1147,6 @@ background:
 .cloud-strategy{
 
     padding:70px 0;
-   background-color: #6d96dc !important;
 
 }
 
@@ -1384,7 +1348,7 @@ background: rgba(255, 193, 7, 0.45);
 
     font-size:25px;
 
-    color:#1b4d3e ;
+    color:#b74eef ;
 
     margin-bottom:10px;
 
@@ -1458,101 +1422,143 @@ background: rgba(255, 193, 7, 0.45);
 .cloud-modernization{
 
     padding:70px 0;
-
-
- background:
-
-    /* Soft purple top glow */
-    radial-gradient(
-        circle at 85% 15%,
-        rgba(170,145,255,.32),
-        transparent 40%
-    ),
-
-    /* Blue transition glow */
-    radial-gradient(
-        circle at 50% 25%,
-        rgba(100,150,255,.28),
-        transparent 42%
-    ),
-
-    /* Green bottom glow */
-    radial-gradient(
-        circle at 20% 90%,
-        rgba(70,245,175,.38),
-        transparent 42%
-    ),
-
-
-    linear-gradient(
-        135deg,
-        #e2e7ff 0%,     /* bright ice blue */
-        #cfd8ff 35%,    /* clearer blue */
-        #c9c3ff 60%,    /* soft purple */
-        #91e3b8 100%   /* brighter green bottom */
-    );
-
 }
 
+.modernization-card{
 
-.modernization-content{
+    position:relative;
 
-    width:85%;
+    width:100%;
 
     max-width:1100px;
 
-    margin:auto;
+    padding:60px;
 
-    text-align:center;
+    border-radius:30px;
 
-    opacity:0;
+    overflow:hidden;
 
-    transform:translateY(50px);
+    background:rgba(14,18,38,.88);
 
-    transition:
-    opacity .9s ease,
-    transform .9s ease;
+    backdrop-filter:blur(12px);
 
-}
-
-.modernization-content.show{
-
-    opacity:1;
-
-    transform:translateY(0);
+    z-index:1;
 
 }
 
-.modernization-content blockquote{
+/* Animated Rainbow Border */
+
+.modernization-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-3px;
+
+    border-radius:inherit;
+
+    background:linear-gradient(
+        90deg,
+        #ff6b6b,
+        #ffd93d,
+        #6ee7b7,
+        #38bdf8,
+        #8b5cf6,
+        #ff6b6b
+    );
+
+    background-size:300% 300%;
+
+    animation:rainbowMove 6s linear infinite;
+
+    z-index:-2;
+
+}
+
+/* Inner Card */
+
+.modernization-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:2px;
+
+    border-radius:28px;
+
+    background:linear-gradient(
+        180deg,
+        #131b35,
+        #0b1120
+    );
+
+    z-index:-1;
+
+}
+
+/* Quote */
+
+.modernization-card blockquote{
+
+    margin:0;
+
+    font-size:24px;
+
+    line-height:2;
+
+    color:#E8ECF8;
+
+    font-weight:400;
+
+}
+
+/* First sentence */
+
+.modernization-card blockquote::first-line{
 
     font-size:32px;
 
     font-weight:700;
 
-    line-height:1.5;
-
-    margin:40px auto;
-
-    color:#52658a;
-
-    opacity:0;
-
-    transform:translateY(40px);
-
-    transition:
-        opacity .8s ease .3s,
-        transform .8s ease .3s;
+    color:#FFFFFF;
 
 }
 
-.modernization-content.show blockquote{
+/* Quote icon */
 
-    opacity:1;
+.quote-mark{
 
-    transform:translateY(0);
+    font-size:70px;
+
+    color:#5EEAD4;
+
+    line-height:0;
+
+    margin-right:10px;
+
+    vertical-align:middle;
 
 }
 
+/* Animation */
+
+@keyframes rainbowMove{
+
+    0%{
+
+        background-position:0% 50%;
+
+    }
+
+    100%{
+
+        background-position:300% 50%;
+
+    }
+
+}
 /*****************  Pillars *****************/
 
 /*========================================
