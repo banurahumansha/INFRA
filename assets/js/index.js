@@ -59,25 +59,16 @@ wrapper.style.transform = `translateX(-${index * (100/3)}%)`;
 
 }
 
+console.log("Script loaded");
+
 window.addEventListener("load", () => {
+    console.log("Window loaded");
 
-    [...document.querySelectorAll("*")].forEach(el => {
+    document.querySelectorAll("*").forEach(el => {
+        const rect = el.getBoundingClientRect();
 
-        const r = el.getBoundingClientRect();
-
-        if (r.right > window.innerWidth + 1 || r.left < -1) {
-
-            console.log("Overflow Element:", el);
-            console.log({
-                class: el.className,
-                id: el.id,
-                left: Math.round(r.left),
-                right: Math.round(r.right),
-                width: Math.round(r.width)
-            });
-
+        if (rect.right > window.innerWidth) {
+            console.log("Overflow:", el);
         }
-
     });
-
 });

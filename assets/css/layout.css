@@ -906,10 +906,74 @@ background: linear-gradient(135deg, #fce7f3 0%, #e0f2fe 60%, #ccfbf1 100%);
 
 }
 
-@media (max-width:768px){
+/* ===============================
+   LARGE TABLETS (992px - 1199px)
+================================= */
+@media (max-width:1199px){
 
     .solutions-grid{
-        grid-template-columns:1fr ! important;
+        grid-template-columns:repeat(2,1fr);
+        gap:28px;
+    }
+
+    .solution-card{
+        min-height:300px;
+        padding:30px;
+    }
+
+    .card-content h3{
+        font-size:30px !important;
+    }
+
+}
+
+/* ===============================
+   TABLETS (768px - 991px)
+================================= */
+@media (max-width:991px){
+
+    .solutions-grid{
+        grid-template-columns:1fr !important;
+        gap:24px;
+    }
+
+    .solution-card{
+        padding:28px;
+        min-height:280px;
+    }
+
+    .solution-icon{
+        width:68px;
+        top:22px;
+        right:22px;
+    }
+
+    .solution-card i{
+        font-size:38px;
+        margin-bottom:20px;
+    }
+
+    .solution-card h3{
+        font-size:30px !important;
+        line-height:1.15;
+        max-width:100%;
+        margin-bottom:16px;
+    }
+
+    .solution-card p{
+        font-size:16px;
+        line-height:1.7;
+    }
+
+}
+
+/* ===============================
+   MOBILE (481px - 767px)
+================================= */
+@media (max-width:767px){
+
+    .solutions-grid{
+        grid-template-columns:1fr !important;
         gap:20px;
     }
 
@@ -929,10 +993,10 @@ background: linear-gradient(135deg, #fce7f3 0%, #e0f2fe 60%, #ccfbf1 100%);
         margin-bottom:18px;
     }
 
-    .card-content h3{
-        font-size:28px;
+    .solution-card h3{
+        font-size:28px !important;
         line-height:1.15;
-        letter-spacing:0.5px;
+        letter-spacing:.4px;
         max-width:100%;
         margin-bottom:16px;
     }
@@ -940,6 +1004,50 @@ background: linear-gradient(135deg, #fce7f3 0%, #e0f2fe 60%, #ccfbf1 100%);
     .solution-card p{
         font-size:15px;
         line-height:1.6;
+    }
+
+}
+
+/* ===============================
+   SMALL MOBILE (480px and below)
+================================= */
+@media (max-width:480px){
+
+    .solutions-grid{
+        gap:16px;
+    }
+
+    .solution-card{
+        padding:20px;
+        min-height:auto;
+        border-radius:18px;
+    }
+
+    .solution-icon{
+        width:50px;
+        top:18px;
+        right:18px;
+    }
+
+    .solution-card i{
+        font-size:28px;
+        margin-bottom:16px;
+    }
+
+    .solution-card h3{
+        font-size:24px !important;
+        line-height:1.2;
+        margin-bottom:14px;
+    }
+
+    .solution-card p{
+        font-size:14px;
+        line-height:1.6;
+    }
+
+    .card-btn{
+        padding:10px 18px;
+        font-size:13px;
     }
 
 }
@@ -1042,11 +1150,11 @@ background: linear-gradient(135deg, #fce7f3 0%, #e0f2fe 60%, #ccfbf1 100%);
 }
 
 
-.card-content h3{
+.solution-card h3{
 
     color:#fff;
 
-    font-size:38px;
+    font-size:32px;
 
     font-weight:700;
 
@@ -1112,7 +1220,7 @@ font-size: 1.2rem;
 }
 .solution-card:hover .desc,
 .solution-card:hover .card-btn{
-``
+
     opacity:1;
     transform:translateY(0);
 
@@ -1125,7 +1233,7 @@ font-size: 1.2rem;
 
     box-shadow:0 25px 60px rgba(11,94,215,0.15);
 }
-solution-card:hover img{
+.solution-card:hover img{
 
     transform:scale(1.08);
 
@@ -1573,7 +1681,7 @@ background: linear-gradient(
 
     gap:70px;
 
-    width:max-content;
+    width:fit-content;
 
     animation:clientScroll 120s linear infinite;
 
