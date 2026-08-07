@@ -226,11 +226,11 @@ document.addEventListener("DOMContentLoaded", function () {
             node.draw(time);
         });
 
-        packets.forEach(packet=>{
+        //         packets.forEach(packet=>{
 
-    packet.draw();
+        //     packet.draw();
 
-});
+        // });
     }
 
 
