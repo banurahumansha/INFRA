@@ -196,14 +196,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     );
 
 
-                    ctx.strokeStyle =
-                    `rgba(0,229,255,${alpha*0.25})`;
+                   ctx.strokeStyle =
+                    `rgba(124,77,255,${alpha*0.25})`;
 
 
-                    ctx.lineWidth=1;
+                    ctx.lineWidth=5;
 
 
-                    ctx.shadowColor="#c60e0e";
+                    ctx.shadowColor="#dab6e7";
 
                     ctx.shadowBlur=8;
 
