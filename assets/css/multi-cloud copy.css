@@ -34,6 +34,9 @@ body.page-multi-cloud.cta-box{
 }
 /**++++++++++++++++++++ CTA ++++++++++**********/
 
+/*==================================================
+            Cloud Section Tag
+==================================================*/
 
 /* ===================================
    MULTI CLOUD TAG
@@ -293,101 +296,6 @@ font-size: clamp(20px, 2.5vw, 32px);
 }
 
 
-/*======================================
-MULTI HERO HIGHLIGHT RESPONSIVE
-======================================*/
-
-/* Large Desktop */
-@media (min-width: 1400px){
-
-    .multi-hero-highlight{
-
-        font-size:42px !important;
-        margin-left:180px !important;
-
-    }
-
-}
-
-/* Laptop */
-@media (max-width:1200px){
-
-    .multi-hero-highlight{
-
-        margin-left:120px;
-        font-size:34px;
-        line-height:1.35;
-
-    }
-
-}
-
-/* Tablet */
-@media (max-width:992px){
-
-    .multi-hero-highlight{
-
-        margin-left:60px !important;
-        padding:10px 12px 10px 8px !important;
-
-        font-size:28px !important;
-        line-height:1.35;
-
-    }
-
-}
-
-/* Mobile */
-@media (max-width:768px){
-
-    .multi-hero-highlight{
-
-        display:inline-flex;
-
-        margin-left:0;
-
-        padding:10px 12px !important;
-
-        font-size:24px !important;
-        line-height:1.4;
-
-        border-left:3px solid #FF9900;
-
-        border-radius:0 6px 6px 0;
-
-    }
-
-}
-
-/* Small Mobile */
-@media (max-width:576px){
-
-    .multi-hero-highlight{
-
-        font-size:22px;
-
-        padding:8px 10px;
-
-        line-height:1.45;
-
-    }
-
-}
-
-/* Extra Small Mobile */
-@media (max-width:480px){
-
-    .multi-hero-highlight{
-
-        font-size:14px;
-
-        padding:8px 10px;
-
-        line-height:1.45;
-
-    }
-
-}
 @keyframes heroFadeUp{
 
     from{
@@ -555,7 +463,7 @@ MULTI HERO HIGHLIGHT RESPONSIVE
 }
 
 /*==================================================
-  CLOUD OVERVIEW
+            Cloud Overview
 ==================================================*/
 
 .mcloud-overview{
@@ -564,13 +472,16 @@ MULTI HERO HIGHLIGHT RESPONSIVE
 
     overflow:hidden;
 
-    padding:80px 0;
+    padding:10px 0;
+   /*background-color: #6d96dc !important; */
 
+   /* background-color: #004246 !important; */
 }
 
-.mcloud-overview-container{
 
-    width:min(97%,1600px);
+.mcloud-overview.container{
+
+    width:min(97%, 1600px);
 
     max-width:1600px;
 
@@ -579,422 +490,165 @@ MULTI HERO HIGHLIGHT RESPONSIVE
     padding:0;
 
 }
+/* Container box framing the video asset */
+.mcloud-overview-image {
+    width: 100%;
+    display: block;
+}
+.mcloud-overview-image video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0;
+}
+.ms-overview-text {
+    width: 100%;
+    max-width: none;
+    margin-top: 40px;
+}
 
-/*======================================
-LAYOUT
-======================================*/
+@media (max-width: 767px) {
+    .mcloud-overview-image {
+        max-width: 100%; /* Allows container to span fully across mobile screens */
+        padding: 6px; /* Shrinks the inner box padding to save precious screen space */
+        margin: 15px 0; /* Brings down the outer vertical margin for tighter spacing */
+        border-radius: 8px; /* Slightly sharper corner radius looks better on smaller screens */
+    }
 
-.mcloud-overview-grid{
+    .mcloud-overview-image video {
+        border-radius: 4px; /* Matches the tighter container corners */
+    }
+}
 
-    display:flex;
+/* =========================================================
+   💻 DESKTOP ONLY RESTRICTIONS (Screens 768px wide and above)
+   ========================================================= */
+@media (min-width: 768px) {
+    .mcloud-overview-image {
+        max-width: 800px; /* Prevents the video from becoming monstrously huge on large monitors */
+        padding: 12px;
+    }
+}
+/****** header *******/
 
-    flex-direction:column;
+.multi-cloud-header p{
 
-    gap:50px;
+    font-size:27px;
+
+    line-height:1.7;
+
+    color:#eeeff1;
+
+    font-weight:500;
+
+    margin-bottom:40px;
+
+}
+.multi-cloud-header h2{
+
+    font-size:48px;
+
+    line-height:1.2;
+
+    margin:20px 0 30px;
+    border-radius: 6px; /* Smooths the sharp corners */
+    padding: 10px 16px; /* Adds space so the text doesn't hit the border */
+    color: #ffffff !important; /* Center of the text is pure white */
+    font-size: 2.5rem;
+    font-weight: 800; /* Bold fonts look best with text stroke */
 
 }
 
-/*======================================
-VIDEO
-======================================*/
+.multi-cloud-header{
 
-.mcloud-overview-image{
-
-    width:100%;
-
-    overflow:hidden;
-
-    border-radius:24px;
-
-    box-shadow:0 20px 50px rgba(0,0,0,.35);
+    padding:30px;
 
 }
-
-.mcloud-overview-image video{
-
-    width:100%;
-
-    height:auto;
-
-    display:block;
-
-    object-fit:cover;
-
-}
-
-/*======================================
-CONTENT CARD
-======================================*/
-
 .mcloud-overview-content{
 
-    width:100%;
-
-    max-width:100%;
-
-    padding:45px;
+    padding:50px;
 
     border-radius:30px;
 
     background:rgba(255,255,255,.05);
 
-    backdrop-filter:blur(14px);
-
-    -webkit-backdrop-filter:blur(14px);
-
-    border:1px solid rgba(255,255,255,.08);
 
     opacity:0;
 
-    transform:translateY(50px);
+    transform:translateX(-70px);
 
     transition:
-        opacity .9s ease,
-        transform .9s ease;
+    opacity .9s ease,
+    transform .9s ease;
 
 }
+
 
 .mcloud-overview-content.show{
 
     opacity:1;
 
-    transform:translateY(0);
+    transform:translateX(0);
 
 }
 
-/*======================================
-HEADER
-======================================*/
 
-.multi-cloud-header{
-
-    margin-bottom:35px;
-    margin-left:35px;
-
-}
-
-.multi-cloud-header h2{
-
-    font-size:clamp(36px,3vw,52px);
-
-    font-weight:800;
-
-    line-height:1.2;
-
-    color:#ffffff;
-
-    margin:18px 0 24px;
-
-}
-
-.multi-cloud-header p{
-
-    font-size:clamp(20px,1.5vw,28px);
-
-    line-height:1.7;
-
-    color:#eef2f7;
-
-}
-
-/*======================================
-BODY
-======================================*/
 
 .mcloud-overview-content p{
 
-    color:rgba(255,255,255,.92);
+    color:#ffffff;
 
-    font-size:28px;
+    font-size:24px;
 
-    line-height:1.85;
+    line-height:1.9;
 
-    margin-bottom:24px;
+    margin-bottom:25px;
 
 }
-
-/*======================================
-HIGHLIGHTS
-======================================*/
-
 .cloud-highlights{
 
     display:grid;
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:20px;
+    gap:18px;
 
     margin-top:40px;
 
 }
 
-.highlight-item{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:16px;
-
-    padding:20px;
-
-    border-radius:18px;
-
-    background:rgba(255,255,255,.04);
-
-    border:1px solid rgba(114,199,218,.25);
-
-    transition:.35s ease;
-
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px;
+    border-radius: 16px;
+    transition: .35s;
+ border: 2px solid rgba(114, 199, 218, 0.3) !important;
 }
 
-.highlight-item:hover{
 
-    transform:translateY(-6px);
-
-    border-color:#22d3ee;
-
-    background:rgba(34,211,238,.08);
-
-}
 
 .highlight-item i{
 
+
     font-size:28px;
-
-    color:#22d3ee;
-
-    flex-shrink:0;
-
+color:#13c525 ;
 }
 
 .highlight-item span{
 
-    color:#ffffff;
-
-    font-size:22px;
+    color:#fff;
+    font-size:28px;
 
     font-weight:600;
 
-    line-height:1.4;
-
 }
 
-/*==================================================
-LAPTOP
-==================================================*/
 
-@media (max-width:1200px){
-
-    .mcloud-overview{
-
-        padding:70px 0;
-
-    }
-
-    .mcloud-overview-grid{
-
-        gap:40px;
-
-    }
-
-    .mcloud-overview-content{
-
-        padding:38px;
-
-    }
-
-}
-
-/*==================================================
-TABLET
-==================================================*/
-
-@media (max-width:992px){
-
-    .mcloud-overview{
-
-        padding:60px 0;
-
-    }
-
-    .mcloud-overview-container{
-
-        width:100%;
-
-        padding:0 24px;
-
-    }
-
-    .mcloud-overview-grid{
-
-        gap:35px;
-
-    }
-
-    .mcloud-overview-content{
-
-        padding:34px;
-
-    }
-
-    .cloud-highlights{
-
-        grid-template-columns:repeat(2,1fr);
-
-    }
-
-}
-
-/*==================================================
-MOBILE
-==================================================*/
-
-@media (max-width:768px){
-
-    .mcloud-overview{
-
-        padding:50px 0;
-
-    }
-
-    .mcloud-overview-container{
-
-        padding:0 20px;
-
-    }
-
-    .mcloud-overview-grid{
-
-        gap:30px;
-
-    }
-
-    .mcloud-overview-image{
-
-        border-radius:18px;
-
-    }
-
-    .mcloud-overview-content{
-
-        padding:28px;
-
-        border-radius:22px;
-
-    }
-
-    .cloud-highlights{
-
-        grid-template-columns:1fr;
-
-        gap:16px;
-
-    }
-
-    .highlight-item{
-
-        padding:18px;
-
-    }
-
-    .highlight-item span{
-
-        font-size:20px;
-
-    }
-
-}
-
-/*==================================================
-SMALL MOBILE
-==================================================*/
-
-@media (max-width:576px){
-
-    .mcloud-overview{
-
-        padding:40px 0;
-
-    }
-
-    .mcloud-overview-container{
-
-        padding:0 18px;
-
-    }
-
-    .mcloud-overview-content{
-
-        padding:24px;
-
-    }
-
-    .mcloud-overview-content p{
-
-        line-height:1.75;
-
-    }
-
-    .highlight-item{
-
-        padding:16px;
-
-    }
-
-}
-
-/*==================================================
-EXTRA SMALL MOBILE
-==================================================*/
-
-@media (max-width:480px){
-
-    .mcloud-overview-container{
-
-        padding:0 15px;
-
-    }
-
-    .mcloud-overview-grid{
-
-        gap:24px;
-
-    }
-
-    .mcloud-overview-image{
-
-        border-radius:14px;
-
-    }
-
-    .mcloud-overview-content{
-
-        padding:20px;
-
-        border-radius:18px;
-
-    }
-
-    .highlight-item{
-
-        gap:12px;
-
-    }
-
-    .highlight-item i{
-
-        font-size:22px;
-
-    }
-
-    .highlight-item span{
-
-        font-size:18px;
-
-    }
-
+.highlight-item:hover {
+    border-color: rgba(103, 185, 26, 0.8) !important; /* Border sharpens beautifully */
+    transform:translateY(-6px);
 }
 
 
@@ -2389,7 +2043,7 @@ DESCRIPTION
 
     line-height:1.75;
 
-    color:#07235f;
+    color:#667085;
 
 }
 
@@ -2413,11 +2067,7 @@ HOVER
 
 }
 
-.framework-card:hover {
 
-    background-color: wheat;
-
-}
 
 /*========================================
 TABLET
@@ -3625,7 +3275,7 @@ MOBILE
 
 .finops-section{
 
-    padding:70px 0;
+    padding:100px 0;
 
 }
 
@@ -4683,7 +4333,7 @@ opacity:0;
 
     font-size:26px;
 
-    color:#1313f0;
+    color:#14b8a6;
 
     transition:.35s;
 
@@ -4774,8 +4424,8 @@ color:#0f172a;
 
     position:relative;
 
-    color:#093676;
-        font-size:20.4px;
+    color:#334155;
+        font-size:20px;
 font-weight: 600px;
 }
 
@@ -4787,7 +4437,7 @@ font-weight: 600px;
 
     left:0;
 
-    color:#494dd4;
+    color:#14b8a6;
 
     font-weight:700;
 

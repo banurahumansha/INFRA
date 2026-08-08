@@ -401,7 +401,7 @@ body.page-rs .cta-box{
 
     color:#10965f;
 
-    font-size:40px;
+    font-size:38px;
     font-weight:700;
 
     letter-spacing:2px;
@@ -409,19 +409,14 @@ body.page-rs .cta-box{
 
 }
 
-.rs-section-tag::before{
-
-    content:"◆";
-
-    font-size:10px;
-
-    color:#14b8a6;
-
-}
+.rs-section-tag i{
+    color:#67e8f9;
+    font-size:36px;
+    }
 
 .rs-section-header h2{
 
-    font-size:clamp(2rem,4vw,3rem);
+    font-size:clamp(2rem,4vw,2.4rem);
 
     line-height:1.15;
 
@@ -779,7 +774,7 @@ Talent Advantage
     margin-bottom:18px;
 
     transition:.35s;
-    font-size: 18px;
+    font-size: 20.4px;
 
 }
 
@@ -873,8 +868,9 @@ Responsive
     }
 }
 .common-carousel-slide:nth-child(1) .common-carousel-image img{
-    height: 650px;
-
+     object-fit:cover;
+    object-position:center top;
+   
 }
 .common-carousel-slide:nth-child(3) .common-carousel-image img{
       object-fit: contain;
@@ -948,7 +944,7 @@ Responsive
 
     color:#bfc7d8;
     line-height:1.8;
-    font-size: 20px;
+    font-size: 21px;
 }
 
 .domain-body ul{
@@ -961,7 +957,7 @@ Responsive
 
     color:#abc529;
     margin-bottom:10px;
-    font-size: 18px;
+    font-size: 20.4px;
 }
 
 .domain-card.active .domain-body{
@@ -1216,7 +1212,7 @@ TEXT
 
     color:#ffffff;
 
-    font-size:22px;
+    font-size:23px;
     font-weight:600;
 
     transition:.35s;
@@ -1229,7 +1225,7 @@ TEXT
 
     color:#9da9bc;
 
-    font-size:18px;
+    font-size:20.4px;
 
     line-height:1.8;
 

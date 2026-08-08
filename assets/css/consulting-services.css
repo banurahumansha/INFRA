@@ -473,31 +473,26 @@ background-position: center 20%;
 
     backdrop-filter:blur(12px);
 
-    color:#3842fa;
+    color:#cfe225;
 
-    font-size:40px;
+    font-size:38px;
     font-weight:700;
 
     letter-spacing:2px;
     text-transform:uppercase;
 
 }
-
-.cs-section-tag::before{
-
-    content:"◆";
-
-    font-size:10px;
-
-    color:#14b8a6;
-
+.cs-section-tag i{
+    color: #77e6d6;
+    font-size: 38px;
 }
+
 .cs-section-header{
     max-width:100%;
 }
 .cs-section-header h2{
 
-    font-size:clamp(2rem,4vw,3rem);
+    font-size:clamp(2rem,4vw,2.4rem);
 
     line-height:1.15;
 

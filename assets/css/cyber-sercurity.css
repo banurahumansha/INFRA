@@ -42,10 +42,10 @@ body.page-cs{
     color:#fff;
 }
 body.page-cs .cta-box{
-
+    margin-top: 70px;
     background: linear-gradient(
         135deg,
-        #2563eb,
+        #131924,
         #5c6bc0
     );
 
@@ -448,29 +448,25 @@ body.page-cs .cta-box{
 
     color:#3842fa;
 
-    font-size:40px;
+    font-size:38px;
     font-weight:700;
 
     letter-spacing:2px;
     text-transform:uppercase;
 
 }
-
-.cs-section-tag::before{
-
-    content:"◆";
-
-    font-size:10px;
-
-    color:#14b8a6;
-
+.cs-section-tag i{
+    color:#6280e9;
+    font-size:36px;
+  
 }
+
 .cs-section-header{
     max-width:100%;
 }
 .cs-section-header h2{
 
-    font-size:clamp(2rem,4vw,3rem);
+    font-size:clamp(2rem,4vw,2.4rem);
 
     line-height:1.15;
 
@@ -932,7 +928,7 @@ Security Philosophy
 
 .common-carousel-slide:nth-child(3) .common-carousel-image img{
           object-fit: cover;
-  object-position:  93% 26%;
+    object-position: 70% 26%;
 
 }
 

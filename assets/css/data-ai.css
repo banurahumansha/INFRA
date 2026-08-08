@@ -409,7 +409,7 @@ margin-left: 20px;
 
     backdrop-filter:blur(12px);
 
-    color:#e8e819;
+    color:#7ae472;
 
     font-size:40px;
     font-weight:700;
@@ -419,19 +419,13 @@ margin-left: 20px;
 
 }
 
-.rs-section-tag::before{
-
-    content:"◆";
-
-    font-size:10px;
-
-    color:#14b8a6;
-
+.rs-section-tag i{
+    color:#ebca5b;
+    font-size:32px;
 }
-
 .rs-section-header h2{
 
-    font-size:clamp(2rem,4vw,3rem);
+    font-size:clamp(1.4rem,4vw,2.5rem);
 
     line-height:1.15;
 
@@ -603,10 +597,11 @@ margin-left: 20px;
     SOLUTION MATRIX
 ======================================*/
 
-.solution-matrix{
+.solution-matrix,
+.feature-showcase{
 
     position:relative;
-    padding:120px 0;
+    padding:70px 0;
     overflow:hidden;
 
 }
@@ -957,6 +952,7 @@ HEADER
     line-height:1.8;
 
     max-width:700px;
+    font-size: 23px;
 
 }
 
@@ -1096,7 +1092,7 @@ CARD TEXT
 
     color:#fff;
 
-    font-size:22px;
+    font-size:24px;
 
     margin-bottom:15px;
 
@@ -1106,9 +1102,9 @@ CARD TEXT
 
     color:#bfd9e8;
 
-    line-height:1.8;
+    line-height:22.4px;
 
-    font-size:15px;
+    font-size:20px;
 
 }
 
@@ -1537,7 +1533,7 @@ LAYOUT
 
     display:grid;
     grid-template-columns:42% 58%;
-    gap:70px;
+    gap:45px;
     align-items:center;
 
 }
@@ -1585,7 +1581,7 @@ TIMELINE
 
     position:relative;
 
-    padding-left:65px;
+    padding-left:25px;
 
 }
 
@@ -1605,7 +1601,7 @@ ITEM
     display:flex;
     gap:25px;
     align-items:flex-start;
-
+    padding: 30px;
 }
 
 .ef-item:last-child{
@@ -1665,7 +1661,7 @@ ICON
 
     width:2px;
 
-    height:195px;   /* Adjust to match the spacing between cards */
+    height:230px;   /* Adjust to match the spacing between cards */
 
     background:rgba(255,255,255,.15);
 
@@ -1696,7 +1692,7 @@ CONTENT
 
     width:100%;
 
-    padding:28px;
+    padding:20px;
 
     border-radius:22px;
 
@@ -1729,7 +1725,7 @@ CONTENT
 
     color:#67e8f9;
 
-    font-size:14px;
+    font-size:16px;
 
     letter-spacing:2px;
 
@@ -1754,6 +1750,7 @@ CONTENT
     color:#c6dce9;
 
     line-height:1.8;
+    font-size: 20px;
 
 }
 
@@ -1782,6 +1779,7 @@ CALLOUT
     color:#d5e7f0;
 
     line-height:1.9;
+        font-size:20px;
 
 }
 

@@ -1303,10 +1303,10 @@ infra-overview.section-header p{
     overflow:hidden;
 
     padding: 30px;
-}
+}   
 .practice-number{
 
-    position:absolute;
+    position:absolute;  
 
     top:20px;
     right:20px;
@@ -1448,7 +1448,7 @@ infra-overview.section-header p{
 
     line-height:1.7;
 
-    font-size:19px;
+    font-size:20px;
 
 
 
