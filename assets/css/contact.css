@@ -9,8 +9,8 @@ PAGE BACKGROUND
     background:
     linear-gradient(
         135deg,
-        #234ecf 0%,
-        #b319b6 100%
+        #a7b6e3 0%,
+        #945695 100%
     );
 
 }
@@ -27,7 +27,7 @@ body.page-contact .cta-box{
     linear-gradient(
         135deg,
         #2563eb,
-        #5c6bc0
+        #c05cae
     );
 
     color:#ffffff;

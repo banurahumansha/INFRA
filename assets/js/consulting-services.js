@@ -1,40 +1,32 @@
+const swiper = new Swiper(".consultingSwiper", {
 
-document.addEventListener("DOMContentLoaded", function () {
-console.log("CS JS LOADED");
-    const cards = document.querySelectorAll(".pillar-card");
-    const panels = document.querySelectorAll(".pillar-panel");
+    loop:true,
 
-    cards.forEach(card => {
+    speed:800,
 
-        card.addEventListener("click", function () {
+    spaceBetween:30,
 
-            cards.forEach(c => c.classList.remove("active"));
-            panels.forEach(p => p.classList.remove("active"));
+    grabCursor:true,
 
-            card.classList.add("active");
+    centeredSlides:false,
 
-            document
-                .getElementById(card.dataset.target)
-                .classList.add("active");
+    autoplay:{
+        delay:6000,
+        disableOnInteraction:false
+    },
 
-        });
+    pagination:{
+        el:".swiper-pagination",
+        clickable:true
+    },
 
-    });
-    // For mobile
+    navigation:{
+        nextEl:".swiper-button-next",
+        prevEl:".swiper-button-prev"
+    },
 
-if (window.innerWidth > 768) {
+    keyboard:{
+        enabled:true
+    }
 
-    document.querySelectorAll(".mobile-title").forEach(title => {
-
-        title.addEventListener("click", function () {
-
-            const card = this.closest(".mobile-card");
-
-            card.classList.toggle("active");
-
-        });
-
-    });
-
-}
 });

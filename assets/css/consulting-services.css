@@ -681,82 +681,90 @@ background-position: center 20%;
     }
 }
 
-/********************/
+
 
 /*=========================================
 CONSULTING PILLARS
 =========================================*/
+/*==================================================
+CONSULTING CAROUSEL
+==================================================*/
 
-.consulting-pillars{
+.consulting-carousel{
 
     position:relative;
 
-    padding:110px 0;
+    padding:120px 0;
 
     overflow:hidden;
 
-    background:
-        radial-gradient(circle at 15% 20%,rgba(92,107,192,.18),transparent 30%),
-        radial-gradient(circle at 85% 80%,rgba(20,184,166,.15),transparent 35%),
-        linear-gradient(180deg,#061322,#09182c,#061322);
-
 }
 
-/* Background Glow */
+/*==================================================
+FLOATING GLOW
+==================================================*/
 
-.consulting-pillars::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:700px;
-
-    height:700px;
-
-    border-radius:50%;
-
-    background:radial-gradient(circle,
-    rgba(92,107,192,.18),
-    transparent 70%);
-
-    left:-220px;
-
-    top:-220px;
-
-    animation:floatGlow 12s ease-in-out infinite;
-
-}
-
-.consulting-pillars::after{
+.consulting-carousel::before{
 
     content:"";
 
     position:absolute;
 
     width:650px;
-
     height:650px;
+
+    left:-250px;
+    top:-180px;
 
     border-radius:50%;
 
-    background:radial-gradient(circle,
-    rgba(20,184,166,.15),
+    background:
+    radial-gradient(circle,
+    rgba(37,99,235,.18),
     transparent 70%);
 
-    right:-220px;
+    filter:blur(30px);
 
-    bottom:-220px;
+    animation:floatGlow1 12s ease-in-out infinite;
 
-    animation:floatGlow2 15s ease-in-out infinite;
+    pointer-events:none;
 
 }
 
-@keyframes floatGlow{
+.consulting-carousel::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    right:-260px;
+    bottom:-250px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle,
+    rgba(6,182,212,.12),
+    transparent 72%);
+
+    filter:blur(30px);
+
+    animation:floatGlow2 14s ease-in-out infinite;
+
+    pointer-events:none;
+
+}
+
+@keyframes floatGlow1{
 
     50%{
 
-        transform:translateY(60px);
+        transform:
+        translateY(40px)
+        scale(1.08);
 
     }
 
@@ -766,153 +774,477 @@ CONSULTING PILLARS
 
     50%{
 
-        transform:translateX(-60px);
+        transform:
+        translateX(-40px)
+        scale(1.08);
 
     }
 
 }
 
-/* Navigation */
+/*==================================================
+SWIPER
+==================================================*/
 
-.pillar-nav{
+.consultingSwiper{
 
-    display:grid;
+    margin-top:70px;
 
-    grid-template-columns:repeat(3,1fr);
+    overflow:visible;
 
-    gap:30px;
+}
 
-    margin:60px 0;
+.consultingSwiper .swiper-wrapper{
+
+    align-items:stretch;
+
+}
+
+.consultingSwiper .swiper-slide{
+
+    height:auto;
+
+}
+
+/*==================================================
+CARD
+==================================================*/
+
+.consult-card{
 
     position:relative;
+
+    overflow:hidden;
+
+    border-radius:30px;
+
+    background:
+    rgba(255,255,255,.04);
+
+    border:1px solid
+    rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    transition:.45s;
+
+}
+
+.consult-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#3B82F6;
+
+    box-shadow:
+    0 35px 80px
+    rgba(37,99,235,.18);
+
+}
+
+/*==================================================
+BANNER
+==================================================*/
+
+.consult-banner{
+
+    position:relative;
+
+    overflow:hidden;
+
+    height:350px;
+
+}
+
+.consult-banner img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:1.2s;
+
+}
+
+.consult-card:hover
+.consult-banner img{
+
+    transform:scale(1.08);
+
+}
+
+/*==================================================
+IMAGE OVERLAY
+==================================================*/
+
+.consult-banner::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+
+        180deg,
+
+        transparent,
+
+        rgba(7,16,31,.20),
+
+        rgba(7,16,31,.65)
+
+    );
+
+    z-index:1;
+
+}
+
+.consult-overlay{
+
+    position:absolute;
+
+    left:30px;
+
+    bottom:28px;
 
     z-index:2;
 
 }
 
-.pillar-card{
+.consult-overlay span{
 
-    background:rgba(255,255,255,.05);
+    display:inline-flex;
 
-    border:1px solid rgba(92,107,192,.45);
+    align-items:center;
+
+    padding:10px 20px;
+
+    border-radius:50px;
+
+    background:
+    rgba(255,255,255,.08);
+
+    border:1px solid
+    rgba(255,255,255,.12);
+
+    backdrop-filter:blur(15px);
+
+    color:#7DD3FC;
+
+    font-size:.9rem;
+
+    letter-spacing:.8px;
+
+    text-transform:uppercase;
+
+}
+
+/*==================================================
+CONTENT WRAPPER
+==================================================*/
+
+.consult-content{
+
+    padding:45px;
+
+}
+/*==================================================
+CONTENT
+==================================================*/
+
+.consult-content h3{
+
+    font-size:24px;
+
+    color:#fff;
+
+    line-height:1.25;
+
+    margin-bottom:20px;
+
+    font-weight:700;
+
+}
+
+.consult-content>p{
+
+    max-width:900px;
+
+    color:#BFCBDD;
+
+    font-size:20px;
+
+    line-height:1.9;
+
+    margin-bottom:45px;
+
+}
+
+/*==================================================
+FEATURES
+==================================================*/
+
+.consult-features{
+
+    display:grid;
+
+    gap:22px;
+
+}
+
+.consult-feature{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:22px;
+
+    padding:28px;
+
+    position:relative;
+
+    overflow:hidden;
 
     border-radius:22px;
 
-    padding:20px 15px;
+    background:rgba(255,255,255,.04);
 
-    text-align:center;
+    border:1px solid rgba(255,255,255,.08);
 
-    cursor:pointer;
+    backdrop-filter:blur(18px);
+
+    transition:.4s;
+
+}
+
+.consult-feature::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:5px;
+
+    height:100%;
+
+    background:linear-gradient(
+        180deg,
+        #2563EB,
+        #06B6D4
+    );
+
+    transform:scaleY(0);
+
+    transform-origin:top;
 
     transition:.35s;
 
 }
 
-.pillar-card:hover{
+.consult-feature:hover{
 
-    transform:translateY(-10px);
+    transform:translateX(10px);
 
-    background:rgba(92,107,192,.12);
+    border-color:#3B82F6;
 
-    border-color:#7ED6FF;
-
-    box-shadow:0 20px 40px rgba(92,107,192,.25);
-
-}
-
-.pillar-card.active{
-
-    background:linear-gradient(
-        135deg,
-        #5C6BC0,
-        #14B8A6
-    );
-
-    transform:translateY(-10px);
-
-    border-color:transparent;
-
-    box-shadow:0 25px 50px rgba(92,107,192,.45);
+    box-shadow:
+        0 20px 45px rgba(37,99,235,.20);
 
 }
 
-.pillar-icon{
+.consult-feature:hover::before{
 
-    width:85px;
+    transform:scaleY(1);
 
-    height:85px;
+}
 
-    margin:auto auto 20px;
+.consult-feature i{
+
+    flex-shrink:0;
+
+    width:52px;
+
+    height:52px;
 
     border-radius:50%;
 
     display:flex;
 
-    justify-content:center;
-
     align-items:center;
 
-    font-size:2rem;
+    justify-content:center;
 
-    color:#7ED6FF;
+    font-size:1.2rem;
 
-    background:rgba(255,255,255,.05);
+    color:#fff;
 
-    border:1px solid rgba(126,214,255,.25);
+    background:linear-gradient(
+        135deg,
+        #2563EB,
+        #06B6D4
+    );
+
+}
+
+.consult-feature h5{
+
+    color:#fff;
+
+    font-size:22px;
+
+    margin-bottom:10px;
+
+}
+
+.consult-feature p{
+
+    color:#C7D5E6;
+    font-size:20px;
+
+    line-height:1.8;
+
+    margin:0;
+
+}
+
+/*==================================================
+SWIPER NAVIGATION
+==================================================*/
+
+.consultingSwiper .swiper-button-prev,
+.consultingSwiper .swiper-button-next{
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.10);
+
+    backdrop-filter:blur(15px);
 
     transition:.35s;
 
 }
 
-.pillar-card.active .pillar-icon{
+.consultingSwiper .swiper-button-prev:hover,
+.consultingSwiper .swiper-button-next:hover{
 
-    background:rgba(255,255,255,.18);
+    background:#2563EB;
 
-    color:#fff;
+    border-color:#2563EB;
 
-    transform:scale(1.12);
-
-}
-
-.pillar-card h4{
-
-    color:#fff;
-
-    margin:0;
-
-    font-size:1.15rem;
-
-    font-weight:600;
+    transform:scale(1.08);
 
 }
 
-/* Content */
+.consultingSwiper .swiper-button-prev::after,
+.consultingSwiper .swiper-button-next::after{
 
-.pillar-panel{
+    color:#fff;
 
-    display:none;
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+/*==================================================
+PAGINATION
+==================================================*/
+
+.consultingSwiper .swiper-pagination{
+
+    margin-top:35px;
 
     position:relative;
 
-    z-index:2;
+}
+
+.consultingSwiper .swiper-pagination-bullet{
+
+    width:12px;
+
+    height:12px;
+
+    background:#4B5563;
+
+    opacity:1;
+
+    transition:.35s;
 
 }
 
-.pillar-panel.active{
+.consultingSwiper .swiper-pagination-bullet-active{
 
-    display:block;
+    width:34px;
 
-    animation:fadeUp .4s;
+    border-radius:30px;
+
+    background:#3B82F6;
 
 }
 
-@keyframes fadeUp{
+/*==================================================
+ANIMATIONS
+==================================================*/
+
+.swiper-slide-active .consult-content h3{
+
+    animation:titleUp .6s ease;
+
+}
+
+.swiper-slide-active .consult-content>p{
+
+    animation:titleUp .8s ease;
+
+}
+
+.swiper-slide-active .consult-feature{
+
+    animation:featureUp .7s ease backwards;
+
+}
+
+.swiper-slide-active .consult-feature:nth-child(1){
+
+    animation-delay:.15s;
+
+}
+
+.swiper-slide-active .consult-feature:nth-child(2){
+
+    animation-delay:.3s;
+
+}
+
+.swiper-slide-active .consult-feature:nth-child(3){
+
+    animation-delay:.45s;
+
+}
+
+@keyframes titleUp{
 
     from{
 
         opacity:0;
 
-        transform:translateY(15px);
+        transform:translateY(25px);
 
     }
 
@@ -926,228 +1258,140 @@ CONSULTING PILLARS
 
 }
 
-.pillar-panel h3{
+@keyframes featureUp{
 
-    color:#fff;
+    from{
 
-    font-size:2.3rem;
+        opacity:0;
 
-    margin-bottom:18px;
+        transform:translateY(20px);
 
-}
-
-.pillar-panel>p{
-
-    color:#C8D5E7;
-    font-size:1.7rem;
-
-    margin-bottom:35px;
-
-
-}
-.pillar-image{
-
-    height:280px;
-
-}
-
-.pillar-image img{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-}
-.pillar-list{
-
-    display:grid;
-
-    gap:22px;
-    margin-left: 180px;
-    margin-top: 50px;
-}
-
-.pillar-item{
-
-  
-    border:1px solid rgba(255,255,255,.15);
-
-    border-radius:16px;
-
-    padding:18px 22px;
-
-    backdrop-filter:blur(14px);
-
-    transition:.35s;
-    width: 70%;
-
-}
-.pillar-item:nth-child(1){
-
-   background:#2563EB;
-
-}
-
-.pillar-item:nth-child(2){
-
-  background:#0891B2;
-
-}
-
-.pillar-item:nth-child(3){
-
-background:#0F766E;
-}
-.pillar-item:hover{
-
-    transform:translateX(8px);
-
-    background:linear-gradient(
-        135deg,
-        rgba(37,99,235,.35),
-        rgba(92,107,192,.28)
-    );
-
-    box-shadow:0 18px 40px rgba(37,99,235,.25);
-
-}
-.pillar-item h5{
-
-    color:#7ED6FF;
-
-    margin-bottom:12px;
-    font-size:1.7rem;
-
-}
-
-.pillar-item p{
-
-    color:#D7E3F4;
-
-    margin:0;
-    font-size:1.3rem;
-
-}
-
-
-
-/* For mobile pillars */
-/* Hidden on desktop */
-
-.pillar-mobile{
-
-    display:none;
-
-}
-
-/* Mobile */
-@media(max-width:768px){
-
-    .pillar-nav{
-        display:none !important;
     }
 
-    .pillar-content{
-        display:none !important;
-    }
+    to{
 
-    .pillar-mobile{
-        display:block !important;
+        opacity:1;
+
+        transform:none;
+
     }
 
 }
 
-@media(max-width:768px){
+/*==================================================
+TABLET
+==================================================*/
 
-    .pillars-wrapper{
+@media (max-width:991px){
 
-        display:none;
+    .consult-content{
 
-    }
-
-    .pillar-mobile{
-
-        display:block;
+        padding:35px;
 
     }
 
-    .mobile-card{
+    .consult-banner{
 
-        margin-bottom:18px;
-
-        border-radius:18px;
-
-        overflow:hidden;
-
-        background:rgba(255,255,255,.05);
-
-        border:1px solid rgba(92,107,192,.25);
+        aspect-ratio:16/8;
 
     }
 
-    .mobile-title{
+    .consult-content h3{
 
-        width:100%;
-
-        padding:20px;
-
-        background:none;
-
-        border:none;
-
-        color:#fff;
-
-        display:flex;
-
-        justify-content:space-between;
-
-        align-items:center;
-
-        font-size:1rem;
-
-        font-weight:600;
-
-        cursor:pointer;
+        font-size:2rem;
 
     }
 
-    .mobile-title i{
+    .consult-feature{
 
-        transition:.35s;
-
-    }
-
-    .mobile-card.active i{
-
-        transform:rotate(45deg);
+        padding:22px;
 
     }
 
-    .mobile-content{
+}
 
-        display:none;
+/*==================================================
+MOBILE
+==================================================*/
+
+@media (max-width:768px){
+
+    .consulting-carousel{
+
+        padding:80px 0;
+
+    }
+
+    .consultingSwiper{
+
+        margin-top:45px;
+
+    }
+
+    .consult-banner{
+
+        aspect-ratio:16/10;
+
+    }
+
+    .consult-content{
 
         padding:25px;
 
-        border-top:1px solid rgba(255,255,255,.08);
+    }
+
+    .consult-content h3{
+
+        font-size:1.7rem;
 
     }
 
-    .mobile-card.active .mobile-content{
+    .consult-content>p{
 
-        display:block;
+        font-size:.95rem;
 
-        animation:fadeUp .35s;
+        margin-bottom:30px;
 
     }
 
-}
-.consulting-pillars::before,
-.consulting-pillars::after{
+    .consult-feature{
 
-    pointer-events:none;
+        gap:15px;
+
+        padding:18px;
+
+    }
+
+    .consult-feature i{
+
+        width:42px;
+
+        height:42px;
+
+        font-size:1rem;
+
+    }
+
+    .consult-feature h5{
+
+        font-size:1rem;
+
+    }
+
+    .consult-feature p{
+
+        font-size:.9rem;
+
+        line-height:1.6;
+
+    }
+
+    .consultingSwiper .swiper-button-prev,
+    .consultingSwiper .swiper-button-next{
+
+        display:none;
+
+    }
 
 }
 
