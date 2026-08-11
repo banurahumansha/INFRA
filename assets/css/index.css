@@ -76,14 +76,14 @@ body.page-home{
     letter-spacing:2px;
     text-transform:uppercase;
             position:absolute;
-    left: 200px;      /* Distance from left edge */
+    left: 20px;      /* Distance from left edge */
     bottom: 140px;    /* Distance from bottom edge */
     z-index:5;
 }
 
 .hero-tag-i{
 
-    color:#56b0e0;
+    color:#f502f9;
 
     border:0.5px solid rgba(88,196,255,.45);
 
@@ -120,36 +120,16 @@ body.page-home{
     opacity:0;
 }
 .slide-1 .hero-title-i{
-    background: linear-gradient(
-        90deg,
-        #1E3A8A 0%,   /* Dark Blue */
-        #2563EB 40%,  /* Blue */
-        #A3E635 100%  /* Light Green */
-    );
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+   color: whitesmoke;
 }
 .slide-2 .hero-title-i{
 
-    background: linear-gradient(
-        90deg,
-        #399598 0%,   /* Brand Teal */
-        #7ED957 55%,  /* Bright Green */
-        #C8FF72 100%  /* Lime Green */
-    );
+   color: #cbedef !important;
 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 .slide-3 .hero-title-i{
 
-    background: linear-gradient(90deg, #FF00A8, #B026FF, #6A5CFF);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
- color: #fff !important;
+ color: #cbedef !important;
 }
 
 .hero-subtitle-i{
