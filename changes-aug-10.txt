@@ -1,0 +1,87 @@
+Hero tag 2 should come, change font color for all 3 slides 
+
+split the partners and clients 
+
+About us -> Header color change to blue 
+
+span tag inas -> to logo color 
+
+Carousel Change 
+Multi -cloud 
+==============
+
+Remove heade overview ,
+
+Multi-cloud eco system 
+
+Change all iamges of aws etc... 
+
+Cloud stratergy 
+
+blue purple dot remove 
+
+and increase header name 
+
+Hover card -  header font reduce font
+
+
+
+================
+
+
+Managed services
+----------------
+
+Remove header Overview 
+
+
+=================
+Consulting services 
+
+Remove header Introduction 
+
+change header color to something other than yellow 
+
+Nav menu  (Consulting Service )
+
+Overview image change height 
+
+
+Resource Augumentation
+
+Remove Heaade Introduction 
+
+move this image to Consulting services
+
+
+================
+
+Cyber security 
+
+remove header 
+
+card  hover maintain (managed sevices )
+
+Add side padding reduce space 
+
+==============
+
+Data & AI
+
+Hero color change green 
+
+Rmove heade introduction 
+
+change hover image 
+
+
+
+
+
+
+
+
+
+
+
+

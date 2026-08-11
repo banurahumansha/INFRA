@@ -1717,7 +1717,7 @@ background: rgba(255, 193, 7, 0.45);
 
 .cloud-pillar h4{
 
-    font-size:25px;
+    font-size:32px;
 
     color:#b74eef ;
 
@@ -1763,7 +1763,7 @@ background: rgba(255, 193, 7, 0.45);
     width:100%;
 
     max-width:800px;
-
+    height: 600px;
     animation:
 
     cloudFloat 6s ease-in-out infinite;
@@ -3014,7 +3014,7 @@ MOBILE
 
     .pillar-text h4{
 
-        font-size:20px;
+        font-size:32px;
 
         margin-bottom:8px;
 
@@ -3636,17 +3636,16 @@ MOBILE
 ================================ */
 
 .finops-grid{
+    display: grid;
 
-    display:grid;
+    grid-template-columns: repeat(2, 1fr);
 
-    grid-template-columns:
-    repeat(2,1fr);
+    gap: 25px;
 
-    gap:30px;
+    max-width: 1400px;
+    margin: 0 auto;
 
-    margin-top:60px;
-
-}
+  }
 
 
 
@@ -3790,16 +3789,27 @@ MOBILE
 
 .finops-card-overlay span{
 
-    font-size:72px;
+      width: 52px;
+    height: 52px;
 
-    font-weight:800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    color:#ffffff;
+    margin-bottom: 22px;
 
-    line-height:1;
+    border-radius: 14px;
 
-    transition:.45s;
+    background: rgba(255, 255, 255, 0.055);
 
+    color: #ffffff;
+
+    font-size: 22px;
+
+    transition:
+        transform 0.4s ease,
+        background 0.4s ease;
+opacity: 0;
 }
 
 
@@ -3808,7 +3818,7 @@ MOBILE
 
 .finops-card-overlay h3{
 
-    font-size:52px;
+    font-size:33px;
 
     font-weight:700;
 
@@ -3829,9 +3839,8 @@ MOBILE
 
 .finops-card-overlay h2{
 
-    font-size:40px;
+       font-size: 23px;
 
-    font-weight:700;
 
     line-height:1.1;
 
@@ -3850,7 +3859,7 @@ MOBILE
 
     margin-top:auto;
 
-    font-size:25px;
+    font-size:20px;
 
     line-height:1.8;
 
@@ -3898,7 +3907,14 @@ MOBILE
 
 }
 
+.finops-card:hover span{
 
+    opacity:1;
+
+    transform:
+    translateY(0);
+
+}
 
 .finops-card:hover p{
 
@@ -4402,7 +4418,6 @@ box-shadow:
     font-weight:600;
 
     text-align:left;
-
 }
 
 .finops-intro p:last-child{
@@ -4418,9 +4433,8 @@ box-shadow:
 
 .finops-intro{
 
-    max-width:980px;
-
-    margin:30px auto 70px;
+    max-width:1400px;
+margin: 30px auto 70px;
 
     text-align:center;
     opacity:0;
@@ -4484,14 +4498,6 @@ box-shadow:
 
 }
 
-
-.finops-intro{
-
-    max-width:980px;
-
-    margin:30px auto 70px;
-
-}
 
 @media(max-width:991px){
 

@@ -969,10 +969,9 @@ Security Philosophy
 
 .cyber-capabilities .feature-grid{
 
-    display:grid;
+      grid-template-columns:repeat(2, 1fr);
+    max-width:1400px;
+    margin:0 auto;
 
-    grid-template-columns:repeat(2,1fr);
-
-    gap:30px;
 
 }

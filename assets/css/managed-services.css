@@ -484,22 +484,18 @@ background-position: center 20%;
    SECTION HEADING
 ------------------------------------------ */
 
-.ms-section-heading {
 
-    margin-bottom: 65px;
-
-}
 
 .ms-section-heading h2 {
 
-color: #c7f36a;
+color: #57dcde;
     font-size: clamp(
-        40px,
+        32px,
         5vw,
-        52px
+        42px
     );
 
-    font-weight: 800;
+    font-weight: 700;
 
     line-height: 1.05;
 
@@ -1372,25 +1368,6 @@ color: #c7f36a;
    SECTION HEADING
    ========================================================= */
 
-.ms-section-heading {
-    max-width: 850px;
-    margin: 0 auto 55px;
-    text-align: center;
-}
-
-.ms-section-heading .section-label {
-    display: inline-block;
-    margin-bottom: 12px;
-
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-
-    opacity: 0.7;
-}
-
-
 /* =========================================================
    FULL WIDTH IMAGE
    ========================================================= */
@@ -1694,10 +1671,10 @@ color: #c7f36a;
    ========================================================= */
 
 .ms-section-heading {
-    max-width: 850px;
+    max-width: 1400px;
     margin: 0 auto 55px;
-    text-align: center;
 }
+
 
 .ms-section-heading .section-label {
     display: inline-block;
@@ -1712,7 +1689,6 @@ color: #c7f36a;
 }
 
 .ms-section-heading p {
-    max-width: 700px;
     margin: 0 auto;
 
     font-size: 24px;

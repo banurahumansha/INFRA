@@ -111,15 +111,24 @@ background-position: center 20%;
 }
 
 /* Tag */
-.hero-tag{
+.about-hero-tag{
 
     display:inline-block;
 
     font-size:68px;
+  background:linear-gradient(
+        90deg,
+        #1a33b1 0%,     /* Deep Blue */
+        #3B5CB3 30%,    /* Medium Blue */
+        #4A7FC0 55%,    /* Blue Transition */
+        #42A3A3 80%,    /* Teal */
+        #399598 100%    /* Green */
+    );
 
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
     font-weight:1000;
-
-    background:linear-gradient(
+    /* background:linear-gradient(
         90deg,
         #A8FF78,
         #DFFF7A,
@@ -130,7 +139,7 @@ background-position: center 20%;
     -webkit-text-fill-color:transparent;
     background-clip:text;
 
-    margin-bottom:25px;
+    margin-bottom:25px; */
 
 }
 /* Heading */
@@ -161,7 +170,7 @@ background-position: center 20%;
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
     background-clip:text;
-
+    font-weight: 800px;
     font-size:40px;
 
 }/* Paragraph */
@@ -2205,17 +2214,18 @@ MOBILE
     font-weight:700;
 }
 
-.intro-header h2 span{
-        font-size:44px;
-
+.logo{
+    font-size:44px;
+    font-weight: 800;
     background:linear-gradient(
         90deg,
-        #FFD54F,
-        #FFE066,
-        #5EEAD4,
-        #399598,
-        #00838F
+        #293B97 0%,     /* Deep Blue */
+        #3B5CB3 30%,    /* Medium Blue */
+        #4A7FC0 55%,    /* Blue Transition */
+        #42A3A3 80%,    /* Teal */
+        #399598 100%    /* Green */
     );
+
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }

@@ -104,6 +104,7 @@ body.solid-nav-mode .custom-navbar .nav-link {
 }
 .rs-introduction{
         padding:70px 0;
+       
     }
 .rs-hero h1 {
     font-size: clamp(110px, 8vw, 120px);
@@ -122,8 +123,8 @@ margin-left: 20px;
 
     background:linear-gradient(
         90deg,
-        #dae114 45%,
-        #02131a 100%
+        #e1e2e4 45%,
+        #0aa9e8 100%
     );
 
     -webkit-background-clip:text;
@@ -409,7 +410,7 @@ margin-left: 20px;
 
     backdrop-filter:blur(12px);
 
-    color:#7ae472;
+    color: #3feed9;
 
     font-size:40px;
     font-weight:700;
@@ -456,6 +457,7 @@ margin-left: 20px;
     color:#c7d2e4;
 
 }
+
 /* ===============================
    TABLET
 ================================= */
@@ -1427,17 +1429,11 @@ SMALL MOBILE
 }
 
 }
-
 .industry-blueprints .feature-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:30px;
-
+    grid-template-columns:repeat(2, 1fr);
+    max-width:1400px;
+    margin:0 auto;
 }
-
 /*=========================================
     EXECUTION FRAMEWORK
 =========================================*/

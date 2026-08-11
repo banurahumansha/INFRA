@@ -75,18 +75,17 @@ body.page-home{
     font-weight:600;
     letter-spacing:2px;
     text-transform:uppercase;
-    width: max-content;
             position:absolute;
-    left: 500px;      /* Distance from left edge */
-    bottom: 400px;    /* Distance from bottom edge */
+    left: 200px;      /* Distance from left edge */
+    bottom: 140px;    /* Distance from bottom edge */
     z-index:5;
 }
 
 .hero-tag-i{
 
-    color:#58C4FF;
+    color:#56b0e0;
 
-    border:1px solid rgba(88,196,255,.45);
+    border:0.5px solid rgba(88,196,255,.45);
 
     background:rgba(9,25,55,.28);
 
@@ -131,7 +130,6 @@ body.page-home{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
--webkit-text-stroke: 2px #3D5AFE;
 }
 .slide-2 .hero-title-i{
 
@@ -145,7 +143,6 @@ body.page-home{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
--webkit-text-stroke: 2px #FF5252;
 }
 .slide-3 .hero-title-i{
 
@@ -153,7 +150,6 @@ body.page-home{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
  color: #fff !important;
--webkit-text-stroke: 2px #9C27B0;
 }
 
 .hero-subtitle-i{
