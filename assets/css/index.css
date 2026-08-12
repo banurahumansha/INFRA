@@ -57,15 +57,19 @@ body.page-home{
 
 }
     /* Backgrounds */
-    .slide-1 {
+   .slide-1 {
+    background-image: url('../images/home/card-baground1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}
 
-   background-image: url('../images/home/card-baground1.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+    .slide-2 { background-image: url('../images/home/card-baground2.jpg');
+        background-position: center 20%;
+ }
+    .slide-3 { background-image: url('../images/home/card-baground3.jpg'); 
+     background-position: 0% 60%;
     }
-
-    .slide-2 { background-image: url('../images/home/card-baground2.jpg'); }
-    .slide-3 { background-image: url('../images/home/card-baground3.jpg'); }
 
     /* Typography */
 .hero-tag-i{
@@ -76,7 +80,7 @@ body.page-home{
     letter-spacing:2px;
     text-transform:uppercase;
             position:absolute;
-    left: 20px;      /* Distance from left edge */
+    left: 320px;      /* Distance from left edge */
     bottom: 140px;    /* Distance from bottom edge */
     z-index:5;
 }
@@ -94,7 +98,7 @@ body.page-home{
 }
 .hero-title-i{
     position:absolute;
-    left: 20px;      /* Distance from left edge */
+    left: 200px;      /* Distance from left edge */
     bottom: 260px;    /* Distance from bottom edge */
     z-index:5;
     width: max-content;
@@ -102,12 +106,12 @@ body.page-home{
 
 
 .hero-title-i{
-
+    font-family: 'Graphik Regular';
     font-size:70px;
 
-    font-weight:650;
+    font-weight:400;
 
-    line-height:1.05;
+    line-height:82px;
 
     letter-spacing:-2px;
 
@@ -128,8 +132,7 @@ body.page-home{
 
 }
 .slide-3 .hero-title-i{
-
- color: #cbedef !important;
+ color: whitesmoke !important;
 }
 
 .hero-subtitle-i{
