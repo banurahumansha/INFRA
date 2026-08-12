@@ -412,6 +412,7 @@ body.page-cs .cta-box{
     width:100%;
     display:block;
     border-radius:18px;
+    height: 720px;
 }
 
 @media (max-width:768px){

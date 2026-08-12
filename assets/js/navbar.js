@@ -13,201 +13,74 @@ fetch("components/footer.html")
 
     });
 
+function initNavbar() {
 
-    function initNavbar() {
+    /*==============================*
+     * NAVBAR SCROLL
+     *==============================*/
 
+    const navbar = document.querySelector(".custom-navbar");
 
-/*==============================
-    NAVBAR SCROLL
-==============================*/
+    if (navbar) {
 
-const navbar = document.querySelector(".custom-navbar");
+        window.addEventListener("scroll", () => {
 
-if (navbar) {
-
-    window.addEventListener("scroll", () => {
-
-        if (window.scrollY > 50) {
-
-            navbar.classList.add("scrolled");
-
-        } else {
-
-            navbar.classList.remove("scrolled");
-
-        }
-
-    });
-
-}
-
-
-
-/*==============================
-    SOLUTIONS MENU
-==============================*/
-
-
-const mainMenus =
-document.querySelectorAll(".solution-main");
-
-
-const middlePanels =
-document.querySelectorAll(".middle-panel");
-
-
-const middleItems =
-document.querySelectorAll(".middle-item");
-
-
-const detailPanels =
-document.querySelectorAll(".detail-panel");
-
-
-
-/*==============================
-    COLUMN 1
-==============================*/
-
-
-mainMenus.forEach(menu => {
-
-
-    menu.addEventListener("mouseenter", () => {
-
-
-
-        // remove active states
-
-        mainMenus.forEach(m => {
-
-            m.classList.remove("active");
-
-        });
-
-
-
-        middlePanels.forEach(panel => {
-
-            panel.classList.remove("active");
-
-        });
-
-
-
-        detailPanels.forEach(panel => {
-
-            panel.classList.remove("active");
-
-        });
-
-
-
-        // activate selected menu
-
-        menu.classList.add("active");
-
-
-
-        const target =
-        menu.dataset.main;
-
-
-
-        const panel =
-        document.getElementById(target);
-
-
-
-        if(panel){
-
-            panel.classList.add("active");
-
-        }
-
-
-
-        // ELV opens right column
-
-        if(target === "elv"){
-
-
-            const elvDetail =
-            document.getElementById("elv-detail");
-
-
-            if(elvDetail){
-
-                elvDetail.classList.add("active");
-
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
             }
 
+        });
 
-        }
+    }
 
+    /*==============================*
+     * MEGA MENU V2
+     *==============================*/
 
-    });
+    const mmTabs = document.querySelectorAll(".mm-category");
+    const mmLeftPanels = document.querySelectorAll(".mm-left-panel");
+    const mmRightPanels = document.querySelectorAll(".mm-right-panel");
 
+    if (mmTabs.length) {
 
-});
+        mmTabs.forEach(tab => {
 
+            tab.addEventListener("mouseenter", function () {
 
+                const target = this.dataset.target;
 
+                // Active tab
+                mmTabs.forEach(t => t.classList.remove("mm-active"));
+                this.classList.add("mm-active");
 
-/*==============================
-    COLUMN 2
-==============================*/
+                // Hide left panels
+                mmLeftPanels.forEach(panel => {
+                    panel.classList.remove("mm-active");
+                });
 
+                // Show selected left panel
+                const left = document.getElementById(target + "-left");
+                if (left) {
+                    left.classList.add("mm-active");
+                }
 
-middleItems.forEach(item => {
+                // Hide right panels
+                mmRightPanels.forEach(panel => {
+                    panel.classList.remove("mm-active");
+                });
 
+                // Show selected right panel
+                const right = document.getElementById(target + "-right");
+                if (right) {
+                    right.classList.add("mm-active");
+                }
 
-    item.addEventListener("mouseenter", () => {
-
-
-
-        middleItems.forEach(i => {
-
-            i.classList.remove("active");
+            });
 
         });
 
-
-
-        detailPanels.forEach(panel => {
-
-            panel.classList.remove("active");
-
-        });
-
-
-
-        item.classList.add("active");
-
-
-
-        const target =
-        item.dataset.detail;
-
-
-
-        const detail =
-        document.getElementById(target);
-
-
-
-        if(detail){
-
-            detail.classList.add("active");
-
-        }
-
-
-
-    });
-
-
-});
-
+    }
 
 }

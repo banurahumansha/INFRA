@@ -115,25 +115,7 @@ background: transparent;
                 DROPDOWN
 =====================================================*/
 
-.dropdown-menu{
-
-    border:none;
-
-    border-radius:18px;
-
-    padding:12px 0;
-
-    box-shadow:0 20px 50px rgba(0,0,0,.15);
-
-    background:linear-gradient(
-        135deg,
-        #F8FBFF,
-        #EEF7FF
-    );
-
-}
-
-.dropdown-item{
+.dropdown-item{ 
 
     padding:12px 24px;
 
@@ -359,235 +341,6 @@ background: transparent;
 
 }
 
-/*==========================
-    SOLUTIONS MEGA MENU
-===========================*/
-
-    .solution-layout{
-
-        display:grid;
-
-        grid-template-columns:180px 240px 1fr;
-
-        gap:15px;
-
-        margin-top:10px;
-
-    }
-
-/*==========================
-    COLUMN 1
-===========================*/
-
-.solution-left{
-
-    border-right:1px solid #E5E7EB;
-
-    padding-right:20px;
-
-}
-
-.solution-main{
-
-    padding:14px 18px;
-
-    border-radius:12px;
-
-    margin-bottom:12px;
-
-    cursor:pointer;
-
-    font-weight:400;
-
-    transition:.3s;
-
-    color:#374151;
-
-}
-
-
-.solution-main:hover{
-
-    background:#EEF6FF;
-
-    color:#0B5ED7;
-
-}
-
-.solution-main.active{
-
-    background:#0B5ED7;
-
-    color:#fff;
- position: relative; /* Crucial for positioning the absolute arrow */
-    padding-right: 35px !important; /* Prevents text from overlapping the arrow */
-}
-.solution-main.active::after,.middle-panel a.active::after {
-    content: "";
-    position: absolute;
-    right: 15px; /* Spacing from the right edge */
-    top: 50%;
-    transform: translateY(-50%); /* Centers the arrow vertically */
-
-    /* Creates a sharp, right-facing triangle arrow */
-    width: 0;
-    height: 0;
-    border-top: 6px solid transparent;
-    border-bottom: 6px solid transparent;
-    /*border-left: 6px solid #FF0000;  White arrow matches the active text */
-
-    transition: all 0.3s ease;
-}
-
-/*==========================
-    COLUMN 2
-===========================*/
-
-.solution-middle{
-
-    border-right:1px solid #E5E7EB;
-
-    padding-right:20px;
-}
-
-.middle-panel{
-
-    display:none;
-
-}
-
-.middle-panel.active{
-
-    display:block;
-
-}
-
-.middle-panel a{
-
-    display:block;
-
-    padding:12px 16px;
-
-    border-radius:10px;
-
-    margin-bottom:8px;
-
-    text-decoration:none;
-
-    color:#374151;
-
-    transition:.25s;
-
-    font-weight:400;
-
-}
-
-.middle-panel a:hover{
-
-    background:#0B5ED7;
-
-    color:0F52BA#;
-
-}
-
-/* Force the selected items to act as local boundaries for the arrows */
-.solution-main.active,
-.middle-panel .middle-item.active {
-    background: #0B5ED7 !important;
-    color: #ffffff !important;
-    position: relative !important;   /* Crucial: Locks the arrow INSIDE this specific link */
-    display: flex !important;        /* Keeps the element strictly block/flex level */
-    justify-content: space-between;  /* Pushes the text left and the arrow right */
-    align-items: center;             /* Centers the text and arrow vertically */
-    padding-right: 20px !important;  /* Sets safe margin inside the right edge */
-}
-
-/* Clear out any inherited pseudo-element leakage across columns */
-.solution-layout .detail-panel a::after {
-    display: none !important;        /* Prevents arrows from bleeding into column 3 */
-}
-
-/*==========================
-    COLUMN 3
-===========================*/
-
-.solution-right{
-
-    min-height:320px;
-
-    padding-left:5px;
-
-}
-
-.detail-panel{
-
-    display:none;
-
-}
-
-.detail-panel.active{
-
-    display:block;
-
-}
-
-.detail-panel a{
-
-    display:block;
-
-    padding:12px 16px;
-
-    margin-bottom:8px;
-
-    text-decoration:none;
-
-    color:#334155;
-
-    border-radius:10px;
-
-    transition:.25s;
-
-}
-
-.detail-panel a:hover{
-
-    background:#EEF6FF;
-
-    color:#0B5ED7;
-
-    padding-left:22px;
-
-}
-
-/*==========================
-    HEADER
-===========================*/
-
-.mega-header{
-
-    margin-bottom:25px;
-
-}
-
-.mega-header h3{
-
-    font-size:28px;
-
-    color:#0B5ED7;
-
-    margin-bottom:10px;
-
-}
-
-.mega-header p{
-
-    color:#64748B;
-
-    margin:0;
-
-}
-
-/** CTA ***/
 
 /** CTA **/
 
@@ -714,7 +467,7 @@ background: transparent;
 
 /* 1. Base Card Framework (Copied directly from your mega-box specifications) */
 .dropdown-menu.mega-box {
-    background: #FFFFFF !important;
+    
     border-radius: 20px !important;
     padding: 28px !important;
     height: auto !important; /* Overrides full-screen grid height stretch */
@@ -781,8 +534,252 @@ li.nav-item.dropdown.position-static .dropdown-menu.mega-menu {
     left: 50% !important;                  /* Shifts the starting position to the middle of the button */
     transform: translateX(-50%) !important; /* Snaps the center point of the panel into flawless alignment */
     right: auto !important;
-
+    
     /* Optional: Controls total width to ensure layout structural sanity */
     width: 800px !important;               /* Limits how far right the grid stretches */
     min-height: 0 !important;
+}
+
+
+    /*=========================================================
+MEGA MENU V2
+=========================================================*/
+.mm-layout{
+    display:grid;
+    grid-template-columns:180px 280px 1fr;
+    gap:15px;
+    margin-top:10px;
+}
+/*=========================================================
+COLUMN 1
+=========================================================*/
+
+.mm-col1{
+
+    border-right:1px solid #E5E7EB;
+    padding-right:20px;
+
+}
+
+.mm-category{
+
+    position:relative;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:14px 18px;
+    margin-bottom:12px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-weight:400;
+
+    color:#374151;
+
+    transition:all .3s ease;
+
+}
+
+.mm-category:hover{
+
+    background:#EEF6FF;
+    color:#0B5ED7;
+
+}
+
+.mm-category.mm-active{
+
+    background:#0B5ED7;
+    color:#fff;
+
+}
+
+.mm-category.mm-active::after{
+
+    content:"";
+
+    width:0;
+    height:0;
+
+    border-top:6px solid transparent;
+    border-bottom:6px solid transparent;
+    border-left:6px solid #fff;
+
+}
+
+/*=========================================================
+COLUMN 2
+=========================================================*/
+
+.mm-col2{
+
+    border-right:1px solid #E5E7EB;
+    padding-right:20px;
+
+}
+
+.mm-left-panel{
+
+    display:none;
+     text-decoration:none !important;
+
+}
+
+.mm-left-panel.mm-active{
+
+    display:block;
+
+}
+
+.mm-link{
+
+    position:relative;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:12px 16px;
+
+    margin-bottom:8px;
+
+    text-decoration:none;
+
+    color:#374151;
+
+    border-radius:10px;
+
+    font-weight:400;
+
+    transition:all .25s ease;
+
+}
+
+.mm-link:hover{
+
+    background:#EEF6FF;
+    color:#0B5ED7;
+
+}
+
+.mm-link.mm-active{
+
+    background:#0B5ED7;
+    color:#fff;
+
+}
+
+.mm-link.mm-active::after{
+
+    content:"";
+
+    width:0;
+    height:0;
+
+    border-top:6px solid transparent;
+    border-bottom:6px solid transparent;
+    border-left:6px solid #fff;
+
+}
+
+/*=========================================================
+COLUMN 3
+=========================================================*/
+
+.mm-col3{
+
+    min-height:320px;
+    padding-left:5px;
+
+}
+
+.mm-right-panel{
+
+    display:none;
+
+}
+
+.mm-right-panel.mm-active{
+
+    display:block;
+
+}
+
+.mm-right-panel a{
+
+    display:block;
+
+    padding:12px 16px;
+
+    margin-bottom:8px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    color:#334155;
+
+    transition:all .25s ease;
+
+}
+
+.mm-right-panel a:hover{
+
+    background:#EEF6FF;
+    color:#0B5ED7;
+    padding-left:22px;
+
+}
+
+/*=========================================================
+HEADINGS (Optional)
+=========================================================*/
+
+.mm-title{
+
+    font-size:28px;
+    color:#0B5ED7;
+    margin-bottom:10px;
+
+}
+
+.mm-subtitle{
+
+    color:#64748B;
+    margin:0;
+
+}
+
+/*=========================================================
+RESPONSIVE
+=========================================================*/
+
+@media(max-width:991px){
+
+    .mm-layout{
+
+        grid-template-columns:1fr;
+        gap:20px;
+
+    }
+
+    .mm-col1,
+    .mm-col2{
+
+        border-right:none;
+        padding-right:0;
+
+    }
+
+    .mm-col3{
+
+        min-height:auto;
+        padding-left:0;
+
+    }
+
 }

@@ -6,7 +6,7 @@ const cloudData = {
 
     title:"Amazon Web Services",
 
-    image:"assets/images/multi-cloud/aws-card.jpg",
+    image:"assets/images/multi-cloud/aws-card.png",
 
 
     description:
@@ -34,7 +34,7 @@ const cloudData = {
 
     title:"Microsoft Azure",
 
-    image:"assets/images/multi-cloud/azure-card.jpg",
+    image:"assets/images/multi-cloud/azure-card.jfif",
 
 
     description:
@@ -64,7 +64,7 @@ const cloudData = {
 
     title:"Google Cloud Platform",
 
-    image:"assets/images/multi-cloud/gcp-card.jpg",
+    image:"assets/images/multi-cloud/gcp-card.png",
 
 
     description:
@@ -94,7 +94,7 @@ const cloudData = {
 
     title:"IBM Cloud + Hybrid",
 
-    image:"assets/images/multi-cloud/ibm-card.png",
+    image:"assets/images/multi-cloud/ibm-card.jpg",
 
 
     description:
@@ -123,7 +123,7 @@ const cloudData = {
 
     title:"Oracle Cloud Infrastructure",
 
-    image:"assets/images/multi-cloud/oracle-card1.jpg",
+    image:"assets/images/multi-cloud/oracle-card.webp",
 
 
     description:
