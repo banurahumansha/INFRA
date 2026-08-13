@@ -94,8 +94,9 @@ ctx.clearRect(
 
 
 const x =
-canvas.width * 0.12;
+// canvas.width * 0.12;
 
+canvas.width * 0.42;
 
 
 const startY = 0;
