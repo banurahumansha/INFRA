@@ -380,3 +380,22 @@ background:#0056b3;
 
 }
 
+/* ==========================================
+WHY INAS
+========================================== */
+
+.why-inas-section{
+    padding:70px 20px;
+    background:linear-gradient(
+        135deg,
+        #F8FAFC,
+        #EEF6FF
+    );
+}
+
+.why-inas-video{
+    display:block;
+    width:100%;
+    height:700px;
+    border-radius:20px;
+}
