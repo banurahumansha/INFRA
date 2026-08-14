@@ -2,23 +2,13 @@
 ELV SOLUTIONS
 ======================================================*/
 
-:root{
 
-    --primary:#0B5ED7;
-    --secondary:#2563EB;
-    --light:#F8FAFC;
-    --text:#334155;
-    --muted:#64748B;
-    --border:#E5E7EB;
-    --radius:22px;
-
-}
 
 
 /*======================================================
 HERO
 ======================================================*/
-.infra-hero{
+.elv-hero{
 background:linear-gradient(90deg, #fda4af, #fdba74);
     position:relative;
 
@@ -28,7 +18,7 @@ background:linear-gradient(90deg, #fda4af, #fdba74);
 
 
 }
-.infra-tag{
+.elv-tag{
 
     font-size:70px;
 
